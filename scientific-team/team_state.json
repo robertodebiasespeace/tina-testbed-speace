@@ -1,0 +1,20 @@
+﻿{
+    "last_daily_brief":  "2026-04-05T13:56:54.0862766+02:00",
+    "iteration":  92,
+    "active_alerts":  [
+
+                      ],
+    "agent_status":  {
+                         "economics":  "completed",
+                         "space":  "completed",
+                         "social":  "completed",
+                         "health":  "completed",
+                         "climate":  "completed",
+                         "technology":  "completed",
+                         "governance":  "completed"
+                     },
+    "alignment_score_avg":  66.7,
+    "team_status":  "operational",
+    "initialized_at":  "2026-04-05T12:26:26.0293273+02:00",
+    "proposals_created_today":  4
+}
