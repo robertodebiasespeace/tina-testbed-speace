@@ -1,0 +1,19 @@
+# SPEACE / TINA Testbed minimal dependencies
+# OpenClaw runtime (assume installed separately)
+# Additional Python packages for agent scripts
+
+requests>=2.28.0
+httpx>=0.24.0
+pandas>=1.5.0
+numpy>=1.24.0
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
+python-dotenv>=0.21.0
+redis>=4.5.0
+pyyaml>=6.0
+schedule>=1.2.0
+prometheus-client>=0.16.0
+
+# Optional: for vector DB if using AnythingLLM-style local
+# chromadb>=0.4.0
+# sentence-transformers>=2.2.0

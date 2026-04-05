@@ -1,0 +1,81 @@
+name: SPEACE Repository Validation
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate genome.yaml
+        run: |
+          if [ -f "skills/digitaldna/genome.yaml" ]; then
+            python3 -c "import yaml; yaml.safe_load(open('skills/digitaldna/genome.yaml'))" && echo "✅ genome.yaml valid"
+          else
+            echo "⚠️ genome.yaml not found (normal for initial setup)"
+          fi
+
+      - name: Validate epigenome.yaml
+        run: |
+          if [ -f "skills/digitaldna/epigenome.yaml" ]; then
+            python3 -c "import yaml; yaml.safe_load(open('skills/digitaldna/epigenome.yaml'))" && echo "✅ epigenome.yaml valid"
+          else
+            echo "⚠️ epigenome.yaml not found (normal for initial setup)"
+          fi
+
+      - name: Check required files
+        run: |
+          for f in README.md LICENSE requirements.txt; do
+            if [ ! -f "$f" ]; then
+              echo "❌ Missing: $f"
+              exit 1
+            fi
+            echo "✅ Found: $f"
+          done
+
+  python-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - name: Install linting tools
+        run: pip install flake8
+      - name: Lint Python scripts
+        run: |
+          for f in scripts/*.py; do
+            if [ -f "$f" ]; then
+              echo "Linting: $f"
+              flake8 "$f" --max-line-length=120 || true
+            fi
+          done
+
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - name: Run smoke test
+        run: |
+          python3 -c "
+          import os, sys
+          # Check required paths
+          for path in ['scientific-team', 'docs', 'scripts']:
+              if not os.path.isdir(path):
+                  print(f'❌ Missing directory: {path}')
+                  sys.exit(1)
+          # Check that team state exists
+          for f in ['scientific-team/team_state.json', 'scientific-team/team_state.example.json']:
+              if os.path.exists(f):
+                  print(f'✅ Found: {f}')
+              else:
+                  print(f'⚠️ Missing: {f}')
+          print('Smoke test passed')
+          "

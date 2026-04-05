@@ -1,0 +1,18 @@
+{
+  "last_daily_brief": null,
+  "team_status": "initializing",
+  "active_alerts": [],
+  "agent_status": {
+    "climate": "pending",
+    "economics": "pending",
+    "governance": "pending",
+    "technology": "pending",
+    "health": "pending",
+    "social": "pending",
+    "space": "pending"
+  },
+  "iteration": 0,
+  "proposals_created_today": 0,
+  "alignment_score_avg": null,
+  "initialized_at": null
+}

@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# OpenClaw / SPEACE
+memory/
+workspace/
+logs/
+*.log
+state.json
+team_state.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sensitive
+.secrets/
+.env
+credentials.json
+wallets.json
+private_keys/
+
+# Data caches (optional)
+scientific-team/data/raw/
+scientific-team/data/cache/

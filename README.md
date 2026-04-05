@@ -84,6 +84,7 @@ This repository contains the complete implementation of the **SPEACE Scientific 
 - OpenClaw environment (v0.6.0+)
 - Access to SafeProactive framework
 - Internet connectivity for API data fetching
+- Python 3.9+ (for optional agent scripts)
 
 ### Setup
 
@@ -93,10 +94,44 @@ git clone https://github.com/rigene-project/tina-testbed-speace.git
 cd tina-testbed-speace
 
 # Initialize team state
-cp team_state.example.json scientific-team/team_state.json
+cp scientific-team/team_state.example.json scientific-team/team_state.json
+
+# Install optional Python dependencies (for custom agent scripts)
+pip install -r requirements.txt
 
 # Edit configuration if needed (data source API keys, schedule)
 nano scientific-team/orchestrator-logic.md
+```
+
+### Project Structure
+
+```
+tina-testbed-repo/
+├── .gitignore
+├── LICENSE
+├── README.md
+├── requirements.txt
+├── docs/
+│   ├── architecture.md
+│   └── agent-dev.md
+├── scientific-team/
+│   ├── agents/
+│   │   ├── 01-climate.md
+│   │   ├── 02-economics.md
+│   │   ├── 03-governance.md
+│   │   ├── 04-technology.md
+│   │   ├── 05-health.md
+│   │   ├── 06-social.md
+│   │   ├── 07-space.md
+│   │   └── orchestrator.md
+│   ├── reports/
+│   │   ├── daily-brief-2026-04-06.md
+│   │   ├── climate-2026-04-06.md
+│   │   └── ... (other domain reports)
+│   ├── orchestrator-logic.md
+│   └── team_state.json (copy from team_state.example.json to initialize)
+└── scripts/
+    └── run_daily_brief.py
 ```
 
 ### Running the Team
