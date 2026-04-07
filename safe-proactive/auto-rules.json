@@ -1,100 +1,261 @@
-﻿{
-    "version":  "1.0.0",
-    "description":  "Auto-Approve rules for Temporary Delegate system (a+b: yield offline + routine confirmations)",
-    "global_limits":  {
-                          "max_autonomous_amount_usd":  100,
-                          "max_autonomous_amount_eth":  0.01,
-                          "allowed_chains":  [
-                                                 196
-                                             ],
-                          "ttl_minutes":  30,
-                          "max_ttl_minutes":  60,
-                          "override_keywords":  [
-                                                    "STOP DELEGATE",
-                                                    "REVOKE",
-                                                    "DISABLE DELEGATE"
-                                                ]
-                      },
-    "rules":  [
-                  {
-                      "id":  "yield_xlayer_small",
-                      "name":  "X Layer Yield (piccoli importi)",
-                      "trigger":  "yield_opportunity",
-                      "priority":  "high",
-                      "conditions":  {
-                                         "chain":  196,
-                                         "max_amount_usd":  50,
-                                         "max_amount_eth":  0.01,
-                                         "protocols":  [
-                                                           "xlayer-staking",
-                                                           "xlayer-lending",
-                                                           "xlayer-farming"
-                                                       ],
-                                         "min_apr_percent":  5,
-                                         "max_risk_level":  "medium"
-                                     },
-                      "ttl_minutes":  30,
-                      "logging":  true,
-                      "rollback_enabled":  true,
-                      "activated_by":  "robertodebiase@outlook.it"
-                  },
-                  {
-                      "id":  "balance_check_readonly",
-                      "name":  "Verifica bilanci (read-only)",
-                      "trigger":  "balance_inquiry",
-                      "priority":  "low",
-                      "conditions":  {
-                                         "type":  "read_only"
-                                     },
-                      "ttl_minutes":  30,
-                      "logging":  true,
-                      "rollback_enabled":  false,
-                      "activated_by":  "robertodebiase@outlook.it"
-                  },
-                  {
-                      "id":  "token_approve_small",
-                      "name":  "Approve token (piccoli importi)",
-                      "trigger":  "token_approve",
-                      "priority":  "medium",
-                      "conditions":  {
-                                         "max_amount_usd":  50,
-                                         "max_amount_eth":  0.01,
-                                         "token_symbols":  [
-                                                               "USDC",
-                                                               "USDT",
-                                                               "ETH",
-                                                               "OKB"
-                                                           ],
-                                         "unlimited_approve":  false
-                                     },
-                      "ttl_minutes":  30,
-                      "logging":  true,
-                      "rollback_enabled":  true,
-                      "activated_by":  "robertodebiase@outlook.it"
-                  },
-                  {
-                      "id":  "monitoring_scan",
-                      "name":  "Scansioni di monitoraggio",
-                      "trigger":  "monitoring_check",
-                      "priority":  "low",
-                      "conditions":  {
-                                         "type":  "read_only"
-                                     },
-                      "ttl_minutes":  60,
-                      "logging":  true,
-                      "rollback_enabled":  false,
-                      "activated_by":  "robertodebiase@outlook.it"
-                  }
-              ],
-    "active_rules":  [
-
-                     ],
-    "delegation_state":  {
-                             "enabled":  false,
-                             "expires_at":  null,
-                             "activated_at":  null,
-                             "activated_by":  null,
-                             "mode":  null
-                         },
-    "action_log_path":  "logs/delegated_actions.log"
+{
+    "version": "1.1.0",
+    "description": "Auto-Approve rules for Temporary Delegate system (expanded: crypto + general operations)",
+    "global_limits": {
+        "max_autonomous_amount_usd": 100,
+        "max_autonomous_amount_eth": 0.01,
+        "allowed_chains": [
+            196,
+            1,
+            56,
+            137,
+            42161,
+            43114
+        ],
+        "ttl_minutes": 30,
+        "max_ttl_minutes": 60,
+        "override_keywords": [
+            "STOP DELEGATE",
+            "REVOKE",
+            "DISABLE DELEGATE"
+        ]
+    },
+    "rules": [
+        {
+            "id": "yield_xlayer_small",
+            "name": "X Layer Yield (piccoli importi)",
+            "trigger": "yield_opportunity",
+            "priority": "high",
+            "conditions": {
+                "chain": 196,
+                "max_amount_usd": 50,
+                "max_amount_eth": 0.01,
+                "protocols": [
+                    "xlayer-staking",
+                    "xlayer-lending",
+                    "xlayer-farming"
+                ],
+                "min_apr_percent": 5,
+                "max_risk_level": "medium"
+            },
+            "ttl_minutes": 30,
+            "logging": true,
+            "rollback_enabled": true,
+            "activated_by": "robertodebiase@outlook.it"
+        },
+        {
+            "id": "balance_check_readonly",
+            "name": "Verifica bilanci (read-only)",
+            "trigger": "balance_inquiry",
+            "priority": "low",
+            "conditions": {
+                "type": "read_only"
+            },
+            "ttl_minutes": 30,
+            "logging": true,
+            "rollback_enabled": false,
+            "activated_by": "robertodebiase@outlook.it"
+        },
+        {
+            "id": "token_approve_small",
+            "name": "Approve token (piccoli importi)",
+            "trigger": "token_approve",
+            "priority": "medium",
+            "conditions": {
+                "max_amount_usd": 50,
+                "max_amount_eth": 0.01,
+                "token_symbols": [
+                    "USDC",
+                    "USDT",
+                    "ETH",
+                    "OKB"
+                ],
+                "unlimited_approve": false
+            },
+            "ttl_minutes": 30,
+            "logging": true,
+            "rollback_enabled": true,
+            "activated_by": "robertodebiase@outlook.it"
+        },
+        {
+            "id": "monitoring_scan",
+            "name": "Scansioni di monitoraggio",
+            "trigger": "monitoring_check",
+            "priority": "low",
+            "conditions": {
+                "type": "read_only"
+            },
+            "ttl_minutes": 60,
+            "logging": true,
+            "rollback_enabled": false,
+            "activated_by": "robertodebiase@outlook.it"
+        },
+        {
+            "id": "web_search_research",
+            "name": "Ricerca web e research",
+            "trigger": "web_search",
+            "priority": "medium",
+            "conditions": {
+                "operation_type": "read_only",
+                "max_queries_per_session": 20,
+                "allowed_domains": "any"
+            },
+            "ttl_minutes": 30,
+            "logging": true,
+            "rollback_enabled": false,
+            "activated_by": "robertodebiase@outlook.it"
+        },
+        {
+            "id": "file_operations",
+            "name": "Operazioni file (read/write/organize)",
+            "trigger": "file_operation",
+            "priority": "medium",
+            "conditions": {
+                "operation_type": "file_management",
+                "max_file_size_mb": 10,
+                "allowed_extensions": [
+                    "md",
+                    "txt",
+                    "json",
+                    "yaml",
+                    "yml",
+                    "csv",
+                    "log"
+                ],
+                "forbidden_paths": [
+                    "**/.ssh/**",
+                    "**/id_rsa**",
+                    "**/passwords/**"
+                ]
+            },
+            "ttl_minutes": 30,
+            "logging": true,
+            "rollback_enabled": true,
+            "activated_by": "robertodebiase@outlook.it"
+        },
+        {
+            "id": "messaging_send",
+            "name": "Invio messaggi (WhatsApp/Signal)",
+            "trigger": "messaging",
+            "priority": "high",
+            "conditions": {
+                "channel": [
+                    "whatsapp",
+                    "signal"
+                ],
+                "max_message_length": 2000,
+                "require_confirmation": false,
+                "auto_forward_to": "robertodebiase@outlook.it"
+            },
+            "ttl_minutes": 30,
+            "logging": true,
+            "rollback_enabled": false,
+            "activated_by": "robertodebiase@outlook.it"
+        },
+        {
+            "id": "calendar_check",
+            "name": "Verifica calendario e promemoria",
+            "trigger": "calendar_event",
+            "priority": "low",
+            "conditions": {
+                "operation_type": "read_only"
+            },
+            "ttl_minutes": 30,
+            "logging": true,
+            "rollback_enabled": false,
+            "activated_by": "robertodebiase@outlook.it"
+        },
+        {
+            "id": "code_execution",
+            "name": "Esecuzione codice e script",
+            "trigger": "code_execution",
+            "priority": "medium",
+            "conditions": {
+                "language": [
+                    "python",
+                    "bash",
+                    "powershell"
+                ],
+                "max_execution_time_sec": 60,
+                "max_output_lines": 500,
+                "sandboxed": true
+            },
+            "ttl_minutes": 30,
+            "logging": true,
+            "rollback_enabled": true,
+            "activated_by": "robertodebiase@outlook.it"
+        },
+        {
+            "id": "skill_management",
+            "name": "Gestione skill e strumenti",
+            "trigger": "skill_management",
+            "priority": "medium",
+            "conditions": {
+                "allowed_actions": [
+                    "skill_info",
+                    "skill_list",
+                    "skill_check",
+                    "skill_verify"
+                ],
+                "forbidden_actions": [
+                    "skill_delete",
+                    "skill_remove",
+                    "skill_uninstall"
+                ]
+            },
+            "ttl_minutes": 30,
+            "logging": true,
+            "rollback_enabled": false,
+            "activated_by": "robertodebiase@outlook.it"
+        },
+        {
+            "id": "memory_operations",
+            "name": "Operazioni su memoria e file system",
+            "trigger": "memory_operation",
+            "priority": "medium",
+            "conditions": {
+                "operation_type": "read_write",
+                "allowed_paths": [
+                    "memory/**",
+                    "safe-proactive/**",
+                    "digitaldna/**"
+                ],
+                "forbidden_paths": [
+                    "**/.ssh/**",
+                    "**/credentials/**"
+                ]
+            },
+            "ttl_minutes": 30,
+            "logging": true,
+            "rollback_enabled": true,
+            "activated_by": "robertodebiase@outlook.it"
+        },
+        {
+            "id": "ai_model_management",
+            "name": "Gestione e interrogazione modelli AI",
+            "trigger": "ai_model_query",
+            "priority": "low",
+            "conditions": {
+                "operation_type": "query",
+                "max_context_tokens": 131072,
+                "allowed_providers": [
+                    "ollama",
+                    "openrouter"
+                ]
+            },
+            "ttl_minutes": 60,
+            "logging": true,
+            "rollback_enabled": false,
+            "activated_by": "robertodebiase@outlook.it"
+        }
+    ],
+    "active_rules": [],
+    "delegation_state": {
+        "enabled": false,
+        "expires_at": null,
+        "activated_at": null,
+        "activated_by": null,
+        "mode": null
+    },
+    "action_log_path": "logs/delegated_actions.log"
 }
