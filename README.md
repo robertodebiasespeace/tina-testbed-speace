@@ -221,8 +221,8 @@ This testbed is itself a demonstration of TINA principles:
 - [Rigene Project](https://www.rigeneproject.org) — Theoretical foundation
 - [TINA Framework](https://www.rigeneproject.org/tina-technical-intelligent-nervous-adaptive-system) — Original TINA specification
 - [DigitalDNA Skill](https://github.com/robertodebiasespeace/skills-digitaldna) — Self-evolution engine
-- [SMFOI-KERNEL](https://github.com/openclaw/skills/smfoi-kernel) — Orientation protocol
-- [SafeProactive](https://github.com/openclaw/skills/safe-proactive) — Human approval gateway
+- [SMFOI-KERNEL](https://github.com/robertodebiasespeace/skills-smfoi-kernel) — Orientation protocol
+- [SafeProactive](https://github.com/robertodebiasespeace/skills-safe-proactive) — Human approval gateway
 
 ## 📄 License
 
