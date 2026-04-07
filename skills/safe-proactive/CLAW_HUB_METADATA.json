@@ -1,0 +1,12 @@
+{
+  "name": "safe-proactive",
+  "display_name": "SafeProactive v1.1 — Human-Approved Autonomous Agent",
+  "version": "1.1.0",
+  "description": "Framework per agenti autonomi sicuri: Write-Ahead Logging, Proposal-First, Semantic Validation e mandatory human approval. Integra perfettamente con SPEACE, SMFOI-KERNEL e DigitalDNA.",
+  "author": "Roberto De Biase",
+  "license": "MIT",
+  "keywords": ["safe-proactive", "wal", "human-approval", "audit-trail", "alignment-safety"],
+  "categories": ["agent-safety", "security"],
+  "dependencies": ["smfoi-kernel"],
+  "provides": ["safe-proactive", "proposal-framework"]
+}

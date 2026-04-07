@@ -1,0 +1,20 @@
+{
+  "registry_version": "1.0",
+  "users": {
+    "roberto": {
+      "user_id": "roberto",
+      "name": "Roberto",
+      "whatsapp": "+393714191412",
+      "approval_method": "whatsapp",
+      "max_proposal_level": 3,
+      "timeout_seconds": 600,
+      "auto_approve_level1": true
+    }
+  },
+  "default_policy": {
+    "require_approval_for_level2": true,
+    "require_approval_for_level3": true,
+    "simulation_required_for_self_edit": true,
+    "max_pending_proposals": 10
+  }
+}

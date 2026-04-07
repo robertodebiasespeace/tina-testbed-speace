@@ -1,0 +1,57 @@
+{
+  "agent": {
+    "name": "SafeProactive Agent",
+    "version": "1.0.0",
+    "enabled": true,
+    "created": "2026-03-25T10:50:00Z"
+  },
+  "heartbeat": {
+    "enabled": true,
+    "interval_minutes": 30,
+    "checks": {
+      "file_system": true,
+      "config_drift": true,
+      "security": true,
+      "performance": true,
+      "proposals": true
+    },
+    "alert_thresholds": {
+      "disk_usage_percent": 80,
+      "log_file_size_mb": 500,
+      "old_proposals_hours": 48,
+      "memory_files_days": 30
+    }
+  },
+  "wal_settings": {
+    "data_scrubbing": true,
+    "audit_logging": true,
+    "proposal_required": true,
+    "approval_required": true
+  },
+  "monitoring": {
+    "track_file_changes": true,
+    "track_config_drift": true,
+    "track_performance": true,
+    "baseline_update_days": 7
+  },
+  "notification": {
+    "channel": "whatsapp",
+    "whatsapp_number": "+393714191412",
+    "heartbeat_notification": true,
+    "anomaly_alert": true,
+    "proposal_reminder": true
+  },
+  "safety": {
+    "max_retry_attempts": 10,
+    "no_obfuscated_commands": true,
+    "no_background_modifications": true,
+    "emergency_threshold": "high_risk",
+    "require_explicit_approval": true
+  },
+  "archive": {
+    "enabled": true,
+    "archive_path": "./proposals-archive/",
+    "retention_days": 90,
+    "auto_cleanup": true
+  }
+}

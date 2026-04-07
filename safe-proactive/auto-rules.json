@@ -1,0 +1,100 @@
+﻿{
+    "version":  "1.0.0",
+    "description":  "Auto-Approve rules for Temporary Delegate system (a+b: yield offline + routine confirmations)",
+    "global_limits":  {
+                          "max_autonomous_amount_usd":  100,
+                          "max_autonomous_amount_eth":  0.01,
+                          "allowed_chains":  [
+                                                 196
+                                             ],
+                          "ttl_minutes":  30,
+                          "max_ttl_minutes":  60,
+                          "override_keywords":  [
+                                                    "STOP DELEGATE",
+                                                    "REVOKE",
+                                                    "DISABLE DELEGATE"
+                                                ]
+                      },
+    "rules":  [
+                  {
+                      "id":  "yield_xlayer_small",
+                      "name":  "X Layer Yield (piccoli importi)",
+                      "trigger":  "yield_opportunity",
+                      "priority":  "high",
+                      "conditions":  {
+                                         "chain":  196,
+                                         "max_amount_usd":  50,
+                                         "max_amount_eth":  0.01,
+                                         "protocols":  [
+                                                           "xlayer-staking",
+                                                           "xlayer-lending",
+                                                           "xlayer-farming"
+                                                       ],
+                                         "min_apr_percent":  5,
+                                         "max_risk_level":  "medium"
+                                     },
+                      "ttl_minutes":  30,
+                      "logging":  true,
+                      "rollback_enabled":  true,
+                      "activated_by":  "robertodebiase@outlook.it"
+                  },
+                  {
+                      "id":  "balance_check_readonly",
+                      "name":  "Verifica bilanci (read-only)",
+                      "trigger":  "balance_inquiry",
+                      "priority":  "low",
+                      "conditions":  {
+                                         "type":  "read_only"
+                                     },
+                      "ttl_minutes":  30,
+                      "logging":  true,
+                      "rollback_enabled":  false,
+                      "activated_by":  "robertodebiase@outlook.it"
+                  },
+                  {
+                      "id":  "token_approve_small",
+                      "name":  "Approve token (piccoli importi)",
+                      "trigger":  "token_approve",
+                      "priority":  "medium",
+                      "conditions":  {
+                                         "max_amount_usd":  50,
+                                         "max_amount_eth":  0.01,
+                                         "token_symbols":  [
+                                                               "USDC",
+                                                               "USDT",
+                                                               "ETH",
+                                                               "OKB"
+                                                           ],
+                                         "unlimited_approve":  false
+                                     },
+                      "ttl_minutes":  30,
+                      "logging":  true,
+                      "rollback_enabled":  true,
+                      "activated_by":  "robertodebiase@outlook.it"
+                  },
+                  {
+                      "id":  "monitoring_scan",
+                      "name":  "Scansioni di monitoraggio",
+                      "trigger":  "monitoring_check",
+                      "priority":  "low",
+                      "conditions":  {
+                                         "type":  "read_only"
+                                     },
+                      "ttl_minutes":  60,
+                      "logging":  true,
+                      "rollback_enabled":  false,
+                      "activated_by":  "robertodebiase@outlook.it"
+                  }
+              ],
+    "active_rules":  [
+
+                     ],
+    "delegation_state":  {
+                             "enabled":  false,
+                             "expires_at":  null,
+                             "activated_at":  null,
+                             "activated_by":  null,
+                             "mode":  null
+                         },
+    "action_log_path":  "logs/delegated_actions.log"
+}

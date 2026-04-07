@@ -1,0 +1,15 @@
+{
+  "registry_version": "1.0",
+  "devices": {
+    "example_thermostat": {
+      "device_id": "thermostat_livingroom_01",
+      "name": "Living Room Thermostat",
+      "type": "iot_sensor",
+      "public_key_fingerprint": "AB:CD:EF:12:34:56:78:90",
+      "allowed_events": ["temperature_update", "humidity_update", "mode_change"],
+      "max_frequency_hz": 0.1,
+      "trust_level": "high"
+    }
+  },
+  "notes": "Add your IoT devices here. Never trust devices without cryptographic signatures."
+}
