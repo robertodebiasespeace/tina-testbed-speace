@@ -94,3 +94,74 @@ speace_organism/
 - Foundation for physical agent
 
 ---
+
+## Proposal #002 - AnythingLLM World Model Prototipo
+**Date:** 2026-04-17
+**Author:** SPEACE Cortex
+**Risk Level:** Medium
+**SPEACE Alignment Score (pre):** 67.3
+**SPEACE Alignment Score (post est.):** 70.0
+**DigitalDNA Impact:** Moderate
+**Fitness Function Impact:** Positive
+
+### Description
+Implementazione prototipo di AnythingLLM come World Model / Knowledge Graph per SPEACE. Questo consentirà a SPEACE di mantenere un modello interno della realtà, inferenza, simulazione e cross-framework knowledge sync.
+
+### Motivation
+- Completamento Phase 1 del Piano Implementazione (Week 1)
+- Abilitazione World Model / Knowledge Graph (9° comparto Cortex)
+- Preparazione per SuperAGI orchestration
+- Foundation per multi-framework data exchange
+
+### Components to Implement
+
+#### 1. AnythingLLM Installation & Configuration
+- Docker container deployment (port 8003)
+- Vector database setup (LanceDB embedded)
+- Workspace configuration for SPEACE docs
+
+#### 2. Document Ingestion Pipeline
+```
+ingest/
+├── engineering_documents/
+├── specs/
+├── digitaldna/
+└── team_output/
+```
+
+#### 3. Query Interface (OpenClaw → AnythingLLM)
+- REST endpoint: POST /query
+- Request format: JSON with question/context
+- Response format: JSON with answer + sources
+
+#### 4. World Model Sync Protocol
+- Periodic sync with DigitalDNA updates
+- Cross-framework knowledge sharing
+- Long-term memory integration
+
+### Risk Assessment
+| Risk | Level | Mitigation |
+|------|-------|------------|
+| Resource Usage | Medium | RAM budget 2.5GB |
+| Data Privacy | Low | Local vector store |
+| Performance | Low | Embedded DB |
+
+### DigitalDNA Impact
+- Epigenome: `world_model_enabled: true`
+- New workflow: `world_model_query` integrated in SMFOI
+- Comparto 9 (World Model) now functional
+
+### Required Approvals
+- Roberto De Biase (Human-in-loop per Medium risk)
+
+### Implementation Phases
+1. **Phase 1:** Docker setup + AnythingLLM install (1 day)
+2. **Phase 2:** Document ingestion (2 days)
+3. **Phase 3:** Query interface development (2 days)
+4. **Phase 4:** Integration test with SPEACE Cortex (1 day)
+
+### Expected Outcomes
+- SPEACE Alignment Score +2.7 (67.3 → 70.0)
+- World Model functional with SPEACE documentation
+- Foundation for multi-framework orchestration
+- Query response time <2 seconds target
