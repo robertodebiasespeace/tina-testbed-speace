@@ -37,7 +37,7 @@ epigenome:
     fitness_score: 0.70  # estimated
     last_heartbeat: "2026-04-17T18:00:00Z"
     organism_enabled: true  # Agente Organismico Foundation implemented
-    world_model_enabled: false  # Pending AnythingLLM implementation
+    world_model_enabled: true  # AnythingLLM World Model implemented
 
   tina_alignment:
     score: 67.3
