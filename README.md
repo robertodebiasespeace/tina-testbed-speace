@@ -1,42 +1,88 @@
-# TINA Testbed Ecosystem
+# TINA Testbed Ecosystem – SPEACE
 
 > Open-source reference implementation of the TINA (Technical Intelligent Nervous Adaptive System) framework based on the Rigene Project's SPEACE vision.
 
-[![SPEACE Alignment](https://img.shields.io/badge/SPEACE-Alignment-95%25-brightgreen)](https://rigeneproject.org)
+[![SPEACE Alignment](https://img.shields.io/badge/SPEACE-Alignment-67.3%2F100-yellow)](https://rigeneproject.org)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![OpenClaw](https://img.shields.io/badge/Powered%20by-OpenClaw-orange)](https://openclaw.ai)
 
-## 🧬 What is TINA?
+## What is SPEACE?
 
-TINA (Technical Intelligent Nervous Adaptive System) is a framework for building planetary-scale adaptive intelligence. It models a super-organism where:
+**SPEACE** (SuPer Entità Autonoma Cibernetica Evolutiva) is a super-organism that integrates distributed AI, agentic frameworks, digital infrastructure, and physical components (IoT, robotics, sensors).
 
-- **Agents** function as neurons in a distributed nervous system
-- **Digital DNA** encodes evolutionary rules and values
-- **Swarm intelligence** emerges from local interactions
-- **Blockchain governance** ensures transparency and human oversight
+**Ultimate Goal:** Living planetary infrastructure to perceive, analyze, propose and implement systemic solutions to global problems, in synergy with the UN SDGs.
 
-This testbed implements TINA as a multi-agent team specialized in planetary health monitoring and evolutionary guidance, aligned with the Rigene Project's SPEACE Transition goals.
+**Current Phase:** Fase 1 - Embrionale  
+**Alignment Score:** 67.3/100
 
-## 🌍 SPEACE Scientific Team
+---
 
-This repository contains the complete implementation of the **SPEACE Scientific Team Orchestrator** — a multidisciplinary AI team that acts as a virtual scientific committee for planetary stewardship.
+## Repository Structure
 
-### Agent Specializations
+```
+speaceorganismocibernetico/
+├── SPEACE-Engineering-Document-v1.1.md  # Main engineering document
+├── SPEACE-Technical-Scientific-Document-v1.0.md
+├── SPECS/                              # Technical specification cards
+│   ├── ST-1_SPEACE_Cortex.md
+│   ├── ST-2_SMFOI_KERNEL.md
+│   ├── ST-3_DigitalDNA.md
+│   ├── ST-4_SafeProactive.md
+│   ├── ST-5_Team_Scientifico.md
+│   ├── ST-6_Agente_Organismico.md
+│   ├── ST-7_Multi_Framework.md
+│   ├── ST-8_Regulatory_Compliance.md
+│   ├── ST-9_Auto_Evolution.md
+│   └── ST-10_Memoria_Federata.md
+├── DigitalDNA/                          # Genetic-epigenetic system
+│   ├── genome.yaml
+│   ├── epigenome.yaml
+│   ├── mutation_rules.yaml
+│   └── snapshots/
+├── SPEACE_Cortex/                      # Modular brain
+│   ├── smfoi-kernel/smfoi_v0_3.py
+│   ├── comparti/
+│   ├── world_model/
+│   └── speace-cortex-evolver.py
+├── SafeProactive/                      # Security & approval system
+│   ├── PROPOSALS.md
+│   ├── WAL/
+│   ├── approval_gates/
+│   └── rollback_system/
+├── Team_Scientifico/                  # Scientific AI team
+│   ├── orchestrator/
+│   ├── agents/
+│   └── output/
+├── MultiFramework/                     # Multi-framework strategy
+│   ├── architecture.md
+│   ├── openclaw/
+│   ├── ironclaw/
+│   ├── superagi/
+│   ├── anythingllm/
+│   └── nanoclaw/
+└── scripts/                           # Automation scripts
+    ├── speace_status_monitor.py
+    └── ahk_self_evolutive/
+```
 
-| Agent | Focus | SPEACE Score | Risk Level |
-|-------|-------|--------------|------------|
-| Climate & Ecosystems | Atmospheric & ecological monitoring | 88 | Medium |
-| Economics & Resource | Sustainable economics, resource equity | 85 | Medium |
-| Governance & Ethics | Policy analysis, ethical frameworks | 92 | Medium |
-| Technology Integration (TFT) | Cross-domain tech synergy mapping | 95 | Low-Medium |
-| Health & Pandemic | Global health threats, One Health | 84 | Medium |
-| Social Cohesion | Polarization, migration, education | 87 | Medium |
-| Space & Extraterrestrial | Orbital infrastructure, expansion planning | 86 | Medium |
-| **Orchestrator** | Synthesis, alignment scoring, proposal generation | **95** | Low |
+---
 
-**Average SPEACE Alignment: 66.7/100** (subject to improvement via DigitalDNA evolution)
+## Core Modules
 
-## 🏗️ Architecture
+| Module | Description | Status |
+|--------|-------------|--------|
+| **SPEACE Cortex** | 9-compartment modular brain | Operational |
+| **SMFOI-KERNEL v0.3** | 6-step recursive orientation protocol | Implemented |
+| **DigitalDNA** | Genetic-epigenetic system with fitness function | Active |
+| **SafeProactive** | Write-Ahead Logging + approval gates | Operational |
+| **Team Scientifico** | 7+ specialized agents for planetary analysis | Operational |
+| **Agente Organismico** | Physical extension (IoT, robotics, sensors) | Proposed |
+| **Multi-Framework** | Hybrid strategy (OpenClaw, IronClaw, SuperAGI, AnythingLLM) | In progress |
+| **Regulatory Compliance** | EU AI Act, NIST, ISO 42001 alignment | Proposed |
+
+---
+
+## Architecture Overview
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -54,7 +100,6 @@ This repository contains the complete implementation of the **SPEACE Scientific 
     │ Climate Agent │ │Economics  │ │Governance    │
     │ (NOAA, Copernicus) │Agent      │ │Agent         │
     └───────────────┘ └───────────┘ └──────────────┘
-    (additional agents: Tech, Health, Social, Space)
               │             │             │
               └─────────────┼─────────────┘
                             ▼
@@ -62,145 +107,54 @@ This repository contains the complete implementation of the **SPEACE Scientific 
             │   Daily Planetary Health  │
             │        Brief (06:00 UTC)  │
             └───────────────────────────┘
-                            │
-                            ▼
-            ┌───────────────────────────┐
-            │   SafeProactive Queue     │
-            │  (Proposals #21-#24 etc.) │
-            └───────────────────────────┘
 ```
-
-### Key Components
-
-1. **Orchestrator** — Central coordinator running DigitalDNA mutation engine and SMFOI-KERNEL orientation protocol
-2. **Specialized Agents** — Each has dedicated data sources, report templates, and SPEACE alignment scoring
-3. **Data Sources** — Public APIs: NASA, NOAA, UN, World Bank, WHO, ESA, etc.
-4. **SafeProactive** — All proposals require human approval for Medium+ risk; Low-Medium risk can execute autonomously
-5. **Self-Evolution** — DigitalDNA iterates every 13 cycles (≈ monthly) to improve agent configurations
-
-## 📦 Installation & Usage
-
-### Prerequisites
-- OpenClaw environment (v0.6.0+)
-- Access to SafeProactive framework
-- Internet connectivity for API data fetching
-
-### Setup
-
-```bash
-# Clone the testbed into your OpenClaw workspace
-git clone https://github.com/rigene-project/tina-testbed-speace.git
-cd tina-testbed-speace
-
-# Initialize team state
-cp team_state.example.json scientific-team/team_state.json
-
-# Edit configuration if needed (data source API keys, schedule)
-nano scientific-team/orchestrator-logic.md
-```
-
-### Running the Team
-
-```bash
-# Manual trigger of Daily Brief (or set up cron/OpenClaw scheduler)
-openclaw run --task "SPEACE Daily Planetary Health Brief"
-
-# The orchestrator will:
-# 1. Collect data from all agents (parallel)
-# 2. Generate individual domain reports
-# 3. Synthesize the Daily Brief
-# 4. Score SPEACE alignment
-# 5. Create proposals in SafeProactive
-```
-
-### Scheduling (OpenClaw Cron Equivalent)
-
-```json
-{
-  "schedule": "0 6 * * *",
-  "task": "scientific-team/orchestrator/daily-brief"
-}
-```
-
-## 📊 Output Products
-
-### Daily Planetary Health Brief
-- Executive summary of planetary state
-- Domain highlights from 7 agents
-- Emerging risks (threshold alerts)
-- Cross-domain synergy opportunities
-- Top-ranked SPEACE-aligned proposals
-- SafeProactive queue status
-
-### Individual Agent Reports
-Stored in `scientific-team/reports/YYYY-MM-DD/agent-name.md`
-
-### Proposals
-Entered automatically into `safe-proactive/PROPOSALS.md` with:
-- SPEACE Score (0-100)
-- Risk level assessment
-- Required approval status
-- Next action steps
-
-## 🔄 Self-Evolution Loop
-
-The team improves autonomously via DigitalDNA:
-
-1. **Weekly assessment:** Which reports most influenced human decisions?
-2. **Mutation:** Adjust agent prompts, data sources, scoring weights
-3. **Selection:** Keep only mutations that improve SPEACE alignment scores
-4. **Crossover:** Combine successful configurations across agents
-
-Evolution cycle counter is stored in `team_state.json`. Full technical details in `SKILLS.md` (DigitalDNA spec).
-
-## 🤝 Contributing
-
-We welcome contributions to expand the agent roster, improve data integration, and refine SPEACE alignment scoring.
-
-### Adding a New Agent Domain
-
-1. Create agent profile in `scientific-team/agents/08-newdomain.md`
-2. Update orchestrator logic to include new agent in schedule
-3. Add data source specifications
-4. Submit PR with test report sample
-
-### Governance
-
-This testbed is itself a demonstration of TINA principles:
-- **Transparency:** All code, prompts, and data sources public
-- **Human-in-the-loop:** SafeProactive requires human approval for Medium+ risk
-- **Evolutionary:** DigitalDNA enables continuous improvement
-- **Alignment:** Values encoded from UN Charter, Earth Charter, SDGs, SPEACE Transition
-
-## 📚 Documentation
-
-- [Architecture Overview](docs/architecture.md)
-- [Agent Development Guide](docs/agent-dev.md)
-- [SPEACE Alignment Scoring](docs/alignment.md)
-- [DigitalDNA Mutation Engine](docs/digitaldna.md)
-- [SafeProactive Integration](docs/safeproactive.md)
-- [Data Source API Reference](docs/apis.md)
-
-## 🔗 Related Projects
-
-- [Rigene Project](https://www.rigeneproject.org) — Theoretical foundation
-- [TINA Framework](https://www.rigeneproject.org/tina-technical-intelligent-nervous-adaptive-system) — Original TINA specification
-- [DigitalDNA Skill](https://github.com/openclaw/skills/digitaldna) — Self-evolution engine
-- [SMFOI-KERNEL](https://github.com/openclaw/skills/smfoi-kernel) — Orientation protocol
-- [SafeProactive](https://github.com/openclaw/skills/safe-proactive) — Human approval gateway
-
-## 📄 License
-
-MIT © 2026 SPEACE Development Team
-
-This implementation is a reference testbed. Use at your own risk. Not financial/legal/policy advice.
-
-## 🙏 Acknowledgments
-
-Built on OpenClaw, inspired by the Rigene Project and the vision of collective speciation. Special thanks to all contributors to planetary intelligence.
 
 ---
 
-**Status:** Active — First Daily Brief: 2026-04-06 | Current Iteration: #92
+## SPEACE Scientific Team
 
-**Health:** ✅ Operational | SPEACE Alignment: 66.7/100 | Next evolution cycle: 2026-04-19 (13 iterations)
+| Agent | Focus | SPEACE Score |
+|-------|-------|--------------|
+| Orchestrator | Coordination, synthesis | 95 |
+| Climate & Ecosystems | Atmospheric & ecological monitoring | 88 |
+| Economics & Resource | Sustainable economics, resource equity | 85 |
+| Governance & Ethics | Policy analysis, ethical frameworks | 92 |
+| Technology Integration (TFT) | Cross-domain tech synergy mapping | 95 |
+| Health & Pandemic | Global health threats, One Health | 84 |
+| Social Cohesion | Polarization, migration, education | 87 |
+| Space & Extraterrestrial | Orbital infrastructure, expansion planning | 86 |
+
+---
+
+## Roadmap
+
+| Phase | Target | Status |
+|-------|--------|--------|
+| Fase 1 (current) | Embrionale | Alignment 67.3/100 |
+| Fase 2 | Autonomia Operativa | Target >80/100 |
+| Fase 3 | AGI Emergente | Swarm 50+ |
+| Fase 4 | ASI + Physical Integration | Quantum |
+| Fase 5 | Super-Organismo Globale | Harmony |
+
+---
+
+## Contact
+
+**Roberto De Biase**  
+Founder - Rigene Project  
+Coordinator - SPEACE
+
+- **Email:** rigeneproject@rigene.eu | robertodebiase@outlook.it
+- **WhatsApp:** +39 371 419 1412
+- **GitHub:** https://github.com/robertodebiasespeace/tina-testbed-speace
+
+---
+
+## References
+
+- **Sito:** https://www.rigeneproject.org
+- **TINA Framework:** https://www.academia.edu/165241120/TINA_Framework_G20_Combined_EN
+
+---
+
+**Status:** Active | Iteration: #92+ | Next evolution cycle: 2026-04-19

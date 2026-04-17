@@ -1,0 +1,73 @@
+mutation_rules:
+  version: "1.0"
+  created: "2026-04-17"
+
+  fitness_function:
+    description: >
+      Funzione di fitness per selezione mutazioni non caotiche.
+      Guida l'evoluzione di SPEACE verso obiettivi Rigene Project.
+
+    weights:
+      speace_alignment_score: 0.35
+      task_success_rate: 0.25
+      system_stability: 0.20
+      resource_efficiency: 0.15
+      ethical_compliance: 0.05
+
+    formula: >
+      fitness = (alignment * 0.35) + (success_rate * 0.25) +
+                (stability * 0.20) + (efficiency * 0.15) +
+                (ethics * 0.05)
+
+    normalization:
+      method: "min_max"
+      range:
+        min: 0.0
+        max: 1.0
+      clip: true
+
+    thresholds:
+      min_fitness_to_apply: 0.60
+      min_fitness_to_survive: 0.50
+      mutation_selection_probability: "fitness / max_fitness"
+      excellent_threshold: 0.85
+      poor_threshold: 0.40
+
+  regole_mutazione:
+    allowed_types:
+      - epigenetic
+      - parameter_adjustment
+      - compartment_extension
+      - workflow_optimization
+
+    prohibited_types:
+      - destructive
+      - self_modifying_core
+      - autonomous_weapon
+
+    mutation_rate: 0.05
+    max_mutations_per_cycle: 3
+
+    safety_gates:
+      - alignment_check
+      - risk_assessment
+      - human_approval_for_high_risk
+      - rollback_ready
+
+  criteri_selezione:
+    fitness_based: true
+    alignment_maintained: true
+    stability_preserved: true
+    ethical_compliance: mandatory
+    resource_efficiency: recommended
+
+    evaluation_frequency:
+      after_each_mutation: true
+      periodic: 3600  # seconds
+      on_alignment_drift: true
+
+  rollback_procedure:
+    snapshot_before_mutation: true
+    version_control: automatic
+    rollback_command_approval: human_required
+    max_rollback_depth: 5

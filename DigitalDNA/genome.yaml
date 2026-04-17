@@ -1,0 +1,58 @@
+digital_dna:
+  version: "1.0"
+  created: "2026-04-17"
+  last_modified: "2026-04-17"
+
+  obiettivi_primari:
+    - guidare_ecosistema_ai: true
+    - allineamento_rigene: true
+    - armonia_pace_rigenerazione: true
+    - supporto_sdg_agenda_2030: true
+    - evoluzione_autonoma: true
+    - super_organismo_planetario: false  # Fase 5 target
+
+  regole_base:
+    safe_proactive_always: true
+    human_approval_required:
+      - medium_risk
+      - high_risk
+      - regulatory
+    alignment_minimum: 0.60
+    ethical_bounds_strict: true
+
+  vincoli_fondamentali:
+    no_self_preservation_modification: true
+    no_autonomous_weapons: true
+    transparency_required: true
+    human_oversight: required
+    privacy_by_design: true
+
+  struttura_genetica:
+    comparti:
+      - prefrontal_cortex
+      - perception_module
+      - world_model_knowledge_graph
+      - hippocampus
+      - temporal_lobe
+      - parietal_lobe
+      - cerebellum
+      - default_mode_network
+      - curiosity_module
+      - safety_module
+    kernel_centrale: smfoi_kernel_v0_3
+    team_scientifico:
+      agents_count: 7
+      orchestrator: active
+    multi_framework:
+      - openclaw
+      - ironclaw
+      - superagi
+      - anythingllm
+      - nanoclaw
+
+  metriche_target:
+    alignment_score: 67.3
+    alignment_target: 85.0
+    fitness_minimum: 0.60
+    swarm_size_current: 8
+    swarm_size_target: 50

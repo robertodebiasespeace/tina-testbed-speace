@@ -1,0 +1,49 @@
+epigenome:
+  version: "1.0"
+  created: "2026-04-17"
+  last_modified: "2026-04-17"
+
+  mutazioni_recenti:
+    - mutation_id: "mut_001"
+      type: "yield_priority"
+      change: "+2"
+      date: "2026-04-17"
+      reason: "Aumentare priorità yield per ottimizzazione risorse"
+      approved_by: "Roberto De Biase"
+    - mutation_id: "mut_002"
+      type: "bridge_claim_pattern"
+      change: "added"
+      date: "2026-04-17"
+      reason: "Pattern per connessioni sistemiche"
+      approved_by: "Roberto De Biase"
+    - mutation_id: "mut_003"
+      type: "TINA_regen"
+      change: "activated"
+      date: "2026-04-17"
+      reason: "Attivazione allineamento TINA Framework"
+      approved_by: "Roberto De Biase"
+
+  parametri_adattivi:
+    heartbeat_frequency: 60  # seconds
+    learning_rate: 0.01
+    yield_priority: 7  # 1-10 scale
+    mutation_rate: 0.05
+    exploration_rate: 0.15
+
+  stato_corrente:
+    alignment_score: 67.3
+    phase: "Fase 1 - Embrionale"
+    active_comparti: 9
+    fitness_score: 0.70  # estimated
+    last_heartbeat: "2026-04-17T18:00:00Z"
+
+  tina_alignment:
+    score: 67.3
+    target: 85.0
+    rigene_conformity: true
+    sdg_alignment: true
+    ethical_bounds: strict
+
+  snapshots:
+    latest: "snapshot_2026-04-17_initial"
+    path: "DigitalDNA/snapshots/"

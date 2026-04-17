@@ -1,0 +1,234 @@
+{
+  "timestamp": "2026-04-17T19:09:46.399702",
+  "speace_status": "operational",
+  "phase": "Fase 1 - Embrionale",
+  "alignment_score": 67.3,
+  "fitness_score": 0.7075,
+  "digitaldna": {
+    "genome": {
+      "digital_dna": {
+        "version": "1.0",
+        "created": "2026-04-17",
+        "last_modified": "2026-04-17",
+        "obiettivi_primari": [
+          {
+            "guidare_ecosistema_ai": true
+          },
+          {
+            "allineamento_rigene": true
+          },
+          {
+            "armonia_pace_rigenerazione": true
+          },
+          {
+            "supporto_sdg_agenda_2030": true
+          },
+          {
+            "evoluzione_autonoma": true
+          },
+          {
+            "super_organismo_planetario": false
+          }
+        ],
+        "regole_base": {
+          "safe_proactive_always": true,
+          "human_approval_required": [
+            "medium_risk",
+            "high_risk",
+            "regulatory"
+          ],
+          "alignment_minimum": 0.6,
+          "ethical_bounds_strict": true
+        },
+        "vincoli_fondamentali": {
+          "no_self_preservation_modification": true,
+          "no_autonomous_weapons": true,
+          "transparency_required": true,
+          "human_oversight": "required",
+          "privacy_by_design": true
+        },
+        "struttura_genetica": {
+          "comparti": [
+            "prefrontal_cortex",
+            "perception_module",
+            "world_model_knowledge_graph",
+            "hippocampus",
+            "temporal_lobe",
+            "parietal_lobe",
+            "cerebellum",
+            "default_mode_network",
+            "curiosity_module",
+            "safety_module"
+          ],
+          "kernel_centrale": "smfoi_kernel_v0_3",
+          "team_scientifico": {
+            "agents_count": 7,
+            "orchestrator": "active"
+          },
+          "multi_framework": [
+            "openclaw",
+            "ironclaw",
+            "superagi",
+            "anythingllm",
+            "nanoclaw"
+          ]
+        },
+        "metriche_target": {
+          "alignment_score": 67.3,
+          "alignment_target": 85.0,
+          "fitness_minimum": 0.6,
+          "swarm_size_current": 8,
+          "swarm_size_target": 50
+        }
+      }
+    },
+    "epigenome": {
+      "epigenome": {
+        "version": "1.0",
+        "created": "2026-04-17",
+        "last_modified": "2026-04-17",
+        "mutazioni_recenti": [
+          {
+            "mutation_id": "mut_001",
+            "type": "yield_priority",
+            "change": "+2",
+            "date": "2026-04-17",
+            "reason": "Aumentare priorit\u00c3\u00a0 yield per ottimizzazione risorse",
+            "approved_by": "Roberto De Biase"
+          },
+          {
+            "mutation_id": "mut_002",
+            "type": "bridge_claim_pattern",
+            "change": "added",
+            "date": "2026-04-17",
+            "reason": "Pattern per connessioni sistemiche",
+            "approved_by": "Roberto De Biase"
+          },
+          {
+            "mutation_id": "mut_003",
+            "type": "TINA_regen",
+            "change": "activated",
+            "date": "2026-04-17",
+            "reason": "Attivazione allineamento TINA Framework",
+            "approved_by": "Roberto De Biase"
+          }
+        ],
+        "parametri_adattivi": {
+          "heartbeat_frequency": 60,
+          "learning_rate": 0.01,
+          "yield_priority": 7,
+          "mutation_rate": 0.05,
+          "exploration_rate": 0.15
+        },
+        "stato_corrente": {
+          "alignment_score": 67.3,
+          "phase": "Fase 1 - Embrionale",
+          "active_comparti": 9,
+          "fitness_score": 0.7,
+          "last_heartbeat": "2026-04-17T18:00:00Z"
+        },
+        "tina_alignment": {
+          "score": 67.3,
+          "target": 85.0,
+          "rigene_conformity": true,
+          "sdg_alignment": true,
+          "ethical_bounds": "strict"
+        },
+        "snapshots": {
+          "latest": "snapshot_2026-04-17_initial",
+          "path": "DigitalDNA/snapshots/"
+        }
+      }
+    },
+    "mutation_rules": {
+      "mutation_rules": {
+        "version": "1.0",
+        "created": "2026-04-17",
+        "fitness_function": {
+          "description": "Funzione di fitness per selezione mutazioni non caotiche. Guida l'evoluzione di SPEACE verso obiettivi Rigene Project.\n",
+          "weights": {
+            "speace_alignment_score": 0.35,
+            "task_success_rate": 0.25,
+            "system_stability": 0.2,
+            "resource_efficiency": 0.15,
+            "ethical_compliance": 0.05
+          },
+          "formula": "fitness = (alignment * 0.35) + (success_rate * 0.25) +\n          (stability * 0.20) + (efficiency * 0.15) +\n          (ethics * 0.05)\n",
+          "normalization": {
+            "method": "min_max",
+            "range": {
+              "min": 0.0,
+              "max": 1.0
+            },
+            "clip": true
+          },
+          "thresholds": {
+            "min_fitness_to_apply": 0.6,
+            "min_fitness_to_survive": 0.5,
+            "mutation_selection_probability": "fitness / max_fitness",
+            "excellent_threshold": 0.85,
+            "poor_threshold": 0.4
+          }
+        },
+        "regole_mutazione": {
+          "allowed_types": [
+            "epigenetic",
+            "parameter_adjustment",
+            "compartment_extension",
+            "workflow_optimization"
+          ],
+          "prohibited_types": [
+            "destructive",
+            "self_modifying_core",
+            "autonomous_weapon"
+          ],
+          "mutation_rate": 0.05,
+          "max_mutations_per_cycle": 3,
+          "safety_gates": [
+            "alignment_check",
+            "risk_assessment",
+            "human_approval_for_high_risk",
+            "rollback_ready"
+          ]
+        },
+        "criteri_selezione": {
+          "fitness_based": true,
+          "alignment_maintained": true,
+          "stability_preserved": true,
+          "ethical_compliance": "mandatory",
+          "resource_efficiency": "recommended",
+          "evaluation_frequency": {
+            "after_each_mutation": true,
+            "periodic": 3600,
+            "on_alignment_drift": true
+          }
+        },
+        "rollback_procedure": {
+          "snapshot_before_mutation": true,
+          "version_control": "automatic",
+          "rollback_command_approval": "human_required",
+          "max_rollback_depth": 5
+        }
+      }
+    }
+  },
+  "safe_proactive": {
+    "proposals_count": 3,
+    "pending_approvals": [],
+    "recent_actions": []
+  },
+  "cortex": {
+    "smfoi_kernel_version": "0.3",
+    "comparti_active": 9,
+    "swarm_size": 8,
+    "kernel_status": "operational",
+    "kernel_exists": true
+  },
+  "alerts": [],
+  "components": {
+    "smfoi_kernel": "v0.3",
+    "digital_dna": "v1.0",
+    "safe_proactive": "v1.0",
+    "team_scientifico": "7+1 agents"
+  }
+}
