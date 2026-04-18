@@ -1,19 +1,20 @@
 """
 AnythingLLM API Server
-REST API per World Model (Flask/FastAPI)
+REST API per World Model
 
 Versione: 1.0
 Data: 2026-04-17
-
-NOTA: Questo è uno stub. Per production:
-- Installare flask: pip install flask
-- O usare fastapi: pip install fastapi uvicorn
 """
 
+import sys
+import os
 import json
 import logging
 from datetime import datetime
-from typing import Dict, Any
+
+# Add parent to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
 from flask import Flask, request, jsonify
 
 logging.basicConfig(level=logging.INFO)
@@ -155,15 +156,31 @@ def create_app(query_interface=None, ingester=None) -> Flask:
     return app
 
 
-def run_server(host: str = "localhost", port: int = 8003):
+def run_server(host: str = "0.0.0.0", port: int = 8003):
     """
     Avvia server AnythingLLM.
     """
-    app = create_app()
+    from ..anythingllm_config import AnythingLLMConfig
+    from ..document_ingester import DocumentIngester
+    from ..query_interface import WorldModelQueryInterface
+
+    logger.info("Initializing AnythingLLM components...")
+
+    # Initialize components
+    config = AnythingLLMConfig.create_speace_default()
+    ingester = DocumentIngester("./vector_data")
+    qi = WorldModelQueryInterface(ingester)
+
+    # Create app with initialized components
+    app = create_app(qi, ingester)
 
     logger.info(f"Starting AnythingLLM server on {host}:{port}")
     app.run(host=host, port=port, debug=False)
 
 
 if __name__ == "__main__":
+    import os
+    # Change to workspace root if run directly
+    os.chdir(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
+
     run_server()

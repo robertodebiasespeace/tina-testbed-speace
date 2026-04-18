@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-04-18T10:14:45.333479",
+  "test_results": [
+    {
+      "timestamp": "2026-04-18T10:14:45.332751",
+      "query": "Qual \u00e8 lo stato attuale di SPEACE e quali sono i prossimi passi evolutivi?",
+      "query_time_ms": 28.891324996948242,
+      "confidence": 0.85,
+      "sources_count": 2,
+      "c_index": 0.683,
+      "passed": true
+    }
+  ],
+  "digitaldna_status": {
+    "alignment_score": 67.3,
+    "fitness_score": 0.7075,
+    "phase": "Fase 1 - Embrionale",
+    "components": {
+      "smfoi_kernel": "v0.3",
+      "digital_dna": "v1.0",
+      "safe_proactive": "v1.0",
+      "team_scientifico": "7+1 agents",
+      "adaptive_consciousness": "v1.0",
+      "world_model": "prototype"
+    },
+    "digital_dna_version": "1.0"
+  },
+  "cortex_status": {
+    "comparti_active": 9,
+    "comparti_list": [
+      "Prefrontal Cortex",
+      "Perception Module",
+      "World Model / Knowledge Graph",
+      "Hippocampus",
+      "Temporal Lobe",
+      "Parietal Lobe",
+      "Cerebellum",
+      "Default Mode Network",
+      "Curiosity Module"
+    ],
+    "kernel_status": "operational",
+    "swarm_size": 8,
+    "evolutionary_stage": "Modular Emergent"
+  },
+  "next_steps": [
+    "1. Deploy AnythingLLM production instance (Proposal #003)",
+    "2. Complete World Model integration with all SPEACE documents",
+    "3. Run C-index validation experiments (from Adaptive Consciousness Framework)",
+    "4. Evolve toward Fase 2 (Autonomia Operativa) - target Alignment >80",
+    "5. Integrate adaptive consciousness metrics into DigitalDNA fitness function",
+    "6. Test multi-framework orchestration (OpenClaw + SuperAGI + AnythingLLM)",
+    "7. Expand Team Scientifico with additional specialized agents"
+  ]
+}

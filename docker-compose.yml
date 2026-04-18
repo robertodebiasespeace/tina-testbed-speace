@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  # SPEACE World Model - AnythingLLM REST API
+  # Flask server implementing AnythingLLM-compatible endpoints
+  speace-worldmodel:
+    build:
+      context: .
+      dockerfile: MultiFramework/anythingllm/Dockerfile
+    container_name: speace-worldmodel
+    ports:
+      - "8003:8003"
+    volumes:
+      - ./MultiFramework/anythingllm:/app
+      - ./vector_data:/app/vector_data
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=false
+      - WORKSPACES_PATH=/app/workspaces
+      - VECTOR_DATA_PATH=/app/vector_data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8003/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - speace-net
+
+  # Redis for inter-framework communication (shared with other frameworks)
+  redis:
+    image: redis:7-alpine
+    container_name: speace-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - speace-net
+    command: redis-server --appendonly yes
+
+networks:
+  speace-net:
+    driver: bridge
+
+volumes:
+  redis_data:
+    driver: local

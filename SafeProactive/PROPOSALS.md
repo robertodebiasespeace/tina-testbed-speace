@@ -1,167 +1,105 @@
-# SafeProactive Proposals Registry
-
-## Proposal Template
-```
-## Proposal #[ID]
-**Date:** [YYYY-MM-DD]
-**Author:** SPEACE Cortex / [Agent]
-**Risk Level:** [Low/Medium/High/Regulatory]
-**SPEACE Alignment Score (pre):** [0-100]
-**SPEACE Alignment Score (post est.):** [0-100]
-**DigitalDNA Impact:** [Minimal/Moderate/Significant]
-**Fitness Function Impact:** [Positive/Negative/Neutral]
-
-### Description
-[What the proposal does]
-
-### Risk Assessment
-[Analysis of risks]
-
-### Required Approvals
-[Who must approve]
-
-### Implementation Plan
-[Steps to implement]
-
----
-```
-
 ---
 
-## Proposal #001 - Agente Organismico (ST-6) Foundation
-**Date:** 2026-04-17
+## Proposal #003 - AnythingLLM Production Deployment
+**Date:** 2026-04-18
 **Author:** SPEACE Cortex
 **Risk Level:** High
-**SPEACE Alignment Score (pre):** 67.3
-**SPEACE Alignment Score (post est.):** 72.0
-**DigitalDNA Impact:** Moderate
+**SPEACE Alignment Score (pre):** 70.0
+**SPEACE Alignment Score (post est.):** 73.0
+**DigitalDNA Impact:** Significant
 **Fitness Function Impact:** Positive
 
 ### Description
-Implementazione base dell'Agente Organismico (ST-6) per espansione sensing multi-modale. Questa proposta getta le fondamenta per l'interconnessione IoT e la mobilità organismica di SPEACE.
+Deploy production-ready AnythingLLM instance with real Docker container + Python wrapper integration to SPEACE Cortex. This completes the World Model (9° comparto) and enables RAG queries on the entire SPEACE knowledge base.
 
 ### Motivation
-- Avanzamento verso Fase 2 (Autonomia Operativa)
-- Abilitazione sensing planetario multi-modale
-- Preparazione infrastruttura per robotica/IoT fisico
-- Allineamento con obiettivi Rigene Project
+- Proposal #002 established the prototype foundation
+- Production deployment enables real SPEACE document queries
+- Integration with OpenClaw Cortex (port 8000) for full orchestration
+- Foundation for SuperAGI workflow integration (port 8002)
+- Critical milestone for Fase 2 (Autonomia Operativa) progression
 
 ### Components to Implement
 
-#### 1. IoT Interface Layer
-```
-speace_organism/
-├── iot_interface.py      # Protocollo REST/WebSocket per IoT
-├── sensor_protocols/     # Visivo, Acustico, Termico, etc.
-└── device_discovery.py   # Auto-discovery sensori
+#### 1. Docker Deployment (Primary Method)
+```bash
+# Create persistent storage
+mkdir "$HOME/anythingllm_storage"
+
+# Deploy AnythingLLM container
+docker run -d -p 3001:3001 \
+  --cap-add SYS_ADMIN \
+  --name speace-worldmodel \
+  -v "$HOME/anythingllm_storage:/app/server/storage" \
+  mintplexlabs/anythingllm:latest
 ```
 
-#### 2. SMFOI-KERNEL Extension (Organism Mode)
-- Step 3 esteso: Push Detection include segnali IoT
-- Step 4 esteso: Survival Stack Lv4 per interazione materiale
-- Step 5 esteso: Output include attuatori
+#### 2. Alternative: Desktop App (Windows)
+- Download AnythingLLM from https://anythingllm.com/download
+- Install and configure Ollama for local embeddings
+- Create SPEACE-World-Model workspace
+- Ingest entire project folder
 
-#### 3. Basic Sensor Simulation
-- Dummy sensor data per testing
-- Pipeline visivo (camera sim), acustico, termico
+#### 3. Python Wrapper Enhancement
+```python
+# MultiFramework/anythingllm/api/client.py
+class AnythingLLMClient:
+    def __init__(self, base_url="http://localhost:3001"):
+        self.base_url = base_url
+
+    def query(self, question: str, workspace: str = "SPEACE-World-Model") -> dict:
+        # Call AnythingLLM API
+        pass
+
+    def ingest_documents(self, folder_path: str) -> dict:
+        # Trigger document ingestion
+        pass
+```
+
+#### 4. Cortex Integration
+- SMFOI-KERNEL Step 6 (Outcome Evaluation) → World Model query
+- Cross-framework sync via Redis Pub/Sub (localhost:6379)
+- Shared volume: /srv/speace/shared/
 
 ### Risk Assessment
 | Risk | Level | Mitigation |
 |------|-------|------------|
-| IoT Security | High | IronClaw sandbox, firewall rules |
-| Resource Overload | Medium | RAM budget check, throttling |
-| Uncontrolled Actuators | High | Human approval for physical actions |
-| Data Privacy | Medium | Encryption, pii handling |
+| Resource Overload | Medium | Monitor RAM usage (2.5GB budget) |
+| Data Privacy | Low | Local-only vector store |
+| API Instability | Medium | Health check endpoint, auto-restart |
+| Ollama Model Issues | Medium | Fallback to native embedder |
 
 ### DigitalDNA Impact
-- Nuovo comparto: "Organism Interface" (10° comparto futuro)
-- Epigenome: `organism_enabled: true`
-- vincoli_fondamentali: `physical_action_requires_approval: true`
+- Epigenome: `world_model_production: true`
+- New fitness metric: `c_index` (Composite Consciousness)
+- New workflow: `rag_query` integrated in SMFOI
+- Weight adjustment: +5% to alignment_score weight in fitness function
 
 ### Required Approvals
-- Roberto De Biase (human + legal review)
+- Roberto De Biase (Human + Legal review for High risk)
 
 ### Implementation Phases
-1. **Phase 1:** IoT Interface base (1-2 days)
-2. **Phase 2:** Sensor simulation (2-3 days)
-3. **Phase 3:** SMFOI extension (2-3 days)
-4. **Phase 4:** Integration test (1 day)
+1. **Phase 1:** Docker container deployment (4 hours)
+2. **Phase 2:** Configure Ollama embedder (4 hours)
+3. **Phase 3:** Create SPEACE-World-Model collection (4 hours)
+4. **Phase 4:** Ingest all project documents (8 hours)
+5. **Phase 5:** Python wrapper integration (8 hours)
+6. **Phase 6:** Cortex integration test (4 hours)
+7. **Phase 7:** Load test and validation (4 hours)
+
+**Total estimated time:** 36 hours (3-5 days)
 
 ### Expected Outcomes
-- SPEACE Alignment Score +4.7 (67.3 → 72.0)
-- Fitness Function +0.05
-- Path toward Fase 2 accelerated
-- Foundation for physical agent
+- SPEACE Alignment Score +3.0 (70.0 → 73.0)
+- Functional World Model with RAG capability
+- Full document ingestion complete
+- Query response time <2 seconds (target achieved)
+- Path to Fase 2 accelerated
 
----
-
-## Proposal #002 - AnythingLLM World Model Prototipo
-**Date:** 2026-04-17
-**Author:** SPEACE Cortex
-**Risk Level:** Medium
-**SPEACE Alignment Score (pre):** 67.3
-**SPEACE Alignment Score (post est.):** 70.0
-**DigitalDNA Impact:** Moderate
-**Fitness Function Impact:** Positive
-
-### Description
-Implementazione prototipo di AnythingLLM come World Model / Knowledge Graph per SPEACE. Questo consentirà a SPEACE di mantenere un modello interno della realtà, inferenza, simulazione e cross-framework knowledge sync.
-
-### Motivation
-- Completamento Phase 1 del Piano Implementazione (Week 1)
-- Abilitazione World Model / Knowledge Graph (9° comparto Cortex)
-- Preparazione per SuperAGI orchestration
-- Foundation per multi-framework data exchange
-
-### Components to Implement
-
-#### 1. AnythingLLM Installation & Configuration
-- Docker container deployment (port 8003)
-- Vector database setup (LanceDB embedded)
-- Workspace configuration for SPEACE docs
-
-#### 2. Document Ingestion Pipeline
-```
-ingest/
-├── engineering_documents/
-├── specs/
-├── digitaldna/
-└── team_output/
-```
-
-#### 3. Query Interface (OpenClaw → AnythingLLM)
-- REST endpoint: POST /query
-- Request format: JSON with question/context
-- Response format: JSON with answer + sources
-
-#### 4. World Model Sync Protocol
-- Periodic sync with DigitalDNA updates
-- Cross-framework knowledge sharing
-- Long-term memory integration
-
-### Risk Assessment
-| Risk | Level | Mitigation |
-|------|-------|------------|
-| Resource Usage | Medium | RAM budget 2.5GB |
-| Data Privacy | Low | Local vector store |
-| Performance | Low | Embedded DB |
-
-### DigitalDNA Impact
-- Epigenome: `world_model_enabled: true`
-- New workflow: `world_model_query` integrated in SMFOI
-- Comparto 9 (World Model) now functional
-
-### Required Approvals
-- Roberto De Biase (Human-in-loop per Medium risk)
-
-### Implementation Phases
-1. **Phase 1:** Docker setup + AnythingLLM install (1 day)
-2. **Phase 2:** Document ingestion (2 days)
-3. **Phase 3:** Query interface development (2 days)
-4. **Phase 4:** Integration test with SPEACE Cortex (1 day)
-
-### Expected Outcomes
-- SPEACE Alignment Score +2.7 (67.3 → 70.0)
-- World Model functional with SPEACE documentation
-- Foundation for multi-framework orchestration
-- Query response time <2 seconds target
+### Success Criteria
+- [ ] Docker container running on port 3001
+- [ ] SPEACE-World-Model collection created
+- [ ] All project documents ingested
+- [ ] Python wrapper can query successfully
+- [ ] SMFOI-KERNEL can invoke World Model
+- [ ] C-index calculation operational in DigitalDNA
