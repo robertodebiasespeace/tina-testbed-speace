@@ -1,0 +1,209 @@
+# ============================================================
+# SPEACE DIGITAL DNA – EPIGENOME
+# Versione: 1.0 | Data: 2026-04-17
+# Regolazioni DINAMICHE – modificabili tramite mutazioni
+# approvate da SafeProactive (Risk Level: Medium)
+# ============================================================
+
+meta:
+  version: "1.3"
+  last_updated: "2026-04-20"
+  last_mutation_id: "EPI-003"
+  mutation_count: 3
+  # EPI-001: Aggiunta sezione consciousness_metrics (ACF Integration)
+  #          + fitness_function v2 (6 componenti) in mutation_rules.yaml
+  # EPI-002: M2 – external_benchmark_validated=true dopo benchmark suite 6/6 pass
+  #          (PROP-BENCHMARK-ROLLBACK-M2, snap_20260418_143355_m2_benchmark_rollback)
+  # EPI-003: M3L.6 – Aggiunta blocchi neural_flow: e llm: (cascade LM Studio →
+  #          Anthropic → mock). Benchmark suite 8/8 pass (incluso bench_llm_smoke
+  #          e bench_neural_flow). Flag neural_flow_enabled rimane OFF (opt-in).
+  #          (PROP-CORTEX-NEURAL-M3L, evidence in benchmarks/results.json)
+
+# --- Parametri di apprendimento e adattamento ---
+learning:
+  learning_rate: 0.05
+  exploration_rate: 0.15        # curiosità: quanto SPEACE esplora vs sfrutta
+  yield_priority: 3             # priorità a task ad alto rendimento (1-10)
+  reflection_depth: 2           # livelli di auto-riflessione post-ciclo
+  memory_retention_days: 90     # giorni di memoria episodica da mantenere
+
+# --- Parametri evolutivi ---
+evolution:
+  heartbeat_interval_min: 60    # minuti tra cicli evolver
+  status_report_interval_min: 40 # minuti tra status report
+  mutation_threshold: 0.65      # fitness minima per accettare una mutazione
+  max_mutations_per_cycle: 3    # massimo mutazioni approvabili per ciclo
+  tina_alignment_weight: 0.35   # peso allineamento TINA nella fitness
+
+# --- Allineamento Rigene Project ---
+tina_alignment:
+  active: true
+  source: "https://www.rigeneproject.org"
+  fetch_interval_min: 60
+  last_fetch: null
+  current_objectives_hash: null
+  alignment_score: 0.0          # 0.0–1.0, calibrato su benchmark esterni
+
+# --- Stato runtime agenti ---
+agents:
+  scientific_team_active: true
+  evolver_active: true
+  monitor_active: true
+  world_model_active: true
+  adversarial_agent_active: true
+
+# --- Parametri World Model ---
+world_model:
+  backend: "local_json"         # "local_json" | "anythingllm" | "neo4j"
+  update_interval_min: 30
+  data_sources:
+    - name: "rigeneproject.org"
+      url: "https://www.rigeneproject.org"
+      type: "web_scrape"
+      active: true
+    - name: "NOAA Climate"
+      url: "https://www.noaa.gov/climate"
+      type: "web_fetch"
+      active: false             # abilitare quando serve
+    - name: "UN SDGs"
+      url: "https://unstats.un.org/sdgs"
+      type: "web_fetch"
+      active: false
+
+# --- Compliance e regolatorio ---
+regulatory:
+  eu_ai_act_monitoring: true
+  nist_ai_rmf: true
+  iso_42001: false              # da abilitare in Fase 1b
+  last_regulatory_check: null
+  risk_classification: "limited" # minimal | limited | high | unacceptable
+
+# --- Metriche di fitness (valori correnti) ---
+fitness_metrics:
+  speace_alignment_score: 0.0   # DEVE essere calibrato su benchmark esterni
+  task_success_rate: 0.0        # % task completati con successo
+  system_stability: 1.0         # 1.0 = stabile, 0.0 = crash/errori
+  resource_efficiency: 0.8      # uso RAM/CPU rispetto al budget
+  ethical_compliance: 1.0       # 0.0 = violazioni, 1.0 = compliant
+  current_fitness: 0.0          # calcolato da mutation_rules.yaml (fitness v2)
+
+# --- Consciousness Index (C-index) – ACF Framework ---
+# Formula: C-index = α·Φ + β·W-activation + γ·A-complexity
+# Riferimento: Implementation and Testing of an Adaptive Artificial
+#              Consciousness Framework (2025)
+consciousness_metrics:
+  c_index: 0.0                  # Indice composito [0.0–1.0]
+  c_index_level: "Reattivo"     # Reattivo | Funzionale | Adattivo | Cosciente-Funzionale | Emergente
+  c_index_trend: 0.0            # Δ rispetto al ciclo precedente
+
+  # Componenti C-index
+  phi: 0.0                      # Φ – Integrazione informativa (IIT, α=0.40)
+  phi_mode: "fast"              # "fast" | "medium" | "full"
+  phi_trend: 0.0                # Δ Φ recente
+
+  w_activation: 0.0             # W-activation – Workspace Globale (GWT, β=0.35)
+  workspace_active_compartments: []   # Comparti attivi nell'ultimo ciclo
+
+  a_complexity: 0.0             # A-complexity – Metacognizione adattiva (γ=0.25)
+  plasticity_index: 0.0         # Indice di plasticità cognitiva
+
+  # Pesi formula C-index (immutabili in Fase 1)
+  alpha: 0.40
+  beta: 0.35
+  gamma: 0.25
+
+  # Storico ultimi 10 cicli (rolling)
+  c_index_history: []
+  last_updated_cycle: null
+
+  # Suggerimento evolutivo corrente
+  evolution_suggestion: null    # generato da ConsciousnessIndex.suggest_evolution()
+
+# --- Neural Flow (M3L) ---
+# Orchestrazione canonica dei 9 comparti del Cortex.
+# Opt-in: di default DISABILITATA per non alterare il comportamento M2.
+neural_flow:
+  enabled: false                # opt-in: abilitare dopo verifica su staging
+  canonical_order:              # ordine canonico (NeuralFlow lo rispetta se non sovrascritto dallo scheduler)
+    - "parietal_lobe"           # L4 – sensing
+    - "temporal_lobe"           # L2 – cognizione linguistica
+    - "world_model"             # L2 – contesto sistemico
+    - "prefrontal_cortex"       # L1 – pianificazione
+    - "safety_module"           # L1 – veto/override
+    - "cerebellum"              # L4 – esecuzione whitelisted
+    - "hippocampus"             # L3 – memoria
+    - "default_mode_network"    # L2 – riflessione
+    - "curiosity_module"        # L5 – mutation proposal
+  conditional_thresholds:       # soglie scheduler condizionale (ConditionalScheduler)
+    uncertainty_for_temporal: 0.30
+    novelty_for_world_model: 0.35
+    risk_for_safety: 0.20       # safety è sempre attiva, soglia per log verboso
+    drift_for_world_model: 0.40
+    novelty_for_curiosity: 0.50
+  safety_downstream_policy: "skip_L2plus"  # post-blocco Safety → skip comparti L>=2
+                                           # (eccezioni: hippocampus, default_mode_network)
+  validated_by_benchmark: true  # 2026-04-20: bench_neural_flow 2/2 scenari pass
+
+# --- LLM Adapter (M3L) ---
+# Cascade: openai_compat (LM Studio) → anthropic (Claude API) → mock (safety net)
+# Il mock è sempre attivo come ultima risorsa: il sistema non può rimanere senza LLM.
+llm:
+  primary: "openai_compat"      # backend primario (LM Studio locale, porta 1234)
+  fallback_chain:               # ordine di fallback (primo disponibile vince)
+    - "anthropic"
+    - "mock"
+  backends:
+    openai_compat:
+      enabled: true
+      base_url: "http://localhost:1234/v1"
+      model: "local-model"      # auto-detect: il primo modello caricato in LM Studio
+      timeout_s: 30
+      max_retries: 1
+    ollama_native:
+      enabled: false            # opzionale, richiede ollama serve
+      base_url: "http://localhost:11434"
+      model: "llama3.1:8b-instruct-q4_K_M"
+      timeout_s: 30
+    anthropic:
+      enabled: true
+      model: "claude-haiku-4-5-20251001"  # rapido ed economico per fallback
+      timeout_s: 30
+      requires_env: "ANTHROPIC_API_KEY"
+    mock:
+      enabled: true             # SEMPRE ON: safety net
+      latency_ms: 1             # risposta quasi-istantanea
+      is_stub: true             # segnalato esplicitamente in LLMResponse
+  routing:
+    health_check_on_start: true
+    skip_failing_backend_s: 60  # dopo fallimento, non riprovare per 60s (circuit breaker leggero)
+    log_backend_used: true
+  validated_by_benchmark: true  # 2026-04-20: bench_llm_smoke pass (cascade → mock)
+
+# --- Flag di sistema ---
+flags:
+  rollback_system_active: true
+  external_benchmark_validated: true   # M2 (2026-04-18): 6/6 pass → M3L.6 (2026-04-20): 8/8 pass
+  neural_flow_enabled: false           # M3L.6: opt-in, da abilitare in staging dopo verifica
+  llm_cascade_enabled: true            # M3L.6: cascade sempre attiva (mock come safety net)
+  debug_mode: false
+  verbose_logging: true
+  safe_mode: true               # disabilita azioni rischiose
+
+# --- Storico mutazioni (ultime 10) ---
+mutation_history:
+  - id: "EPI-002"
+    timestamp: "2026-04-18T14:38:00"
+    proposal: "PROP-BENCHMARK-ROLLBACK-M2"
+    change: "flags.external_benchmark_validated: false → true"
+    evidence: "benchmarks/results.json (6/6 pass)"
+    snapshot_pre: "snap_20260418_143355_m2_benchmark_rollback"
+  - id: "EPI-003"
+    timestamp: "2026-04-20T09:40:00"
+    proposal: "PROP-CORTEX-NEURAL-M3L"
+    change: >
+      Aggiunti blocchi neural_flow: (ordine canonico 9 comparti + thresholds)
+      e llm: (cascade openai_compat → anthropic → mock).
+      Nuovi flag: neural_flow_enabled (OFF, opt-in), llm_cascade_enabled (ON).
+      Suite benchmark estesa: 8/8 pass (aggiunti bench_llm_smoke + bench_neural_flow).
+    evidence: "benchmarks/results.json (8/8 pass, 2026-04-20)"
+    snapshot_pre: "pending_before_m4_1"   # snapshot dedicato verrà creato prima di M4.1

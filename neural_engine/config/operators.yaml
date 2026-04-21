@@ -1,0 +1,149 @@
+# SPEACE Neural Engine - Operators Configuration
+# Definisce gli operatori Disponibili per i neuroni
+
+operators:
+  # Operatori logici
+  logical:
+    - name: AND
+      symbol: "&&"
+      arity: 2
+      description: Logical AND
+    - name: OR
+      symbol: "||"
+      arity: 2
+      description: Logical OR
+    - name: NOT
+      symbol: "!"
+      arity: 1
+      description: Logical NOT
+    - name: XOR
+      symbol: "^"
+      arity: 2
+      description: Logical XOR
+
+  # Operatori matematici
+  mathematical:
+    - name: ADD
+      symbol: "+"
+      arity: 2
+      description: Addition
+    - name: SUBTRACT
+      symbol: "-"
+      arity: 2
+      description: Subtraction
+    - name: MULTIPLY
+      symbol: "*"
+      arity: 2
+      description: Multiplication
+    - name: DIVIDE
+      symbol: "/"
+      arity: 2
+      description: Division
+    - name: MOD
+      symbol: "%"
+      arity: 2
+      description: Modulo
+    - name: POW
+      symbol: "**"
+      arity: 2
+      description: Power
+
+  # Operatori di confronto
+  comparison:
+    - name: EQ
+      symbol: "=="
+      arity: 2
+      description: Equal
+    - name: NEQ
+      symbol: "!="
+      arity: 2
+      description: Not equal
+    - name: GT
+      symbol: ">"
+      arity: 2
+      description: Greater than
+    - name: GTE
+      symbol: ">="
+      arity: 2
+      description: Greater than or equal
+    - name: LT
+      symbol: "<"
+      arity: 2
+      description: Less than
+    - name: LTE
+      symbol: "<="
+      arity: 2
+      description: Less than or equal
+
+  # Operatori di trasformazione
+  transformation:
+    - name: MAP
+      arity: 2
+      description: Map function over collection
+    - name: FILTER
+      arity: 2
+      description: Filter collection by predicate
+    - name: REDUCE
+      arity: 3
+      description: Reduce collection to single value
+    - name: FLATMAP
+      arity: 2
+      description: Flatten and map
+    - name: SORT
+      arity: 2
+      description: Sort collection
+    - name: GROUP
+      arity: 2
+      description: Group by key
+
+  # Operatori di stringa
+  string:
+    - name: CONCAT
+      arity: 2
+      description: Concatenate strings
+    - name: SPLIT
+      arity: 2
+      description: Split string by delimiter
+    - name: MATCH
+      arity: 2
+      description: Match regex pattern
+    - name: REPLACE
+      arity: 3
+      description: Replace pattern in string
+
+  # Operatori temporali
+  temporal:
+    - name: DELAY
+      arity: 2
+      description: Delay execution by duration
+    - name: THROTTLE
+      arity: 2
+      description: Throttle execution rate
+    - name: DEBOUNCE
+      arity: 2
+      description: Debounce rapid calls
+    - name: TIMEOUT
+      arity: 2
+      description: Timeout for operation
+
+  # Operatori di rete
+  network:
+    - name: FETCH
+      arity: 1
+      description: Fetch data from URL
+    - name: POST
+      arity: 2
+      description: POST data to endpoint
+    - name: SUBSCRIBE
+      arity: 2
+      description: Subscribe to events
+    - name: PUBLISH
+      arity: 2
+      description: Publish event
+
+# Limiti degli operatori
+limits:
+  max_arity: 10
+  max_nested_calls: 100
+  execution_timeout_ms: 5000
+  memory_limit_mb: 128

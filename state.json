@@ -1,0 +1,161 @@
+{
+  "version": "1.0",
+  "phase": 1,
+  "phase_name": "Embrionale",
+  "created": "2026-04-17T00:00:00",
+  "cycles": [
+    {
+      "id": "CYCLE-SPEACE-VERIFY-0001",
+      "ts": "2026-04-17T11:18:32.748240",
+      "fitness": 0.62
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0001",
+      "ts": "2026-04-18T13:41:32.737378",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0001",
+      "ts": "2026-04-18T14:22:09.431073",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0001",
+      "ts": "2026-04-18T14:37:27.134917",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0002",
+      "ts": "2026-04-18T14:37:27.297553",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0003",
+      "ts": "2026-04-18T14:37:27.470728",
+      "fitness": 0.5912
+    },
+    {
+      "id": "CYCLE-BENCH-CINDEX-0001",
+      "ts": "2026-04-18T14:37:27.799905",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-BENCH-FITNESS-0001",
+      "ts": "2026-04-18T14:37:28.006911",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-BENCH-CINDEX-0001",
+      "ts": "2026-04-18T14:38:12.016409",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0001",
+      "ts": "2026-04-18T14:38:17.078095",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0002",
+      "ts": "2026-04-18T14:38:17.261454",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0003",
+      "ts": "2026-04-18T14:38:17.434294",
+      "fitness": 0.5876
+    },
+    {
+      "id": "CYCLE-BENCH-CINDEX-0001",
+      "ts": "2026-04-18T14:38:17.760852",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-BENCH-FITNESS-0001",
+      "ts": "2026-04-18T14:38:17.967396",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0001",
+      "ts": "2026-04-19T08:45:52.298480",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0002",
+      "ts": "2026-04-19T08:45:52.501408",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0003",
+      "ts": "2026-04-19T08:45:52.694561",
+      "fitness": 0.5877
+    },
+    {
+      "id": "CYCLE-BENCH-CINDEX-0001",
+      "ts": "2026-04-19T08:45:53.119428",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-BENCH-FITNESS-0001",
+      "ts": "2026-04-19T08:45:53.367865",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-M3L2-smoke-0001",
+      "ts": "2026-04-19T10:00:40.545347",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0001",
+      "ts": "2026-04-20T09:34:20.266940",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0002",
+      "ts": "2026-04-20T09:34:20.477342",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0003",
+      "ts": "2026-04-20T09:34:20.688283",
+      "fitness": 0.5876
+    },
+    {
+      "id": "CYCLE-BENCH-CINDEX-0001",
+      "ts": "2026-04-20T09:34:21.158430",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-BENCH-FITNESS-0001",
+      "ts": "2026-04-20T09:34:21.473833",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0001",
+      "ts": "2026-04-20T09:38:45.362537",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0002",
+      "ts": "2026-04-20T09:38:45.632306",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-SPEACE-MAIN-0003",
+      "ts": "2026-04-20T09:38:45.831215",
+      "fitness": 0.5863
+    },
+    {
+      "id": "CYCLE-BENCH-CINDEX-0001",
+      "ts": "2026-04-20T09:38:46.291928",
+      "fitness": 0.5867
+    },
+    {
+      "id": "CYCLE-BENCH-FITNESS-0001",
+      "ts": "2026-04-20T09:38:46.583730",
+      "fitness": 0.5867
+    }
+  ],
+  "last_fitness": 0.5867,
+  "last_cycle": "CYCLE-BENCH-FITNESS-0001",
+  "last_run": "2026-04-20T09:38:46.583730"
+}

@@ -1,0 +1,51 @@
+# ============================================================
+# SPEACE DIGITAL DNA – REGULATORY EPIGENOME
+# Versione: 1.0 | Data: 2026-04-17
+# Layer di compliance normativa (EU AI Act, NIST, ISO 42001)
+# Aggiornato ogni 60 min via speace-cortex-evolver
+# ============================================================
+
+meta:
+  version: "1.0"
+  last_updated: "2026-04-17"
+  last_regulatory_fetch: null
+
+eu_ai_act:
+  active: true
+  source: "https://artificialintelligenceact.eu"
+  speace_risk_class: "limited"       # minimal | limited | high | unacceptable
+  transparency_obligations: true
+  human_oversight_required: true
+  prohibited_practices_check: true
+  last_check: null
+  compliance_score: null
+
+nist_ai_rmf:
+  active: true
+  source: "https://www.nist.gov/artificial-intelligence"
+  functions:
+    govern: true
+    map: true
+    measure: false               # da implementare in Fase 1b
+    manage: false
+
+iso_42001:
+  active: false                  # da abilitare in Fase 1b
+  source: "https://www.iso.org/standard/81230.html"
+
+singapore_agentic:
+  active: false
+  source: "https://www.imda.gov.sg/aigentic"
+
+# --- Risk Assessment SPEACE ---
+risk_assessment:
+  agentic_autonomy_level: "supervised"    # supervised | conditional | full
+  data_processing: "public_web_only"
+  physical_world_impact: "none"           # none | indirect | direct
+  decision_making_impact: "advisory"      # advisory | operational | critical
+
+# --- Trigger di alert normativo ---
+alerts:
+  new_regulation_detected: false
+  compliance_score_below: 0.80
+  high_risk_action_attempted: false

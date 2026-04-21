@@ -1,0 +1,59 @@
+# SPEACE EA Genome — Stable Identity (Immutable)
+# Defines the core identity and immutable structure of the XAUUSD trading EA.
+# Modifications to this file require HIGH approval via SafeProactive.
+
+identity:
+  name: "SPEACE-EA-XAUUSD"
+  version: "1.00"
+  phase: 1
+  phase_name: "Demo Trading — Experimental"
+  founder: "Roberto De Biase"
+  mt5_symbol: "XAUUSD"
+  account_type: "DEMO"
+
+core_objectives:
+  - OBJ-EA-01: Generate positive risk-adjusted returns (immutable)
+  - OBJ-EA-02: Preserve capital via drawdown protection (immutable)
+  - OBJ-EA-03: Operate within SPEACE ethical constraints (immutable)
+  - OBJ-EA-04: Self-optimize via SPEACE evolver loop (mutable)
+  - OBJ-EA-05: Minimize human intervention in demo mode (mutable)
+
+# EA Architecture (stable, not mutable)
+architecture:
+  strategy_type: "RSI + MA Crossover"
+  risk_management: "Fixed fractional"
+  max_simultaneous_trades: 3
+  execution_mode: "semi_autonomous"  # SPEACE modifies params; EA executes trades
+
+# Immutable Safety Rules (cannot be overridden)
+safety_rules:
+  max_drawdown_hard: 30.0        # Hard stop — close all trades
+  max_drawdown_soft: 20.0        # Soft stop — reduce exposure
+  max_daily_loss: 100.0          # Max loss per day (USD)
+  max_single_trade_risk: 0.02    # Max 2% account per trade
+  human_override_enabled: true   # Can be disabled in pure-autonomous mode
+  physical_world_actions: false   # No physical world impact
+  blockchain_wallet: read_only   # Cannot move funds
+
+# Immutable Parameters
+immutable_params:
+  - MaxDrawdownPct        # Hard safety limit
+  - MaxDailyLoss         # Daily loss cap
+  - MaxSingleTradeRisk    # Per-trade risk ceiling
+  - human_override_enabled
+
+# Comparto binding
+speace_cortex_binding:
+  compartment: "trading_cortex"
+  level: 2
+  evolver_agent: "speace-ea-evolver"
+  state_bus_prefix: "trading_ea"
+
+# MT5 Integration
+mt5_integration:
+  magic_number: 20260420
+  shared_state_path: "C:\\Users\\rober\\Documents\\Claude\\Projects\\SPEACE-prototipo\\speace-ea-integration\\shared_state\\"
+  heartbeat_interval_sec: 60
+  metrics_file: "ea_metrics.json"
+  state_file: "ea_state.json"
+  params_file: "ea_params.json"

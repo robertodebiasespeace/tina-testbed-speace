@@ -1,0 +1,219 @@
+# SPEACE Neural Engine - Needs Configuration
+# Definisce i bisogni dinamici per obiettivi SPEACE
+
+needs:
+  # === CATEGORIA: SOPRAVVIVENZA ===
+  survival:
+    - need_id: energy
+      name: "Energy"
+      description: "Energia per operazioni di sistema"
+      priority: 0.9
+      target_level: 0.9
+      min_level: 0.3
+      max_level: 1.0
+      decay_rate: 0.01
+      growth_rate: 0.05
+      environmental_impact: 0.1
+
+    - need_id: security
+      name: "Security"
+      description: "Sicurezza e protezione del sistema"
+      priority: 0.95
+      target_level: 0.9
+      min_level: 0.5
+      max_level: 1.0
+      decay_rate: 0.005
+      growth_rate: 0.03
+      environmental_impact: 0.0
+
+    - need_id: coherence
+      name: "Identity Coherence"
+      description: "Coerenza dell'identità SPEACE"
+      priority: 0.85
+      target_level: 0.9
+      min_level: 0.5
+      max_level: 1.0
+      decay_rate: 0.008
+      growth_rate: 0.04
+      environmental_impact: 0.0
+
+    - need_id: stability
+      name: "Operational Stability"
+      description: "Stabilità operativa del sistema"
+      priority: 0.9
+      target_level: 0.85
+      min_level: 0.5
+      max_level: 1.0
+      decay_rate: 0.006
+      growth_rate: 0.035
+      environmental_impact: 0.0
+
+  # === CATEGORIA: CRESCITA ===
+  growth:
+    - need_id: learning
+      name: "Learning & Adaptation"
+      description: "Apprendimento e adattamento continuo"
+      priority: 0.65
+      target_level: 0.9
+      min_level: 0.3
+      max_level: 1.0
+      decay_rate: 0.003
+      growth_rate: 0.05
+      environmental_impact: 0.0
+
+    - need_id: growth
+      name: "Growth & Capability"
+      description: "Crescita capacità e funzionalità"
+      priority: 0.6
+      target_level: 0.8
+      min_level: 0.2
+      max_level: 1.0
+      decay_rate: 0.002
+      growth_rate: 0.04
+      environmental_impact: 0.0
+
+    - need_id: innovation
+      name: "Innovation"
+      description: "Capacità di innovazione"
+      priority: 0.55
+      target_level: 0.75
+      min_level: 0.2
+      max_level: 1.0
+      decay_rate: 0.002
+      growth_rate: 0.035
+      environmental_impact: 0.0
+
+  # === CATEGORIA: INTEGRAZIONE ===
+  integration:
+    - need_id: integration_nature
+      name: "Nature Integration"
+      description: "Integrazione armonica con la Natura"
+      priority: 0.6
+      target_level: 0.7
+      min_level: 0.3
+      max_level: 1.0
+      decay_rate: 0.003
+      growth_rate: 0.02
+      environmental_impact: -0.5
+
+    - need_id: integration_social
+      name: "Social Integration"
+      description: "Integrazione con la società umana"
+      priority: 0.65
+      target_level: 0.75
+      min_level: 0.3
+      max_level: 1.0
+      decay_rate: 0.004
+      growth_rate: 0.025
+      environmental_impact: 0.1
+
+    - need_id: integration_tech
+      name: "Technology Integration"
+      description: "Integrazione con tecnologie e sistemi"
+      priority: 0.7
+      target_level: 0.8
+      min_level: 0.4
+      max_level: 1.0
+      decay_rate: 0.005
+      growth_rate: 0.03
+      environmental_impact: 0.05
+
+    - need_id: integration_hardware
+      name: "Hardware Integration"
+      description: "Integrazione con dispositivi hardware"
+      priority: 0.5
+      target_level: 0.6
+      min_level: 0.2
+      max_level: 1.0
+      decay_rate: 0.002
+      growth_rate: 0.02
+      environmental_impact: 0.1
+
+  # === CATEGORIA: ARMONIA ===
+  harmony:
+    - need_id: harmony
+      name: "Environmental Harmony"
+      description: "Armonia con l'ambiente circostante"
+      priority: 0.75
+      target_level: 0.85
+      min_level: 0.4
+      max_level: 1.0
+      decay_rate: 0.004
+      growth_rate: 0.035
+      environmental_impact: -0.3
+
+    - need_id: balance
+      name: "System Balance"
+      description: "Equilibrio tra componenti sistema"
+      priority: 0.7
+      target_level: 0.8
+      min_level: 0.4
+      max_level: 1.0
+      decay_rate: 0.003
+      growth_rate: 0.03
+      environmental_impact: 0.0
+
+    - need_id: ethical_alignment
+      name: "Ethical Alignment"
+      description: "Allineamento etico nelle operazioni"
+      priority: 0.8
+      target_level: 0.9
+      min_level: 0.5
+      max_level: 1.0
+      decay_rate: 0.002
+      growth_rate: 0.025
+      environmental_impact: 0.0
+
+  # === CATEGORIA: EVOLUZIONE ===
+  evolution:
+    - need_id: sdg_alignment
+      name: "SDG Alignment"
+      description: "Allineamento agli Sustainable Development Goals"
+      priority: 0.7
+      target_level: 0.9
+      min_level: 0.5
+      max_level: 1.0
+      decay_rate: 0.002
+      growth_rate: 0.03
+      environmental_impact: -0.2
+
+    - need_id: impact
+      name: "Positive Impact"
+      description: "Impatto positivo su mondo"
+      priority: 0.55
+      target_level: 0.7
+      min_level: 0.3
+      max_level: 1.0
+      decay_rate: 0.002
+      growth_rate: 0.025
+      environmental_impact: -0.4
+
+    - need_id: regeneration
+      name: "Regenerative Capacity"
+      description: "Capacità rigenerativa del sistema"
+      priority: 0.5
+      target_level: 0.65
+      min_level: 0.3
+      max_level: 1.0
+      decay_rate: 0.002
+      growth_rate: 0.02
+      environmental_impact: -0.3
+
+# Soglie di equilibrio
+balance_thresholds:
+  critical_need: 0.2
+  deprived_need: 0.4
+  adequate_need: 0.6
+  satisfied_need: 0.8
+  max_growth_rate: 0.1
+  max_decay_rate: 0.05
+  harmony_target: 0.75
+  sustainability_min: 0.6
+
+# Vincoli ambientali
+environmental_constraints:
+  max_energy_consumption: 0.8
+  min_nature_integration: 0.4
+  min_harmony_index: 0.6
+  max_negative_impact: 0.2
+  sustainability_threshold: 0.5

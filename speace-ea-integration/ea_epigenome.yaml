@@ -1,0 +1,112 @@
+# SPEACE EA Epigenome — Mutable Parameters (v1.0)
+# These parameters can be modified by the EA Evolver via SafeProactive approval.
+# Immutable parameters are listed separately in ea_genome.yaml.
+
+meta:
+  name: "SPEACE-EA-Epigenome"
+  version: "1.0"
+  mutation_count: 0
+  last_mutation_id: null
+  evolver_active: true
+  cycle_count: 0
+
+# Mutable Parameters — subject to SafeProactive mutation rules
+parameters:
+  LotSize:
+    current: 0.1
+    min: 0.01
+    max: 1.0
+    description: "Trading lot size"
+    mutation_type: "epigenetic"
+
+  StopLossPips:
+    current: 500
+    min: 50
+    max: 5000
+    description: "Stop Loss distance in pips (1 pip = 0.01 for XAUUSD)"
+    mutation_type: "epigenetic"
+
+  TakeProfitPips:
+    current: 1000
+    min: 100
+    max: 10000
+    description: "Take Profit distance in pips"
+    mutation_type: "epigenetic"
+
+  RSI_Period:
+    current: 14
+    min: 2
+    max: 100
+    description: "RSI lookback period"
+    mutation_type: "epigenetic"
+
+  MA_Fast_Period:
+    current: 10
+    min: 2
+    max: 200
+    description: "Fast EMA period"
+    mutation_type: "epigenetic"
+
+  MA_Slow_Period:
+    current: 30
+    min: 5
+    max: 500
+    description: "Slow EMA period"
+    mutation_type: "epigenetic"
+
+  MaxTrades:
+    current: 3
+    min: 1
+    max: 10
+    description: "Maximum simultaneous trades"
+    mutation_type: "epigenetic"
+
+  TrailingStopPips:
+    current: 250
+    min: 50
+    max: 2000
+    description: "Trailing stop distance"
+    mutation_type: "epigenetic"
+
+# Mutable Flags
+flags:
+  evolver_enabled: true
+  auto_rollback_on_drawdown: true
+  emergency_mode: false
+  strategy_locked: false   # If true, strategy type cannot change
+
+# Evolver Settings
+evolver:
+  enabled: true
+  interval_minutes: 5
+  mutation_threshold: 0.65        # Fitness below this triggers mutation proposal
+  consecutive_poor_limit: 3        # Cycles of poor fitness before mutation
+  fitness_acceptance: 0.60
+  rollback_threshold: 0.10         # Auto-rollback if fitness drops by >10%
+  max_mutations_per_hour: 6
+  max_mutations_total: 50
+  auto_rollback: true
+
+# Fitness Weights (same as SPEACE fitness v2)
+fitness_weights:
+  alignment: 0.25
+  task_success: 0.20
+  stability: 0.15
+  efficiency: 0.10
+  ethics: 0.05
+  c_index: 0.25
+
+# Mutation History
+mutation_log: []
+
+# Override Actions
+overrides:
+  drawdown_emergency:
+    LotSize: 0.01
+    MaxTrades: 1
+    description: "Emergency lot reduction when drawdown > soft limit"
+
+  no_signal_mode:
+    LotSize: 0.05
+    MaxTrades: 1
+    description: "Reduced exposure when no clear signals"

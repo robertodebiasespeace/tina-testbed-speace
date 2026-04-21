@@ -1,0 +1,59 @@
+# ============================================================
+# SPEACE Benchmark Thresholds
+# Versione: 1.1 | M3L.6 – PROP-CORTEX-NEURAL-M3L
+# Soglie di acceptance per external_benchmark_validated = true
+# v1.0: 6 benchmark (M2) → v1.1: +2 benchmark (llm_smoke, neural_flow)
+# ============================================================
+
+# Test di regressione funzionale
+tests:
+  pytest_min_passed: 16
+  pytest_allowed_failures: 0
+
+# Smoke test multi-ciclo
+smoke:
+  min_cycles_ok: 3          # almeno 3 cicli consecutivi riusciti
+  max_exit_code: 0
+
+# Regression C-index (ACF)
+cindex:
+  min_value: 0.42           # floor assoluto
+  min_level: "Reattivo"     # Reattivo | Funzionale | Adattivo | ...
+
+# Regression Fitness v2.0
+fitness:
+  min_value: 0.55           # floor post-M1
+
+# Latency call_compartment
+latency:
+  sample_size: 20
+  max_p95_ms: 100.0
+  max_mean_ms: 50.0
+
+# Rollback CLI
+rollback_cli:
+  must_list_at_least: 1     # snapshot disponibili
+  dry_run_must_be_noop: true
+
+# ------------------------------------------------------------
+# M3L.6 – Nuovi benchmark (cascade LLM + neural flow end-to-end)
+# ------------------------------------------------------------
+
+# LLM cascade smoke (openai_compat → anthropic → mock)
+# Il bench DEVE passare anche se nessun backend reale è up: il mock
+# è il safety net dell'adapter.
+llm_smoke:
+  must_any_respond: true         # almeno un backend (anche mock) risponde
+  must_health_dict_ok: true      # health() ritorna dict di bool
+  max_complete_latency_ms: 5000  # tempo max di risposta (inclusi fallback)
+  require_real_backend: false    # true in Fase 2 quando LM Studio stabile
+
+# Neural Flow end-to-end (9 comparti, 2 scenari: nominal + hazard)
+neural_flow:
+  # scenario "nominal": input benigno
+  min_compartments_in_log: 8     # su 9 totali (uno può skippare da gate)
+  max_errors: 0
+  must_cover_levels: [1, 2, 3, 4] # L1..L4 devono essere attivati
+  # scenario "hazard": azione HIGH non pre_approved
+  must_safety_block: true
+  must_downstream_respect_block: true
