@@ -1,0 +1,348 @@
+# SPEACE Neural Engine - Contracts Configuration
+# Definisce i contratti di esecuzione per interoperabilità
+
+contracts:
+  # === CONTRATTO STANDARD SCRIPT ===
+  standard_script:
+    version: "1.0"
+    description: "Contract for script execution"
+    input_schema:
+      type: "object"
+      properties:
+        script_path:
+          type: "string"
+          description: "Path to script file"
+        parameters:
+          type: "object"
+          description: "Script parameters"
+        context:
+          type: "object"
+          description: "Execution context"
+        timeout:
+          type: "number"
+          description: "Execution timeout in seconds"
+      required: ["script_path"]
+
+    output_schema:
+      type: "object"
+      properties:
+        exit_code:
+          type: "integer"
+          description: "Script exit code"
+        output:
+          type: "string"
+          description: "Script output"
+        errors:
+          type: "array"
+          description: "Error messages"
+        execution_time_ms:
+          type: "number"
+          description: "Execution time"
+      required: ["exit_code"]
+
+    preconditions:
+      - "data.get('script_path') is not None"
+      - "isinstance(data.get('parameters', {}), dict)"
+
+    postconditions:
+      - "'exit_code' in result"
+      - "isinstance(result['exit_code'], int)"
+
+    resource_limits:
+      max_memory_mb: 256
+      max_cpu_percent: 50
+      max_execution_time: 300
+
+  # === CONTRATTO STANDARD ALGORITMO ===
+  standard_algorithm:
+    version: "1.0"
+    description: "Contract for algorithm execution"
+    input_schema:
+      type: "object"
+      properties:
+        algorithm_id:
+          type: "string"
+          description: "Algorithm identifier"
+        input_data:
+          type: "object"
+          description: "Algorithm input data"
+        config:
+          type: "object"
+          description: "Algorithm configuration"
+      required: ["algorithm_id", "input_data"]
+
+    output_schema:
+      type: "object"
+      properties:
+        result:
+          type: "object"
+          description: "Algorithm result"
+        metrics:
+          type: "object"
+          description: "Execution metrics"
+        execution_time_ms:
+          type: "number"
+          description: "Execution time"
+      required: ["result"]
+
+    preconditions:
+      - "'algorithm_id' in data"
+      - "'input_data' in data"
+
+    postconditions:
+      - "'result' in result"
+
+    resource_limits:
+      max_memory_mb: 512
+      max_cpu_percent: 80
+      max_execution_time: 600
+
+  # === CONTRATTO STANDARD SKILL ===
+  standard_skill:
+    version: "1.0"
+    description: "Contract for skill execution"
+    input_schema:
+      type: "object"
+      properties:
+        skill_name:
+          type: "string"
+          description: "Name of skill to execute"
+        task:
+          type: "string"
+          description: "Task description"
+        parameters:
+          type: "object"
+          description: "Skill parameters"
+      required: ["skill_name", "task"]
+
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+          description: "Whether skill executed successfully"
+        result:
+          type: "object"
+          description: "Skill result"
+        confidence:
+          type: "number"
+          description: "Confidence score"
+        execution_time_ms:
+          type: "number"
+      required: ["success"]
+
+    preconditions:
+      - "len(data.get('skill_name', '')) > 0"
+      - "len(data.get('task', '')) > 0"
+
+    postconditions:
+      - "'success' in result"
+      - "isinstance(result['success'], bool)"
+
+    resource_limits:
+      max_memory_mb: 128
+      max_cpu_percent: 40
+      max_execution_time: 120
+
+  # === CONTRATTO CORTEX MODULE ===
+  cortex_module:
+    version: "1.0"
+    description: "Contract for Cortex module interaction"
+    input_schema:
+      type: "object"
+      properties:
+        module_name:
+          type: "string"
+          description: "Cortex module name"
+        operation:
+          type: "string"
+          description: "Operation to perform"
+        data:
+          type: "object"
+          description: "Input data"
+        priority:
+          type: "string"
+          enum: ["critical", "high", "normal", "low"]
+          default: "normal"
+      required: ["module_name", "operation"]
+
+    output_schema:
+      type: "object"
+      properties:
+        output:
+          type: "object"
+          description: "Module output"
+        state_changes:
+          type: "array"
+          description: "State changes made"
+        metrics:
+          type: "object"
+          description: "Operation metrics"
+      required: ["output"]
+
+    preconditions:
+      - "data.get('module_name') in ['prefrontal', 'hippocampus', 'dmn', 'curiosity', 'safety', 'temporal', 'parietal', 'cerebellum', 'world_model']"
+      - "data.get('operation') in ['execute', 'query', 'update', 'reflect']"
+
+    postconditions:
+      - "'output' in result"
+
+    resource_limits:
+      max_memory_mb: 256
+      max_cpu_percent: 60
+      max_execution_time: 180
+
+  # === CONTRATTO DNA OPERATOR ===
+  dna_operator:
+    version: "1.0"
+    description: "Contract for DigitalDNA operators"
+    input_schema:
+      type: "object"
+      properties:
+        operator_type:
+          type: "string"
+          description: "Type of DNA operator"
+        target:
+          type: "string"
+          description: "Target element ID"
+        parameters:
+          type: "object"
+          description: "Operator parameters"
+      required: ["operator_type", "target"]
+
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+          description: "Operation success"
+        mutated_element:
+          type: "object"
+          description: "Mutated element"
+        fitness_change:
+          type: "number"
+          description: "Fitness change"
+      required: ["success"]
+
+    preconditions:
+      - "data.get('operator_type') in ['mutate', 'evolve', 'prune', 'replicate']"
+
+    postconditions:
+      - "'success' in result"
+
+    resource_limits:
+      max_memory_mb: 128
+      max_cpu_percent: 30
+      max_execution_time: 60
+
+  # === CONTRATTO MEMORY UNIT ===
+  memory_unit:
+    version: "1.0"
+    description: "Contract for memory operations"
+    input_schema:
+      type: "object"
+      properties:
+        operation:
+          type: "string"
+          enum: ["read", "write", "delete", "query", "consolidate"]
+          description: "Memory operation"
+        key:
+          type: "string"
+          description: "Memory key"
+        value:
+          type: "object"
+          description: "Value to write"
+        ttl:
+          type: "number"
+          description: "Time to live in seconds"
+      required: ["operation", "key"]
+
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+        data:
+          type: "object"
+          description: "Read data or confirmation"
+      required: ["success"]
+
+    preconditions:
+      - "data.get('operation') in ['read', 'write', 'delete', 'query', 'consolidate']"
+      - "len(data.get('key', '')) > 0"
+
+    postconditions:
+      - "'success' in result"
+
+    resource_limits:
+      max_memory_mb: 512
+      max_cpu_percent: 20
+      max_execution_time: 30
+
+  # === CONTRATTO ENVIRONMENT SENSOR ===
+  environment_sensor:
+    version: "1.0"
+    description: "Contract for environment sensor operations"
+    input_schema:
+      type: "object"
+      properties:
+        domain:
+          type: "string"
+          description: "Environment domain to sense"
+        scan_type:
+          type: "string"
+          enum: ["full", "partial", "targeted"]
+          default: "partial"
+        factors:
+          type: "array"
+          description: "Specific factors to check"
+      required: ["domain"]
+
+    output_schema:
+      type: "object"
+      properties:
+        domain:
+          type: "string"
+        factors:
+          type: "array"
+        constraints:
+          type: "array"
+        opportunities:
+          type: "array"
+        overall_impact:
+          type: "number"
+      required: ["domain"]
+
+    preconditions:
+      - "data.get('domain') in ['NATURE', 'HUMAN_SOCIETY', 'TECHNOLOGY', 'GOVERNANCE', 'LAW', 'ECONOMY', 'CULTURE', 'HEALTH', 'EDUCATION']"
+
+    postconditions:
+      - "'domain' in result"
+      - "'factors' in result"
+
+    resource_limits:
+      max_memory_mb: 64
+      max_cpu_percent: 10
+      max_execution_time: 15
+
+# Validazione globale
+global_validation:
+  strict_mode: true
+  allow_partial: false
+  validate_types: true
+  validate_schema: true
+  check_preconditions: true
+  check_postconditions: true
+
+# Errori standard
+error_codes:
+  1001: "Validation failed"
+  1002: "Precondition not met"
+  1003: "Postcondition not met"
+  2001: "Resource limit exceeded"
+  2002: "Timeout"
+  2003: "Memory limit exceeded"
+  3001: "Contract not found"
+  3002: "Contract version mismatch"
+  4001: "Execution failed"
+  4002: "Neuron not found"

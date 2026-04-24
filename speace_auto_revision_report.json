@@ -1,0 +1,3626 @@
+{
+  "phases": {
+    "structural_scan": {
+      "issues_found": 10,
+      "issues_fixed": 0,
+      "details": [
+        {
+          "type": "empty_operational_directory",
+          "path": "SPEACE_Cortex/comparti",
+          "severity": "low",
+          "message": "Directory documentata come operativa ma vuota: SPEACE_Cortex/comparti"
+        },
+        {
+          "type": "empty_operational_directory",
+          "path": "SPEACE_Cortex/world_model",
+          "severity": "low",
+          "message": "Directory documentata come operativa ma vuota: SPEACE_Cortex/world_model"
+        },
+        {
+          "type": "empty_operational_directory",
+          "path": "SafeProactive/WAL",
+          "severity": "low",
+          "message": "Directory documentata come operativa ma vuota: SafeProactive/WAL"
+        },
+        {
+          "type": "empty_operational_directory",
+          "path": "Team_Scientifico/agents",
+          "severity": "low",
+          "message": "Directory documentata come operativa ma vuota: Team_Scientifico/agents"
+        },
+        {
+          "type": "empty_operational_directory",
+          "path": "Team_Scientifico/orchestrator",
+          "severity": "low",
+          "message": "Directory documentata come operativa ma vuota: Team_Scientifico/orchestrator"
+        },
+        {
+          "type": "empty_operational_directory",
+          "path": "Team_Scientifico/output",
+          "severity": "low",
+          "message": "Directory documentata come operativa ma vuota: Team_Scientifico/output"
+        },
+        {
+          "type": "empty_operational_directory",
+          "path": "MultiFramework/ironclaw",
+          "severity": "low",
+          "message": "Directory documentata come operativa ma vuota: MultiFramework/ironclaw"
+        },
+        {
+          "type": "empty_operational_directory",
+          "path": "MultiFramework/nanoclaw",
+          "severity": "low",
+          "message": "Directory documentata come operativa ma vuota: MultiFramework/nanoclaw"
+        },
+        {
+          "type": "empty_operational_directory",
+          "path": "MultiFramework/openclaw",
+          "severity": "low",
+          "message": "Directory documentata come operativa ma vuota: MultiFramework/openclaw"
+        },
+        {
+          "type": "empty_operational_directory",
+          "path": "MultiFramework/superagi",
+          "severity": "low",
+          "message": "Directory documentata come operativa ma vuota: MultiFramework/superagi"
+        }
+      ]
+    },
+    "import_validation": {
+      "issues_found": 0,
+      "issues_fixed": 0,
+      "details": []
+    },
+    "dependency_alignment": {
+      "issues_found": 589,
+      "issues_fixed": 576,
+      "details": [
+        {
+          "type": "missing_dependency",
+          "package": "AppKit",
+          "severity": "medium",
+          "message": "Package 'AppKit' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "Box2D",
+          "severity": "medium",
+          "message": "Package 'Box2D' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "Carbon",
+          "severity": "medium",
+          "message": "Package 'Carbon' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ConfigParser",
+          "severity": "medium",
+          "message": "Package 'ConfigParser' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "Cython",
+          "severity": "medium",
+          "message": "Package 'Cython' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "EasyDialogs",
+          "severity": "medium",
+          "message": "Package 'EasyDialogs' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "Foundation",
+          "severity": "medium",
+          "message": "Package 'Foundation' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "HTMLParser",
+          "severity": "medium",
+          "message": "Package 'HTMLParser' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "IPython",
+          "severity": "medium",
+          "message": "Package 'IPython' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "Levenshtein",
+          "severity": "medium",
+          "message": "Package 'Levenshtein' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "Mykytea",
+          "severity": "medium",
+          "message": "Package 'Mykytea' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "OpenSSL",
+          "severity": "medium",
+          "message": "Package 'OpenSSL' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "PyInstaller",
+          "severity": "medium",
+          "message": "Package 'PyInstaller' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "PyQt4",
+          "severity": "medium",
+          "message": "Package 'PyQt4' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "PyQt5",
+          "severity": "medium",
+          "message": "Package 'PyQt5' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "PyQt6",
+          "severity": "medium",
+          "message": "Package 'PyQt6' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "PySide2",
+          "severity": "medium",
+          "message": "Package 'PySide2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "PySide6",
+          "severity": "medium",
+          "message": "Package 'PySide6' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "Quartz",
+          "severity": "medium",
+          "message": "Package 'Quartz' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "Queue",
+          "severity": "medium",
+          "message": "Package 'Queue' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "Res",
+          "severity": "medium",
+          "message": "Package 'Res' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "StringIO",
+          "severity": "medium",
+          "message": "Package 'StringIO' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "Tkinter",
+          "severity": "medium",
+          "message": "Package 'Tkinter' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "UserDict",
+          "severity": "medium",
+          "message": "Package 'UserDict' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "Xlib",
+          "severity": "medium",
+          "message": "Package 'Xlib' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "__builtin__",
+          "severity": "medium",
+          "message": "Package '__builtin__' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "__pypy__",
+          "severity": "medium",
+          "message": "Package '__pypy__' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_abcoll",
+          "severity": "medium",
+          "message": "Package '_abcoll' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_activation_checkpointing",
+          "severity": "medium",
+          "message": "Package '_activation_checkpointing' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_activation_offloading",
+          "severity": "medium",
+          "message": "Package '_activation_offloading' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_ansari_swilk_statistics",
+          "severity": "medium",
+          "message": "Package '_ansari_swilk_statistics' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_bdist_wheel",
+          "severity": "medium",
+          "message": "Package '_bdist_wheel' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_bglu_dense",
+          "severity": "medium",
+          "message": "Package '_bglu_dense' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_biasedurn",
+          "severity": "medium",
+          "message": "Package '_biasedurn' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_cache",
+          "severity": "medium",
+          "message": "Package '_cache' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_cext",
+          "severity": "medium",
+          "message": "Package '_cext' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_ckdtree",
+          "severity": "medium",
+          "message": "Package '_ckdtree' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_cmsgpack",
+          "severity": "medium",
+          "message": "Package '_cmsgpack' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_comb",
+          "severity": "medium",
+          "message": "Package '_comb' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_commands",
+          "severity": "medium",
+          "message": "Package '_commands' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_context_parallel",
+          "severity": "medium",
+          "message": "Package '_context_parallel' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_contourpy",
+          "severity": "medium",
+          "message": "Package '_contourpy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_cp_custom_ops",
+          "severity": "medium",
+          "message": "Package '_cp_custom_ops' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_cythonized_array_utils",
+          "severity": "medium",
+          "message": "Package '_cythonized_array_utils' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_decomp_lu_cython",
+          "severity": "medium",
+          "message": "Package '_decomp_lu_cython' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_decomp_update",
+          "severity": "medium",
+          "message": "Package '_decomp_update' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_dim_entry",
+          "severity": "medium",
+          "message": "Package '_dim_entry' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_direct",
+          "severity": "medium",
+          "message": "Package '_direct' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_discovery",
+          "severity": "medium",
+          "message": "Package '_discovery' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_draft_export",
+          "severity": "medium",
+          "message": "Package '_draft_export' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_dummy_thread",
+          "severity": "medium",
+          "message": "Package '_dummy_thread' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_ellip_harm_2",
+          "severity": "medium",
+          "message": "Package '_ellip_harm_2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_enable_all_layers",
+          "severity": "medium",
+          "message": "Package '_enable_all_layers' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_flow",
+          "severity": "medium",
+          "message": "Package '_flow' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_fully_shard",
+          "severity": "medium",
+          "message": "Package '_fully_shard' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_generator",
+          "severity": "medium",
+          "message": "Package '_generator' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_getsetitem",
+          "severity": "medium",
+          "message": "Package '_getsetitem' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_group_columns",
+          "severity": "medium",
+          "message": "Package '_group_columns' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_gufuncs",
+          "severity": "medium",
+          "message": "Package '_gufuncs' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_imaging",
+          "severity": "medium",
+          "message": "Package '_imaging' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_imagingft",
+          "severity": "medium",
+          "message": "Package '_imagingft' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_interpnd",
+          "severity": "medium",
+          "message": "Package '_interpnd' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_interpqueues",
+          "severity": "medium",
+          "message": "Package '_interpqueues' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_interpreters",
+          "severity": "medium",
+          "message": "Package '_interpreters' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_linalg_pythran",
+          "severity": "medium",
+          "message": "Package '_linalg_pythran' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_load_balancer",
+          "severity": "medium",
+          "message": "Package '_load_balancer' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_lowered_aoti_module",
+          "severity": "medium",
+          "message": "Package '_lowered_aoti_module' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_lsap",
+          "severity": "medium",
+          "message": "Package '_lsap' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_matching",
+          "severity": "medium",
+          "message": "Package '_matching' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_matfuncs_expm",
+          "severity": "medium",
+          "message": "Package '_matfuncs_expm' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_matfuncs_schur_sqrtm",
+          "severity": "medium",
+          "message": "Package '_matfuncs_schur_sqrtm' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_matfuncs_sqrtm_triu",
+          "severity": "medium",
+          "message": "Package '_matfuncs_sqrtm_triu' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_max_len_seq_inner",
+          "severity": "medium",
+          "message": "Package '_max_len_seq_inner' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_metadata",
+          "severity": "medium",
+          "message": "Package '_metadata' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_min_spanning_tree",
+          "severity": "medium",
+          "message": "Package '_min_spanning_tree' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_mio5_utils",
+          "severity": "medium",
+          "message": "Package '_mio5_utils' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_mio_utils",
+          "severity": "medium",
+          "message": "Package '_mio_utils' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_mt19937",
+          "severity": "medium",
+          "message": "Package '_mt19937' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_odepack",
+          "severity": "medium",
+          "message": "Package '_odepack' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_openmp_test_helper",
+          "severity": "medium",
+          "message": "Package '_openmp_test_helper' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_order",
+          "severity": "medium",
+          "message": "Package '_order' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_package",
+          "severity": "medium",
+          "message": "Package '_package' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_pava_pybind",
+          "severity": "medium",
+          "message": "Package '_pava_pybind' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_pcg64",
+          "severity": "medium",
+          "message": "Package '_pcg64' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_peak_finding_utils",
+          "severity": "medium",
+          "message": "Package '_peak_finding_utils' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_philox",
+          "severity": "medium",
+          "message": "Package '_philox' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_py_inst_decoder",
+          "severity": "medium",
+          "message": "Package '_py_inst_decoder' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_pygetwindow_macos",
+          "severity": "medium",
+          "message": "Package '_pygetwindow_macos' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_pygetwindow_win",
+          "severity": "medium",
+          "message": "Package '_pygetwindow_win' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_pytest",
+          "severity": "medium",
+          "message": "Package '_pytest' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_qhull",
+          "severity": "medium",
+          "message": "Package '_qhull' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_qmc_cy",
+          "severity": "medium",
+          "message": "Package '_qmc_cy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_qmvnt_cy",
+          "severity": "medium",
+          "message": "Package '_qmvnt_cy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_rbfinterp_pythran",
+          "severity": "medium",
+          "message": "Package '_rbfinterp_pythran' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_reordering",
+          "severity": "medium",
+          "message": "Package '_reordering' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_rgi_cython",
+          "severity": "medium",
+          "message": "Package '_rgi_cython' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_safetensors_rust",
+          "severity": "medium",
+          "message": "Package '_safetensors_rust' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_sfc64",
+          "severity": "medium",
+          "message": "Package '_sfc64' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_sharding_rules",
+          "severity": "medium",
+          "message": "Package '_sharding_rules' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_shortest_path",
+          "severity": "medium",
+          "message": "Package '_shortest_path' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_shutil",
+          "severity": "medium",
+          "message": "Package '_shutil' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_slsqplib",
+          "severity": "medium",
+          "message": "Package '_slsqplib' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_sobol",
+          "severity": "medium",
+          "message": "Package '_sobol' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_soft_rw",
+          "severity": "medium",
+          "message": "Package '_soft_rw' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_solve_toeplitz",
+          "severity": "medium",
+          "message": "Package '_solve_toeplitz' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_sosfilt",
+          "severity": "medium",
+          "message": "Package '_sosfilt' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_sparsetools",
+          "severity": "medium",
+          "message": "Package '_sparsetools' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_special_ufuncs",
+          "severity": "medium",
+          "message": "Package '_special_ufuncs' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_speedups",
+          "severity": "medium",
+          "message": "Package '_speedups' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_spline",
+          "severity": "medium",
+          "message": "Package '_spline' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_static",
+          "severity": "medium",
+          "message": "Package '_static' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_stats_pythran",
+          "severity": "medium",
+          "message": "Package '_stats_pythran' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_superlu",
+          "severity": "medium",
+          "message": "Package '_superlu' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_tensor_info",
+          "severity": "medium",
+          "message": "Package '_tensor_info' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_testbuffer",
+          "severity": "medium",
+          "message": "Package '_testbuffer' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_tkagg",
+          "severity": "medium",
+          "message": "Package '_tkagg' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_traversal",
+          "severity": "medium",
+          "message": "Package '_traversal' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_typeshed",
+          "severity": "medium",
+          "message": "Package '_typeshed' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_upfirdn_apply",
+          "severity": "medium",
+          "message": "Package '_upfirdn_apply' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "_winreg",
+          "severity": "medium",
+          "message": "Package '_winreg' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "accimage",
+          "severity": "medium",
+          "message": "Package 'accimage' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "adbc_driver_manager",
+          "severity": "medium",
+          "message": "Package 'adbc_driver_manager' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "adbc_driver_postgresql",
+          "severity": "medium",
+          "message": "Package 'adbc_driver_postgresql' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "adbc_driver_sqlite",
+          "severity": "medium",
+          "message": "Package 'adbc_driver_sqlite' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "adwin_c",
+          "severity": "medium",
+          "message": "Package 'adwin_c' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "aesara",
+          "severity": "medium",
+          "message": "Package 'aesara' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "aiohttp",
+          "severity": "medium",
+          "message": "Package 'aiohttp' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "amdsmi",
+          "severity": "medium",
+          "message": "Package 'amdsmi' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "analyze_preserves_zero_mask",
+          "severity": "medium",
+          "message": "Package 'analyze_preserves_zero_mask' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "annotationlib",
+          "severity": "medium",
+          "message": "Package 'annotationlib' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "antlr4",
+          "severity": "medium",
+          "message": "Package 'antlr4' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "aot_autograd_result",
+          "severity": "medium",
+          "message": "Package 'aot_autograd_result' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "aot_compile_types",
+          "severity": "medium",
+          "message": "Package 'aot_compile_types' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "apex",
+          "severity": "medium",
+          "message": "Package 'apex' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "apollo_torch",
+          "severity": "medium",
+          "message": "Package 'apollo_torch' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "applier",
+          "severity": "medium",
+          "message": "Package 'applier' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "arch",
+          "severity": "medium",
+          "message": "Package 'arch' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "array_api_strict",
+          "severity": "medium",
+          "message": "Package 'array_api_strict' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "array_interface_testing",
+          "severity": "medium",
+          "message": "Package 'array_interface_testing' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "astunparse",
+          "severity": "medium",
+          "message": "Package 'astunparse' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "attr",
+          "severity": "medium",
+          "message": "Package 'attr' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "authlib",
+          "severity": "medium",
+          "message": "Package 'authlib' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "auto_chunker",
+          "severity": "medium",
+          "message": "Package 'auto_chunker' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "auto_round",
+          "severity": "medium",
+          "message": "Package 'auto_round' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "autoasync",
+          "severity": "medium",
+          "message": "Package 'autoasync' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "autocommand",
+          "severity": "medium",
+          "message": "Package 'autocommand' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "automain",
+          "severity": "medium",
+          "message": "Package 'automain' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "autoparse",
+          "severity": "medium",
+          "message": "Package 'autoparse' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "av",
+          "severity": "medium",
+          "message": "Package 'av' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "azureml",
+          "severity": "medium",
+          "message": "Package 'azureml' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "barriers",
+          "severity": "medium",
+          "message": "Package 'barriers' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "bit_generator",
+          "severity": "medium",
+          "message": "Package 'bit_generator' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "block_analysis",
+          "severity": "medium",
+          "message": "Package 'block_analysis' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "bokeh",
+          "severity": "medium",
+          "message": "Package 'bokeh' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "boto3",
+          "severity": "medium",
+          "message": "Package 'boto3' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "botocore",
+          "severity": "medium",
+          "message": "Package 'botocore' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "brotli",
+          "severity": "medium",
+          "message": "Package 'brotli' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "brotlicffi",
+          "severity": "medium",
+          "message": "Package 'brotlicffi' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "bs4",
+          "severity": "medium",
+          "message": "Package 'bs4' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cPickle",
+          "severity": "medium",
+          "message": "Package 'cPickle' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cairo",
+          "severity": "medium",
+          "message": "Package 'cairo' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cairocffi",
+          "severity": "medium",
+          "message": "Package 'cairocffi' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "catboost",
+          "severity": "medium",
+          "message": "Package 'catboost' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "causal_conv1d",
+          "severity": "medium",
+          "message": "Package 'causal_conv1d' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "chardet",
+          "severity": "medium",
+          "message": "Package 'chardet' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "charset_normalizer",
+          "severity": "medium",
+          "message": "Package 'charset_normalizer' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "checkpoint_process",
+          "severity": "medium",
+          "message": "Package 'checkpoint_process' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "checkpoint_reader",
+          "severity": "medium",
+          "message": "Package 'checkpoint_reader' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "checkpoint_writer",
+          "severity": "medium",
+          "message": "Package 'checkpoint_writer' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "checkpointer",
+          "severity": "medium",
+          "message": "Package 'checkpointer' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "choices",
+          "severity": "medium",
+          "message": "Package 'choices' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ck4inductor",
+          "severity": "medium",
+          "message": "Package 'ck4inductor' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "clearml",
+          "severity": "medium",
+          "message": "Package 'clearml' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "code_generators",
+          "severity": "medium",
+          "message": "Package 'code_generators' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "codecarbon",
+          "severity": "medium",
+          "message": "Package 'codecarbon' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "coloredlogs",
+          "severity": "medium",
+          "message": "Package 'coloredlogs' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "com",
+          "severity": "medium",
+          "message": "Package 'com' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "comet_ml",
+          "severity": "medium",
+          "message": "Package 'comet_ml' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "comm_lowering",
+          "severity": "medium",
+          "message": "Package 'comm_lowering' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "comms_debug",
+          "severity": "medium",
+          "message": "Package 'comms_debug' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "compile_fx_async",
+          "severity": "medium",
+          "message": "Package 'compile_fx_async' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "compile_fx_ext",
+          "severity": "medium",
+          "message": "Package 'compile_fx_ext' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "compile_fx_subproc",
+          "severity": "medium",
+          "message": "Package 'compile_fx_subproc' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "compressed_tensors",
+          "severity": "medium",
+          "message": "Package 'compressed_tensors' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "conda",
+          "severity": "medium",
+          "message": "Package 'conda' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "contextlib2",
+          "severity": "medium",
+          "message": "Package 'contextlib2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "convert_funnel_original_tf_checkpoint_to_pytorch",
+          "severity": "medium",
+          "message": "Package 'convert_funnel_original_tf_checkpoint_to_pytorch' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "coremltools",
+          "severity": "medium",
+          "message": "Package 'coremltools' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cpp_wrapper_cpu_array_ref",
+          "severity": "medium",
+          "message": "Package 'cpp_wrapper_cpu_array_ref' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cpp_wrapper_gpu",
+          "severity": "medium",
+          "message": "Package 'cpp_wrapper_gpu' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cpp_wrapper_mps",
+          "severity": "medium",
+          "message": "Package 'cpp_wrapper_mps' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cpu_device_op_overrides",
+          "severity": "medium",
+          "message": "Package 'cpu_device_op_overrides' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cryptography",
+          "severity": "medium",
+          "message": "Package 'cryptography' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ctags",
+          "severity": "medium",
+          "message": "Package 'ctags' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cupyx",
+          "severity": "medium",
+          "message": "Package 'cupyx' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "custom_extern_kernel_codegen",
+          "severity": "medium",
+          "message": "Package 'custom_extern_kernel_codegen' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "custom_graph_pass",
+          "severity": "medium",
+          "message": "Package 'custom_graph_pass' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cutedsl",
+          "severity": "medium",
+          "message": "Package 'cutedsl' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cutedsl_kernel",
+          "severity": "medium",
+          "message": "Package 'cutedsl_kernel' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cutedsl_op_overrides",
+          "severity": "medium",
+          "message": "Package 'cutedsl_op_overrides' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cutedsl_template",
+          "severity": "medium",
+          "message": "Package 'cutedsl_template' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cutlass",
+          "severity": "medium",
+          "message": "Package 'cutlass' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cutlass_api",
+          "severity": "medium",
+          "message": "Package 'cutlass_api' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cutlass_cppgen",
+          "severity": "medium",
+          "message": "Package 'cutlass_cppgen' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cutlass_library",
+          "severity": "medium",
+          "message": "Package 'cutlass_library' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "cv2",
+          "severity": "medium",
+          "message": "Package 'cv2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "dagshub",
+          "severity": "medium",
+          "message": "Package 'dagshub' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "dce_extra_outputs",
+          "severity": "medium",
+          "message": "Package 'dce_extra_outputs' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "decomp_utils",
+          "severity": "medium",
+          "message": "Package 'decomp_utils' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "decord",
+          "severity": "medium",
+          "message": "Package 'decord' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "deeplearning",
+          "severity": "medium",
+          "message": "Package 'deeplearning' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "defcon",
+          "severity": "medium",
+          "message": "Package 'defcon' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "defusedxml",
+          "severity": "medium",
+          "message": "Package 'defusedxml' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "descriptors",
+          "severity": "medium",
+          "message": "Package 'descriptors' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "detectron2",
+          "severity": "medium",
+          "message": "Package 'detectron2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "dill",
+          "severity": "medium",
+          "message": "Package 'dill' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "distributed_autotune",
+          "severity": "medium",
+          "message": "Package 'distributed_autotune' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "distutils",
+          "severity": "medium",
+          "message": "Package 'distutils' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "dl",
+          "severity": "medium",
+          "message": "Package 'dl' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "docutils",
+          "severity": "medium",
+          "message": "Package 'docutils' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "downloads",
+          "severity": "medium",
+          "message": "Package 'downloads' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "dp",
+          "severity": "medium",
+          "message": "Package 'dp' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "dtype_propagation",
+          "severity": "medium",
+          "message": "Package 'dtype_propagation' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "duckdb",
+          "severity": "medium",
+          "message": "Package 'duckdb' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "dummy_thread",
+          "severity": "medium",
+          "message": "Package 'dummy_thread' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "dummy_threading",
+          "severity": "medium",
+          "message": "Package 'dummy_threading' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "dvclive",
+          "severity": "medium",
+          "message": "Package 'dvclive' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "elasticsearch",
+          "severity": "medium",
+          "message": "Package 'elasticsearch' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "essentia",
+          "severity": "medium",
+          "message": "Package 'essentia' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "etcd",
+          "severity": "medium",
+          "message": "Package 'etcd' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "exceptiongroup",
+          "severity": "medium",
+          "message": "Package 'exceptiongroup' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "expecttest",
+          "severity": "medium",
+          "message": "Package 'expecttest' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "faiss",
+          "severity": "medium",
+          "message": "Package 'faiss' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "fast_hadamard_transform",
+          "severity": "medium",
+          "message": "Package 'fast_hadamard_transform' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "fastai",
+          "severity": "medium",
+          "message": "Package 'fastai' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "fastapi",
+          "severity": "medium",
+          "message": "Package 'fastapi' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "fastparquet",
+          "severity": "medium",
+          "message": "Package 'fastparquet' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "fb",
+          "severity": "medium",
+          "message": "Package 'fb' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "fbgemm_gpu",
+          "severity": "medium",
+          "message": "Package 'fbgemm_gpu' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "fbscribelogger",
+          "severity": "medium",
+          "message": "Package 'fbscribelogger' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_detr",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_detr' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_flava",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_flava' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_imagegpt",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_imagegpt' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_layoutlmv2",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_layoutlmv2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_layoutlmv3",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_layoutlmv3' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_levit",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_levit' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_maskformer",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_maskformer' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_owlvit",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_owlvit' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_poolformer",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_poolformer' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_videomae",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_videomae' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_vilt",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_vilt' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "feature_extraction_yolos",
+          "severity": "medium",
+          "message": "Package 'feature_extraction_yolos' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "fixtures",
+          "severity": "medium",
+          "message": "Package 'fixtures' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "fla",
+          "severity": "medium",
+          "message": "Package 'fla' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "flash_attn",
+          "severity": "medium",
+          "message": "Package 'flash_attn' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "flash_attn_interface",
+          "severity": "medium",
+          "message": "Package 'flash_attn_interface' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "flashlight",
+          "severity": "medium",
+          "message": "Package 'flashlight' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "flat_apply",
+          "severity": "medium",
+          "message": "Package 'flat_apply' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "flex_cpu",
+          "severity": "medium",
+          "message": "Package 'flex_cpu' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "flex_flash_attention",
+          "severity": "medium",
+          "message": "Package 'flex_flash_attention' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "flint",
+          "severity": "medium",
+          "message": "Package 'flint' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "flute",
+          "severity": "medium",
+          "message": "Package 'flute' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "flytekit",
+          "severity": "medium",
+          "message": "Package 'flytekit' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "flytekitplugins",
+          "severity": "medium",
+          "message": "Package 'flytekitplugins' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "foo",
+          "severity": "medium",
+          "message": "Package 'foo' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "freetype",
+          "severity": "medium",
+          "message": "Package 'freetype' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "fs",
+          "severity": "medium",
+          "message": "Package 'fs' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ft2font",
+          "severity": "medium",
+          "message": "Package 'ft2font' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "fugashi",
+          "severity": "medium",
+          "message": "Package 'fugashi' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "g2p_en",
+          "severity": "medium",
+          "message": "Package 'g2p_en' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "galore_torch",
+          "severity": "medium",
+          "message": "Package 'galore_torch' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "gdown",
+          "severity": "medium",
+          "message": "Package 'gdown' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "gemm",
+          "severity": "medium",
+          "message": "Package 'gemm' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "generalized_pareto",
+          "severity": "medium",
+          "message": "Package 'generalized_pareto' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "gguf",
+          "severity": "medium",
+          "message": "Package 'gguf' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "gi",
+          "severity": "medium",
+          "message": "Package 'gi' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "givens_elimination",
+          "severity": "medium",
+          "message": "Package 'givens_elimination' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "glfw",
+          "severity": "medium",
+          "message": "Package 'glfw' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "glyphsLib",
+          "severity": "medium",
+          "message": "Package 'glyphsLib' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "gmpy2",
+          "severity": "medium",
+          "message": "Package 'gmpy2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "google",
+          "severity": "medium",
+          "message": "Package 'google' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "gptqmodel",
+          "severity": "medium",
+          "message": "Package 'gptqmodel' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "gradio",
+          "severity": "medium",
+          "message": "Package 'gradio' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "graph_bytecode_inputs",
+          "severity": "medium",
+          "message": "Package 'graph_bytecode_inputs' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "graph_capture",
+          "severity": "medium",
+          "message": "Package 'graph_capture' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "graph_capture_wrappers",
+          "severity": "medium",
+          "message": "Package 'graph_capture_wrappers' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "graph_deduplication",
+          "severity": "medium",
+          "message": "Package 'graph_deduplication' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "graph_id_filter",
+          "severity": "medium",
+          "message": "Package 'graph_id_filter' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "graph_region_tracker",
+          "severity": "medium",
+          "message": "Package 'graph_region_tracker' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "graph_view",
+          "severity": "medium",
+          "message": "Package 'graph_view' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "green_contexts",
+          "severity": "medium",
+          "message": "Package 'green_contexts' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "grokadamw",
+          "severity": "medium",
+          "message": "Package 'grokadamw' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "gym",
+          "severity": "medium",
+          "message": "Package 'gym' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "h2",
+          "severity": "medium",
+          "message": "Package 'h2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "h5py",
+          "severity": "medium",
+          "message": "Package 'h5py' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "habana_frameworks",
+          "severity": "medium",
+          "message": "Package 'habana_frameworks' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "helion",
+          "severity": "medium",
+          "message": "Package 'helion' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "hf_storage",
+          "severity": "medium",
+          "message": "Package 'hf_storage' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "htmlentitydefs",
+          "severity": "medium",
+          "message": "Package 'htmlentitydefs' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "httplib",
+          "severity": "medium",
+          "message": "Package 'httplib' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "hypothesis",
+          "severity": "medium",
+          "message": "Package 'hypothesis' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "image_processing_chinese_pil_clip",
+          "severity": "medium",
+          "message": "Package 'image_processing_chinese_pil_clip' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "image_processing_instructblipvideo",
+          "severity": "medium",
+          "message": "Package 'image_processing_instructblipvideo' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "image_processing_llava_next_video",
+          "severity": "medium",
+          "message": "Package 'image_processing_llava_next_video' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "image_processing_mobilenet_pil_v1",
+          "severity": "medium",
+          "message": "Package 'image_processing_mobilenet_pil_v1' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "image_processing_modernvbert",
+          "severity": "medium",
+          "message": "Package 'image_processing_modernvbert' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "image_processing_modernvbert_fast",
+          "severity": "medium",
+          "message": "Package 'image_processing_modernvbert_fast' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "imageio",
+          "severity": "medium",
+          "message": "Package 'imageio' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "imp",
+          "severity": "medium",
+          "message": "Package 'imp' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "indexed_dict",
+          "severity": "medium",
+          "message": "Package 'indexed_dict' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "inflect",
+          "severity": "medium",
+          "message": "Package 'inflect' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ini2toml",
+          "severity": "medium",
+          "message": "Package 'ini2toml' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "int_tuple",
+          "severity": "medium",
+          "message": "Package 'int_tuple' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "integration",
+          "severity": "medium",
+          "message": "Package 'integration' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "invoke_subgraph",
+          "severity": "medium",
+          "message": "Package 'invoke_subgraph' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ipadic",
+          "severity": "medium",
+          "message": "Package 'ipadic' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ipykernel",
+          "severity": "medium",
+          "message": "Package 'ipykernel' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ipywidgets",
+          "severity": "medium",
+          "message": "Package 'ipywidgets' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "isal",
+          "severity": "medium",
+          "message": "Package 'isal' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "java",
+          "severity": "medium",
+          "message": "Package 'java' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "jax",
+          "severity": "medium",
+          "message": "Package 'jax' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "jnius",
+          "severity": "medium",
+          "message": "Package 'jnius' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "kenlm",
+          "severity": "medium",
+          "message": "Package 'kenlm' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "kerchunk",
+          "severity": "medium",
+          "message": "Package 'kerchunk' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "kernel_inputs",
+          "severity": "medium",
+          "message": "Package 'kernel_inputs' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "kernel_template_choice",
+          "severity": "medium",
+          "message": "Package 'kernel_template_choice' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "keyring",
+          "severity": "medium",
+          "message": "Package 'keyring' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "levyst",
+          "severity": "medium",
+          "message": "Package 'levyst' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "lib_extensions",
+          "severity": "medium",
+          "message": "Package 'lib_extensions' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "libcst",
+          "severity": "medium",
+          "message": "Package 'libcst' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "libfb",
+          "severity": "medium",
+          "message": "Package 'libfb' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "librosa",
+          "severity": "medium",
+          "message": "Package 'librosa' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "liger_kernel",
+          "severity": "medium",
+          "message": "Package 'liger_kernel' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "lightgbm",
+          "severity": "medium",
+          "message": "Package 'lightgbm' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "limited_api1",
+          "severity": "medium",
+          "message": "Package 'limited_api1' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "limited_api2",
+          "severity": "medium",
+          "message": "Package 'limited_api2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "limited_api_latest",
+          "severity": "medium",
+          "message": "Package 'limited_api_latest' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "linkify_it",
+          "severity": "medium",
+          "message": "Package 'linkify_it' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "lmdb",
+          "severity": "medium",
+          "message": "Package 'lmdb' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "lomo_optim",
+          "severity": "medium",
+          "message": "Package 'lomo_optim' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "lz4",
+          "severity": "medium",
+          "message": "Package 'lz4' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "lzmaffi",
+          "severity": "medium",
+          "message": "Package 'lzmaffi' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "mambapy",
+          "severity": "medium",
+          "message": "Package 'mambapy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "matchpy",
+          "severity": "medium",
+          "message": "Package 'matchpy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "mcp",
+          "severity": "medium",
+          "message": "Package 'mcp' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "megatron",
+          "severity": "medium",
+          "message": "Package 'megatron' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "mem_policy",
+          "severity": "medium",
+          "message": "Package 'mem_policy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "memory_profiler",
+          "severity": "medium",
+          "message": "Package 'memory_profiler' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "mistral_common",
+          "severity": "medium",
+          "message": "Package 'mistral_common' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ml_dtypes",
+          "severity": "medium",
+          "message": "Package 'ml_dtypes' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "mlflow",
+          "severity": "medium",
+          "message": "Package 'mlflow' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "mod2",
+          "severity": "medium",
+          "message": "Package 'mod2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "model2vec",
+          "severity": "medium",
+          "message": "Package 'model2vec' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "monkeytype",
+          "severity": "medium",
+          "message": "Package 'monkeytype' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "mouseinfo",
+          "severity": "medium",
+          "message": "Package 'mouseinfo' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "moviepy",
+          "severity": "medium",
+          "message": "Package 'moviepy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "mtia_graph",
+          "severity": "medium",
+          "message": "Package 'mtia_graph' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "mtrand",
+          "severity": "medium",
+          "message": "Package 'mtrand' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "multiset",
+          "severity": "medium",
+          "message": "Package 'multiset' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "munkres",
+          "severity": "medium",
+          "message": "Package 'munkres' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "mypy",
+          "severity": "medium",
+          "message": "Package 'mypy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "natten",
+          "severity": "medium",
+          "message": "Package 'natten' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ndonnx",
+          "severity": "medium",
+          "message": "Package 'ndonnx' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "neptune",
+          "severity": "medium",
+          "message": "Package 'neptune' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "nltk",
+          "severity": "medium",
+          "message": "Package 'nltk' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "nspkg",
+          "severity": "medium",
+          "message": "Package 'nspkg' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ntlm",
+          "severity": "medium",
+          "message": "Package 'ntlm' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "num2words",
+          "severity": "medium",
+          "message": "Package 'num2words' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "numexpr",
+          "severity": "medium",
+          "message": "Package 'numexpr' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "numpy_distutils",
+          "severity": "medium",
+          "message": "Package 'numpy_distutils' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "numpydoc",
+          "severity": "medium",
+          "message": "Package 'numpydoc' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "nvMatmulHeuristics",
+          "severity": "medium",
+          "message": "Package 'nvMatmulHeuristics' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "nv_universal_gemm",
+          "severity": "medium",
+          "message": "Package 'nv_universal_gemm' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "objgraph",
+          "severity": "medium",
+          "message": "Package 'objgraph' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "odf",
+          "severity": "medium",
+          "message": "Package 'odf' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "olefile",
+          "severity": "medium",
+          "message": "Package 'olefile' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "onnx_ir",
+          "severity": "medium",
+          "message": "Package 'onnx_ir' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "onnxscript",
+          "severity": "medium",
+          "message": "Package 'onnxscript' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "opaque_object",
+          "severity": "medium",
+          "message": "Package 'opaque_object' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "openpyxl",
+          "severity": "medium",
+          "message": "Package 'openpyxl' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "opensearchpy",
+          "severity": "medium",
+          "message": "Package 'opensearchpy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "opentelemetry",
+          "severity": "medium",
+          "message": "Package 'opentelemetry' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "optimi",
+          "severity": "medium",
+          "message": "Package 'optimi' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "optimum",
+          "severity": "medium",
+          "message": "Package 'optimum' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "optree",
+          "severity": "medium",
+          "message": "Package 'optree' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "optuna",
+          "severity": "medium",
+          "message": "Package 'optuna' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "org",
+          "severity": "medium",
+          "message": "Package 'org' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "outcome",
+          "severity": "medium",
+          "message": "Package 'outcome' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "output_code",
+          "severity": "medium",
+          "message": "Package 'output_code' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pack",
+          "severity": "medium",
+          "message": "Package 'pack' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pallas",
+          "severity": "medium",
+          "message": "Package 'pallas' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "paramiko",
+          "severity": "medium",
+          "message": "Package 'paramiko' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pathops",
+          "severity": "medium",
+          "message": "Package 'pathops' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pgo",
+          "severity": "medium",
+          "message": "Package 'pgo' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "phonemizer",
+          "severity": "medium",
+          "message": "Package 'phonemizer' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pi0_fast",
+          "severity": "medium",
+          "message": "Package 'pi0_fast' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pkg1",
+          "severity": "medium",
+          "message": "Package 'pkg1' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "polars",
+          "severity": "medium",
+          "message": "Package 'polars' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pooch",
+          "severity": "medium",
+          "message": "Package 'pooch' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pretty_midi",
+          "severity": "medium",
+          "message": "Package 'pretty_midi' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "processing_bamba",
+          "severity": "medium",
+          "message": "Package 'processing_bamba' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "processing_mistral3",
+          "severity": "medium",
+          "message": "Package 'processing_mistral3' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "processing_modernvbert",
+          "severity": "medium",
+          "message": "Package 'processing_modernvbert' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "propagate_scale_by",
+          "severity": "medium",
+          "message": "Package 'propagate_scale_by' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "propagator",
+          "severity": "medium",
+          "message": "Package 'propagator' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pulp",
+          "severity": "medium",
+          "message": "Package 'pulp' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pwlf",
+          "severity": "medium",
+          "message": "Package 'pwlf' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "py",
+          "severity": "medium",
+          "message": "Package 'py' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pyamg",
+          "severity": "medium",
+          "message": "Package 'pyamg' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pycocotools",
+          "severity": "medium",
+          "message": "Package 'pycocotools' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pycosat",
+          "severity": "medium",
+          "message": "Package 'pycosat' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pyctcdecode",
+          "severity": "medium",
+          "message": "Package 'pyctcdecode' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pycute",
+          "severity": "medium",
+          "message": "Package 'pycute' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pydot",
+          "severity": "medium",
+          "message": "Package 'pydot' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pydy",
+          "severity": "medium",
+          "message": "Package 'pydy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pygame",
+          "severity": "medium",
+          "message": "Package 'pygame' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pygetwindow",
+          "severity": "medium",
+          "message": "Package 'pygetwindow' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pygit2",
+          "severity": "medium",
+          "message": "Package 'pygit2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pyglet",
+          "severity": "medium",
+          "message": "Package 'pyglet' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pygraphviz",
+          "severity": "medium",
+          "message": "Package 'pygraphviz' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pyinstrument",
+          "severity": "medium",
+          "message": "Package 'pyinstrument' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pymc",
+          "severity": "medium",
+          "message": "Package 'pymc' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pymc3",
+          "severity": "medium",
+          "message": "Package 'pymc3' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pymsgbox",
+          "severity": "medium",
+          "message": "Package 'pymsgbox' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pynvml",
+          "severity": "medium",
+          "message": "Package 'pynvml' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pyodide_js",
+          "severity": "medium",
+          "message": "Package 'pyodide_js' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pyperclip",
+          "severity": "medium",
+          "message": "Package 'pyperclip' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pypocketfft",
+          "severity": "medium",
+          "message": "Package 'pypocketfft' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pyrect",
+          "severity": "medium",
+          "message": "Package 'pyrect' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pysat",
+          "severity": "medium",
+          "message": "Package 'pysat' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pyscreeze",
+          "severity": "medium",
+          "message": "Package 'pyscreeze' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pytesseract",
+          "severity": "medium",
+          "message": "Package 'pytesseract' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pytest_fail_slow",
+          "severity": "medium",
+          "message": "Package 'pytest_fail_slow' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pytest_run_parallel",
+          "severity": "medium",
+          "message": "Package 'pytest_run_parallel' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pytest_subtests",
+          "severity": "medium",
+          "message": "Package 'pytest_subtests' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pytest_timeout",
+          "severity": "medium",
+          "message": "Package 'pytest_timeout' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pythainlp",
+          "severity": "medium",
+          "message": "Package 'pythainlp' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "python_calamine",
+          "severity": "medium",
+          "message": "Package 'python_calamine' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "python_evt",
+          "severity": "medium",
+          "message": "Package 'python_evt' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "python_wrapper_mtia",
+          "severity": "medium",
+          "message": "Package 'python_wrapper_mtia' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pytorch_lightning",
+          "severity": "medium",
+          "message": "Package 'pytorch_lightning' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pytweening",
+          "severity": "medium",
+          "message": "Package 'pytweening' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "pyxlsb",
+          "severity": "medium",
+          "message": "Package 'pyxlsb' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "qdrant_client",
+          "severity": "medium",
+          "message": "Package 'qdrant_client' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "qtpy",
+          "severity": "medium",
+          "message": "Package 'qtpy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "quantized_hf_storage",
+          "severity": "medium",
+          "message": "Package 'quantized_hf_storage' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "railroad",
+          "severity": "medium",
+          "message": "Package 'railroad' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ray",
+          "severity": "medium",
+          "message": "Package 'ray' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "rcont",
+          "severity": "medium",
+          "message": "Package 'rcont' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "reduced_atomic_contention",
+          "severity": "medium",
+          "message": "Package 'reduced_atomic_contention' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "reportlab",
+          "severity": "medium",
+          "message": "Package 'reportlab' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "requests_kerberos",
+          "severity": "medium",
+          "message": "Package 'requests_kerberos' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "rfe",
+          "severity": "medium",
+          "message": "Package 'rfe' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "rhoknp",
+          "severity": "medium",
+          "message": "Package 'rhoknp' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "rjieba",
+          "severity": "medium",
+          "message": "Package 'rjieba' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "rocm_sdk",
+          "severity": "medium",
+          "message": "Package 'rocm_sdk' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "rocm_utils",
+          "severity": "medium",
+          "message": "Package 'rocm_utils' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "rubicon",
+          "severity": "medium",
+          "message": "Package 'rubicon' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "run_agent",
+          "severity": "medium",
+          "message": "Package 'run_agent' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "s3fs",
+          "severity": "medium",
+          "message": "Package 's3fs' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "sac_estimator",
+          "severity": "medium",
+          "message": "Package 'sac_estimator' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "sacremoses",
+          "severity": "medium",
+          "message": "Package 'sacremoses' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "sage",
+          "severity": "medium",
+          "message": "Package 'sage' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "schedulefree",
+          "severity": "medium",
+          "message": "Package 'schedulefree' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "scikits",
+          "severity": "medium",
+          "message": "Package 'scikits' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "scipy_doctest",
+          "severity": "medium",
+          "message": "Package 'scipy_doctest' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "segmented_tree",
+          "severity": "medium",
+          "message": "Package 'segmented_tree' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "seismic",
+          "severity": "medium",
+          "message": "Package 'seismic' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "selenium",
+          "severity": "medium",
+          "message": "Package 'selenium' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "sentencepiece",
+          "severity": "medium",
+          "message": "Package 'sentencepiece' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "setuptools_scm",
+          "severity": "medium",
+          "message": "Package 'setuptools_scm' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "shape_propagation",
+          "severity": "medium",
+          "message": "Package 'shape_propagation' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "shiboken2",
+          "severity": "medium",
+          "message": "Package 'shiboken2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "shiboken6",
+          "severity": "medium",
+          "message": "Package 'shiboken6' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "shimmy",
+          "severity": "medium",
+          "message": "Package 'shimmy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "simd_kernel_features",
+          "severity": "medium",
+          "message": "Package 'simd_kernel_features' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "sip",
+          "severity": "medium",
+          "message": "Package 'sip' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "sksparse",
+          "severity": "medium",
+          "message": "Package 'sksparse' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "slack_sdk",
+          "severity": "medium",
+          "message": "Package 'slack_sdk' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "smbclient",
+          "severity": "medium",
+          "message": "Package 'smbclient' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "smbprotocol",
+          "severity": "medium",
+          "message": "Package 'smbprotocol' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "smdistributed",
+          "severity": "medium",
+          "message": "Package 'smdistributed' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "snappy",
+          "severity": "medium",
+          "message": "Package 'snappy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "sniffio",
+          "severity": "medium",
+          "message": "Package 'sniffio' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "socksio",
+          "severity": "medium",
+          "message": "Package 'socksio' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "soxr",
+          "severity": "medium",
+          "message": "Package 'soxr' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "sphinx",
+          "severity": "medium",
+          "message": "Package 'sphinx' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "sphinx_gallery",
+          "severity": "medium",
+          "message": "Package 'sphinx_gallery' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "spqr_quant",
+          "severity": "medium",
+          "message": "Package 'spqr_quant' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "sqlalchemy",
+          "severity": "medium",
+          "message": "Package 'sqlalchemy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "standalone_compile",
+          "severity": "medium",
+          "message": "Package 'standalone_compile' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "starlette",
+          "severity": "medium",
+          "message": "Package 'starlette' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "static_triton_launcher",
+          "severity": "medium",
+          "message": "Package 'static_triton_launcher' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "sudachipy",
+          "severity": "medium",
+          "message": "Package 'sudachipy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "swanlab",
+          "severity": "medium",
+          "message": "Package 'swanlab' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "symengine",
+          "severity": "medium",
+          "message": "Package 'symengine' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tabulate",
+          "severity": "medium",
+          "message": "Package 'tabulate' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "template",
+          "severity": "medium",
+          "message": "Package 'template' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "template_heuristics",
+          "severity": "medium",
+          "message": "Package 'template_heuristics' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tensorboardX",
+          "severity": "medium",
+          "message": "Package 'tensorboardX' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "test_find_packages",
+          "severity": "medium",
+          "message": "Package 'test_find_packages' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "test_resources",
+          "severity": "medium",
+          "message": "Package 'test_resources' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "theano",
+          "severity": "medium",
+          "message": "Package 'theano' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "thread",
+          "severity": "medium",
+          "message": "Package 'thread' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "timm",
+          "severity": "medium",
+          "message": "Package 'timm' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tmp_joblib_",
+          "severity": "medium",
+          "message": "Package 'tmp_joblib_' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tokenization_blenderbot_small_fast",
+          "severity": "medium",
+          "message": "Package 'tokenization_blenderbot_small_fast' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tokenization_bloom",
+          "severity": "medium",
+          "message": "Package 'tokenization_bloom' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tokenization_blt",
+          "severity": "medium",
+          "message": "Package 'tokenization_blt' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tokenization_gemma_fast",
+          "severity": "medium",
+          "message": "Package 'tokenization_gemma_fast' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tokenization_hy",
+          "severity": "medium",
+          "message": "Package 'tokenization_hy' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tokenization_mt5",
+          "severity": "medium",
+          "message": "Package 'tokenization_mt5' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tokenization_parakeet_fast",
+          "severity": "medium",
+          "message": "Package 'tokenization_parakeet_fast' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tokenization_qwen2_fast",
+          "severity": "medium",
+          "message": "Package 'tokenization_qwen2_fast' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tokenization_roformer_fast",
+          "severity": "medium",
+          "message": "Package 'tokenization_roformer_fast' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tokenization_splinter_fast",
+          "severity": "medium",
+          "message": "Package 'tokenization_splinter_fast' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tokenization_xlm_roberta_fast",
+          "severity": "medium",
+          "message": "Package 'tokenization_xlm_roberta_fast' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "toml",
+          "severity": "medium",
+          "message": "Package 'toml' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "torch_mlu",
+          "severity": "medium",
+          "message": "Package 'torch_mlu' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "torch_musa",
+          "severity": "medium",
+          "message": "Package 'torch_musa' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "torch_neuronx",
+          "severity": "medium",
+          "message": "Package 'torch_neuronx' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "torch_npu",
+          "severity": "medium",
+          "message": "Package 'torch_npu' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "torch_tpu",
+          "severity": "medium",
+          "message": "Package 'torch_tpu' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "torch_xla",
+          "severity": "medium",
+          "message": "Package 'torch_xla' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "torcharrow",
+          "severity": "medium",
+          "message": "Package 'torcharrow' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "torchcodec",
+          "severity": "medium",
+          "message": "Package 'torchcodec' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "torchcomms",
+          "severity": "medium",
+          "message": "Package 'torchcomms' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "torchdistx",
+          "severity": "medium",
+          "message": "Package 'torchdistx' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "torchrec",
+          "severity": "medium",
+          "message": "Package 'torchrec' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "tornado",
+          "severity": "medium",
+          "message": "Package 'tornado' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "trackio",
+          "severity": "medium",
+          "message": "Package 'trackio' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "traitlets",
+          "severity": "medium",
+          "message": "Package 'traitlets' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "triton_bundler",
+          "severity": "medium",
+          "message": "Package 'triton_bundler' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "triton_compat",
+          "severity": "medium",
+          "message": "Package 'triton_compat' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "trove_classifiers",
+          "severity": "medium",
+          "message": "Package 'trove_classifiers' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ufoLib2",
+          "severity": "medium",
+          "message": "Package 'ufoLib2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "uharfbuzz",
+          "severity": "medium",
+          "message": "Package 'uharfbuzz' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "ujson",
+          "severity": "medium",
+          "message": "Package 'ujson' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "unicodedata2",
+          "severity": "medium",
+          "message": "Package 'unicodedata2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "unidic",
+          "severity": "medium",
+          "message": "Package 'unidic' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "unidic_lite",
+          "severity": "medium",
+          "message": "Package 'unidic_lite' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "unix_compat",
+          "severity": "medium",
+          "message": "Package 'unix_compat' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "unpack",
+          "severity": "medium",
+          "message": "Package 'unpack' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "urllib2",
+          "severity": "medium",
+          "message": "Package 'urllib2' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "urllib3_secure_extra",
+          "severity": "medium",
+          "message": "Package 'urllib3_secure_extra' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "urlparse",
+          "severity": "medium",
+          "message": "Package 'urlparse' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "uroman",
+          "severity": "medium",
+          "message": "Package 'uroman' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "usearch",
+          "severity": "medium",
+          "message": "Package 'usearch' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "uvicorn",
+          "severity": "medium",
+          "message": "Package 'uvicorn' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "uvloop",
+          "severity": "medium",
+          "message": "Package 'uvloop' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "vaex",
+          "severity": "medium",
+          "message": "Package 'vaex' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "vectordict",
+          "severity": "medium",
+          "message": "Package 'vectordict' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "viztracer",
+          "severity": "medium",
+          "message": "Package 'viztracer' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "wandb",
+          "severity": "medium",
+          "message": "Package 'wandb' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "win32api",
+          "severity": "medium",
+          "message": "Package 'win32api' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "win32com",
+          "severity": "medium",
+          "message": "Package 'win32com' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "win32con",
+          "severity": "medium",
+          "message": "Package 'win32con' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "win32pdh",
+          "severity": "medium",
+          "message": "Package 'win32pdh' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "winloop",
+          "severity": "medium",
+          "message": "Package 'winloop' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "wrapper_fxir",
+          "severity": "medium",
+          "message": "Package 'wrapper_fxir' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "wx",
+          "severity": "medium",
+          "message": "Package 'wx' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "xarray",
+          "severity": "medium",
+          "message": "Package 'xarray' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "xattr",
+          "severity": "medium",
+          "message": "Package 'xattr' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "xgboost",
+          "severity": "medium",
+          "message": "Package 'xgboost' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "xielu",
+          "severity": "medium",
+          "message": "Package 'xielu' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "xlrd",
+          "severity": "medium",
+          "message": "Package 'xlrd' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "xlsxwriter",
+          "severity": "medium",
+          "message": "Package 'xlsxwriter' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "xmlrpclib",
+          "severity": "medium",
+          "message": "Package 'xmlrpclib' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "xmlrunner",
+          "severity": "medium",
+          "message": "Package 'xmlrunner' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "xx",
+          "severity": "medium",
+          "message": "Package 'xx' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "xxhash",
+          "severity": "medium",
+          "message": "Package 'xxhash' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "yarl",
+          "severity": "medium",
+          "message": "Package 'yarl' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "yt_dlp",
+          "severity": "medium",
+          "message": "Package 'yt_dlp' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "z3",
+          "severity": "medium",
+          "message": "Package 'z3' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "zopfli",
+          "severity": "medium",
+          "message": "Package 'zopfli' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "missing_dependency",
+          "package": "zstandard",
+          "severity": "medium",
+          "message": "Package 'zstandard' imported but not listed in requirements.txt"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "beautifulsoup4",
+          "severity": "low",
+          "message": "Package 'beautifulsoup4' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "httpx",
+          "severity": "low",
+          "message": "Package 'httpx' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "networkx",
+          "severity": "low",
+          "message": "Package 'networkx' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "numpy",
+          "severity": "low",
+          "message": "Package 'numpy' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "pandas",
+          "severity": "low",
+          "message": "Package 'pandas' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "prometheus-client",
+          "severity": "low",
+          "message": "Package 'prometheus-client' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "python-dotenv",
+          "severity": "low",
+          "message": "Package 'python-dotenv' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "pyyaml",
+          "severity": "low",
+          "message": "Package 'pyyaml' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "requests",
+          "severity": "low",
+          "message": "Package 'requests' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "river",
+          "severity": "low",
+          "message": "Package 'river' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "schedule",
+          "severity": "low",
+          "message": "Package 'schedule' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "sklearn",
+          "severity": "low",
+          "message": "Package 'sklearn' listed but not imported in any .py file"
+        },
+        {
+          "type": "unused_dependency",
+          "package": "torch",
+          "severity": "low",
+          "message": "Package 'torch' listed but not imported in any .py file"
+        }
+      ]
+    },
+    "config_sync": {
+      "issues_found": 0,
+      "issues_fixed": 0,
+      "details": []
+    }
+  },
+  "proposals_generated": 576,
+  "safe_fixes_applied": 576,
+  "timestamp": "2026-04-23T11:26:03.683046",
+  "version": "1.0",
+  "repository_hash": "790429429bcd531c",
+  "report_path": "C:\\Users\\rober\\Desktop\\ProgettoCode\\speaceorganismocibernetico\\speace_auto_revision_report.json"
+}

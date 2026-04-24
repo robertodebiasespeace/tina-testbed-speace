@@ -1,0 +1,8 @@
+{
+  "metrics": {
+    "cycles_learned": 884,
+    "avg_fitness": 0.019999999999999997,
+    "best_fitness": 0.02
+  },
+  "buffer_size": 546
+}

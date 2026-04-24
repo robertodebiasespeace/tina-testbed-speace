@@ -17,3 +17,17 @@ prometheus-client>=0.16.0
 # Optional: for vector DB if using AnythingLLM-style local
 # chromadb>=0.4.0
 # sentence-transformers>=2.2.0
+anthropic
+chromadb
+flask
+networkx
+py2neo
+pydantic
+river
+sentence-transformers
+sklearn
+torch
+jsonschema
+psutil
+pyautogui
+# pygetwindow  # opzionale: auto-focus finestra terminale
