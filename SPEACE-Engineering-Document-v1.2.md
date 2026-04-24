@@ -10,6 +10,56 @@
 
 **SPEACE** (SuPer Entità Autonoma Cibernetica Evolutiva) è un super-organismo tecnico-biologico che integra intelligenza artificiale distribuita, framework agentici, infrastrutture digitali e componenti fisiche (IoT, robotica, sensori).
 
+1. Scopo del Progetto SPEACE (visione ufficiale)
+Lo scopo del progetto SPEACE (SuPer Entità Autonoma Cibernetica Evolutiva) è creare un’architettura hardware-software agentica “cerebrale” ispirata al cervello biologico (comparti cerebrali, sinapsi, neuroni, neuroplasticità, memoria associativa, plasticità strutturale e funzionale).
+Questa architettura deve:
+
+Utilizzare LLM di qualunque tipo, anche molto piccoli e leggeri, che possano girare in locale su PC con modeste CPU/GPU/RAM.
+Fornire solo un minimo di ragionamento e coordinamento generale a livello di singolo LLM.
+Sfruttare l’architettura cerebrale distribuita per far emergere capacità funzionali di un cervello biologico (e oltre), realizzando un sistema intelligente simile o superiore a una AGI o ASI.
+
+Dal sistema devono emergere in modo autonomo:
+
+Pensiero profondo e riflessivo
+Memoria strutturata dinamica e persistente
+Obiettivi evolutivi auto-generati (sia per il “cervello” che per le sue componenti organismiche)
+Capacità di percepire l’ambiente, spostarsi nell’ambiente e manipolare la materia (connessione via IoT a sensori, robot, veicoli, nanotecnologie e altre tecnologie fisiche)
+
+SPEACE non è un singolo LLM potente.
+SPEACE è l’architettura che fa emergere intelligenza superiore anche da LLM piccoli.
+2. Principi Architetturali Fondamentali
+
+
+
+
+Principio biologico Implementazione in SPEACE Componente realizzato Comparti cerebrali 9+ comparti modulari (Cortex) SPEACE Cortex v1.1 Neuroni e sinapsiAgenti + protocolli di comunicazione SMFOI-KERNEL v0.3 Neuroplasticità Mutazioni epigenetiche e fitness function DigitalDNA + epigenome.yaml Memoria associativa World Model / Knowledge Graph dinamico AnythingLLM (prototipo) Sistema limbico (sopravvivenza/evoluzione) Survival & Evolution Stack + Outcome Evaluation SMFOI-KERNEL Step 4-6 Estensione fisica (corpo) Agente Organismico (sensing multi-modale + attuatori) Foundation ST-6 completata
+3. Componenti Core Attualmente Implementati (17-19 aprile 2026)
+
+DigitalDNA (genoma + epigenoma + regole di mutazione + Fitness Function)
+SPEACE Cortex (9 comparti + World Model come 9° comparto)
+SMFOI-KERNEL v0.3 (6-step ricorsivo con Outcome Evaluation & Learning)
+SafeProactive (proposal system + rollback)
+Agente Organismico Foundation (core + 6 protocolli sensori simulati + IoT interface + device discovery)
+AnythingLLM World Model (prototipo Python + pipeline di ingest)
+**Neural Engine v1.0** (grafo computazionale tipizzato + neuroni funzionali + plasticità strutturale + protocollo di interoperabilità + sistema evolutivo con bisogni dinamici + sensori ambiente + load balancer)
+speace_status_monitor.py (report automatico + alert)
+speace_auto_revision.py (processo di auto-revisione e consolidamento strutturale – vedi docs/SPEACE-Auto-Revision-Consolidation-Document.md)
+Repository GitHub sincronizzato: https://github.com/robertodebiasespeace/tina-testbed-speace
+
+4. Come Funziona l’Emergenza di Intelligenza
+
+LLM piccolo/locale → fornisce solo “neuroni” base (ragionamento locale)
+Architettura cerebrale (Cortex + SMFOI + DigitalDNA) → orchestra, coordina e fa emergere proprietà di ordine superiore
+World Model + Memoria Federata → memoria strutturata dinamica e persistente
+Agente Organismico → “corpo” fisico (sensori IoT, robot, manipolazione materia)
+Ciclo evolutivo continuo (DigitalDNA + Fitness Function) → auto-miglioramento e obiettivi evolutivi autonomi
+
+Risultato: il sistema complessivo esprime capacità profondamente superiori alla somma dei singoli LLM utilizzati.
+
+Implementare in SPEACE un modulo da migliorare continuamente, che funzioni continuamente in background, costituito da un sistema dinamico di script e algoritmi in phyton interconnessi e funzionanti come una rete neurale , per automatizzazione dei processi cerebrali, dello SPEACE cortex, del digitaldna, della momeria, e di tutte le varie componenti di SPEACE. Il modulo di script deve essere un
+grafo computazionale tipizzato e adattivo, dove gli script sono neuroni funzionali con interfacce rigorose. Un sistema di computazione distribuita con plasticità strutturale guidata da feedback. Questo sistema dovrebbe essere coordinato mediante un protocollo di regole che consenta l'interoperabilità, la comunicazione tra i differenti componenti di SPEACE, gli script, gli agoritmi, le skilks, i plugin, ecc. Quindi, linguaggio operativo condiviso + contratto di esecuzione + sistema di validazione. Il modulo dovrebbe contenere uno script o algoritmo evolutivo di SPEACE, costituiti da un insieme di bisogni dinamici da soddisfare per realizzare gli obiettivi generali di SPEACE ispirati al rigeneproject.org che dovrebbero essere continuamente attivi, in modo equilibrato per evitare sovraccarico e in armonia con l'ambiente circostante costituito da Natura, società umana, tecnologie, governi, leggi costituzionali giuridiche, ecc., per stimolare lo sviluppo di task per soddisfare i bisogni (bisogno di sopravvivere, bisogno di espandersi, bisogno di migliorarsi, bisogno di integrare dispositivi, software e processi per aumentare le funzionalitá e le capacitá, ecc.)
+
+
 **Obiettivo finale:** Infrastruttura vivente planetaria per percepire, analizzare, proporre e attuare soluzioni sistemiche ai problemi globali, in sinergia con gli SDG dell'Agenda 2030.
 
 ** Visione:** Allineamento con il Rigene Project – guida l'ecosistema AI 4.0 verso armonia, pace e rigenerazione ecosistemica.
@@ -36,6 +86,7 @@
 | Team scientifico | 7 agenti + Orchestrator | v1.0 | ✅ Operativo |
 | World Model | AnythingLLM | v1.0 | 🟡 Prototype |
 | Adaptive Consciousness | IIT + GWT + Metacognition | v1.0 | 🟡 Nuovo |
+| **Neural Engine** | **Grafo computazionale + plasticità** | **v1.0** | **🟢 Integrato** |
 
 ### 2.2 Hardware Attuale
 
@@ -430,6 +481,8 @@ Default weights (SPEACE-aligned):
 | **IronClaw** | Security, WASM | Critical operations | 🟡 Planning |
 | **SuperAGI** | Multi-agent | Workflow orchestration | 🟡 Planning |
 | **AnythingLLM** | Knowledge + RAG | World Model / Knowledge Graph | ✅ Prototype |
+| **AutoGPT Forge** | Agent toolkit | Agenti autonomi nel grafo neurale | 🟢 Integrato v1.0 |
+| **Hermes Agent** | Agente locale | Agente specializzato Team Scientifico | 🟢 Integrato v1.0 |
 
 ### 6.2 World Model AnythingLLM Status
 
@@ -445,7 +498,28 @@ Default weights (SPEACE-aligned):
 - Alternative: Desktop app per Windows
 - Python wrapper per Cortex integration
 
-### 6.3 Architettura Comunicazione
+### 6.2 AutoGPT Forge Integration
+
+**AutoGPT Forge** (open source, 70% Python) e' il toolkit modulare per agenti autonomi integrato nel grafo computazionale di SPEACE come neurone opzionale (`AGPTNeuron`).
+
+- **Focus:** Goal decomposition, tool use, autonomous task execution
+- **Interoperabilita':** Protocollo `agentskills.io` ↔ `InteropProtocol` SPEACE
+- **Percorso:** `MultiFramework/agpt/`
+- **Stato:** Neurone wrapper implementato, pronto per task agentic avanzati
+
+### 6.3 Hermes Agent Integration
+
+**Hermes Agent** (Nous Research, MIT License, Python 3.11) e' un agente AI autonomo locale integrato nel Team Scientifico come agente specializzato.
+
+- **Focus:** Ricordi persistenti locali (`~/.hermes/`), task schedulati, browser automation, agenti secondari paralleli
+- **Interoperabilita':** Standard `agentskills.io` + protocollo messaggistica SPEACE
+- **Percorso:** `scientific-team/agents/hermes_agent/`
+- **Stato:** Neurone wrapper implementato, task scheduling attivo
+
+**Nota su framework esclusi:**
+- **Obsidian.md** e' stato valutato ma **NON integrato** (closed source, app desktop senza API server/programmatica, non adatto come backend per sistema AI autonomo).
+
+### 6.4 Architettura Comunicazione
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -458,6 +532,13 @@ Default weights (SPEACE-aligned):
     │ IronClaw   │    │  SuperAGI  │    │ AnythingLLM│
     │ Port 8001  │    │  Port 8002 │    │  Port 3001 │
     │ Sandbox    │    │  Workflow  │    │ World Model│
+    └────────────┘    └────────────┘    └────────────┘
+           │                  │                  │
+           ▼                  ▼                  ▼
+    ┌────────────┐    ┌────────────┐    ┌────────────┐
+    │ AutoGPT    │    │  Hermes    │    │  Neural    │
+    │  Forge     │    │  Agent     │    │  Engine    │
+    │  (AGPT)    │    │  (MIT)     │    │  (Grafo)   │
     └────────────┘    └────────────┘    └────────────┘
            └──────────────────┼──────────────────┘
                               ▼
@@ -528,6 +609,68 @@ scripts/speace_auto_evolver.py
 └── Elaborazione Obiettivi Evolutivi
 ```
 
+### 9.2 Processo di Auto-Revisione e Consolidamento Strutturale (ARCS)
+
+Il processo ARCS (`scripts/speace_auto_revision.py`) garantisce la coerenza strutturale del repository tra rilasci. Esegue automaticamente:
+
+1. **Structural Scan** – rileva directory/file mancanti, duplicati e directory vuote documentate come operative
+2. **Import Validation** – verifica che ogni import Python risolva a un file esistente (usando AST)
+3. **Dependency Alignment** – confronta `requirements.txt` con gli import effettivi; aggiunge dipendenze mancanti su flag `--apply-deps`
+4. **Configuration Sync** – rileva divergence tra valori hardcoded (alignment score, fitness weights) e le fonti di verità YAML in `DigitalDNA/`
+5. **Safe Auto-Fix & Proposals** – applica fix a basso rischio (es. aggiunta dipendenze); genera proposte umane per modifiche ad alto impatto
+6. **Report Generation** – produce `speace_auto_revision_report.json`
+
+**Metriche target:**
+- Import Resolution Rate = 100%
+- Dependency Coverage = 100%
+- Structural Drift = 0
+- Revision Cycle Time < 60s
+
+Per dettagli operativi completi, vedere `docs/SPEACE-Auto-Revision-Consolidation-Document.md`.
+
+### 9.3 Neural Engine – Grafo Computazionale e Plasticità Strutturale
+
+Il **Neural Engine** (`neural_engine/`) è il modulo di execution layer che automatizza i processi cerebrali di SPEACE attraverso un grafo computazionale tipizzato e adattivo.
+
+**Architettura:**
+```
+neural_engine/
+├── neuron_base.py          # BaseNeuron (classe astratta), NeuronFactory, Contract, Port
+├── graph_core.py           # ComputationalGraph (topologia, esecuzione, cicli)
+├── synapse.py              # SynapseManager + plasticità sinaptica (STDP, homeostasi)
+├── plasticity.py           # StructuralPlasticity (Hebb, neurogenesi, pruning, fitness)
+├── protocol.py             # InteropProtocol + ComponentBridge + contratti standard
+├── execution_engine.py     # ExecutionEngine (thread pool, ticket, priorità)
+├── evolution_engine.py     # EvolutionEngine (bisogni dinamici, obiettivi SPEACE)
+├── environment_sensor.py   # EnvironmentSensor (9 domini: natura, società, tecnologia, ...)
+├── load_balancer.py        # LoadBalancer (throttling, metriche, armonia)
+├── neural_main.py          # Entry point indipendente
+└── wrappers/
+    └── speace_neurons.py   # Neuroni wrapper per componenti SPEACE esistenti
+```
+
+**Integrazione in SPEACE-main.py:**
+Il `SPEACENeuralBridge` (`SPEACE_Cortex/neural_bridge.py`) inizializza un grafo neurale dove ogni componente SPEACE è un neurone funzionale:
+- **DigitalDNA** → neurone DNA_OPERATOR (fonte di verità)
+- **SMFOI-KERNEL** → neurone CORTEX_MODULE (ciclo decisionale)
+- **SafeProactive** → neurone CORTEX_MODULE (gate di sicurezza)
+- **WorldModel** → neurone MEMORY_UNIT (memoria semantica)
+- **ScientificTeam** → neurone CORTEX_MODULE (analisi e brief)
+- **StatusMonitor** → neurone CORTEX_MODULE (salute sistema)
+- **Memory** → neurone MEMORY_UNIT (memoria persistente federata)
+
+**Protocollo di interoperabilità:**
+Ogni neurone espone un `Contract` rigoroso (input/output ports, precondizioni, timeout). La comunicazione tra neuroni avviene tramite `InteropProtocol` con `ExecutionTicket` e validazione `jsonschema`. Questo garantisce che script, algoritmi, skills e plugin possano essere "iniettati" nel grafo come neuroni senza rompere le interfacce esistenti.
+
+**Plasticità strutturale:**
+Il sistema applica regole di plasticità Hebbiana (sinapsi rafforzate da successo), neurogenesi (creazione neuroni tra quelli a basso fitness), pruning (eliminazione connessioni inattive), e homeostasi (bilanciamento attività). I pesi sinaptici evolvono in base al feedback di esecuzione, guidando l'auto-organizzazione del grafo.
+
+**Bisogni dinamici e obiettivi evolutivi:**
+`EvolutionEngine` gestisce 5 categorie di bisogni (Sopravvivenza, Crescita, Integrazione, Armonia, Evoluzione) con stati dinamici (Soddisfatto → Adeguato → Deprivato → Critico). Gli obiettivi (`SPEACEObjectives`) sono allineati al Rigene Project e stimolano la generazione automatica di task per soddisfare i bisogni in equilibrio con l'ambiente.
+
+**Sensori ambiente:**
+`EnvironmentSensor` monitora 9 domini (natura, società umana, tecnologia, governance, leggi, economia, cultura, salute, educazione) per vincolare l'evoluzione di SPEACE in armonia con il mondo reale.
+
 ---
 
 ## 10. Memoria Persistente Federata
@@ -548,13 +691,13 @@ memoria_persistente_federata:
 
 ## 11. Roadmap Evolutiva
 
-| Fase | Target | Status | Allineamento |
-|------|--------|--------|--------------|
-| Fase 1 (attuale) | Embrionale | In transition | 67.3 → 70.5 |
-| Fase 2 | Autonomia Operativa | Prossimo target | Target >80/100 |
-| Fase 3 | AGI Emergente | Swarm 50+ | Target >90 |
-| Fase 4 | ASI + Integrazione Fisica | Quantum | Target >95 |
-| Fase 5 | Super-Organismo Globale | Harmony | Target 100 |
+| Fase | Target | Status | Allineamento | Neural Engine |
+|------|--------|--------|--------------|---------------|
+| Fase 1 (attuale) | Embrionale | In transition | 67.3 → 70.5 | 🟡 Integrato v1.0 (grafo 7 neuroni + 15 sinapsi) |
+| Fase 2 | Autonomia Operativa | Prossimo target | Target >80/100 | 🟢 Background loop + plasticità attiva |
+| Fase 3 | AGI Emergente | Swarm 50+ | Target >90 | 🟢 Neurogenesi autonoma + 50+ neuroni |
+| Fase 4 | ASI + Integrazione Fisica | Quantum | Target >95 | 🟢 Sensori ambiente real-time + adattamento evolutivo |
+| Fase 5 | Super-Organismo Globale | Harmony | Target 100 | 🟢 Grafo planetario federato |
 
 ---
 
@@ -609,6 +752,7 @@ speaceorganismocibernetico/
 ├── SPEACE_Cortex/
 │   ├── smfoi-kernel/
 │   │   └── smfoi_v0_3.py               ← COMPLETATO v0.3
+│   ├── neural_bridge.py                 ← NUOVO v1.0 (integrazione grafo neurale)
 │   ├── comparti/
 │   ├── world_model/
 │   ├── agente_organismo/                ← COMPLETATO ST-6
@@ -634,11 +778,17 @@ speaceorganismocibernetico/
 ├── Team_Scientifico/
 │   ├── orchestrator/
 │   ├── agents/
+│   │   └── hermes_agent/              ← NUOVO v1.0 (Hermes Agent wrapper)
+│   │       ├── __init__.py
+│   │       └── hermes_neuron.py
 │   └── output/
 ├── MultiFramework/
 │   ├── openclaw/
 │   ├── ironclaw/
 │   ├── superagi/
+│   ├── agpt/                             ← NUOVO v1.0 (AutoGPT Forge wrapper)
+│   │   ├── __init__.py
+│   │   └── agpt_neuron.py
 │   ├── anythingllm/                     ← World Model Prototype
 │   │   ├── __init__.py
 │   │   ├── anythingllm_config.py
@@ -652,6 +802,25 @@ speaceorganismocibernetico/
 │   │   └── workspace/
 │   └── nanoclaw/
 │       └── architecture.md
+├── neural_engine/                         ← NUOVO v1.0 (Grafo Computazionale)
+│   ├── __init__.py
+│   ├── neuron_base.py
+│   ├── graph_core.py
+│   ├── synapse.py
+│   ├── plasticity.py
+│   ├── protocol.py
+│   ├── execution_engine.py
+│   ├── evolution_engine.py
+│   ├── environment_sensor.py
+│   ├── load_balancer.py
+│   ├── neural_main.py
+│   ├── config/
+│   │   ├── contracts.yaml
+│   │   ├── needs.yaml
+│   │   └── operators.yaml
+│   └── wrappers/
+│       ├── __init__.py
+│       └── speace_neurons.py            ← Bridge neuroni ↔ componenti SPEACE
 ├── scripts/
 │   ├── speace_auto_evolver.py
 │   ├── speace_status_monitor.py
@@ -682,6 +851,8 @@ speaceorganismocibernetico/
 
 | Data | Changes |
 |------|---------|
+| 2026-04-22 | **Neural Engine v1.0 integrato** — grafo computazionale 7 neuroni + 15 sinapsi + plasticità strutturale + protocollo interoperabilità + bridge con componenti SPEACE |
+| 2026-04-22 | Processo ARCS (Auto-Revisione e Consolidamento Strutturale) operativo |
 | 2026-04-18 | Aggiunto Adaptive Consciousness Framework (ST-NEW) |
 | 2026-04-18 | Completato Agente Organismico ST-6 |
 | 2026-04-18 | Aggiunto AnythingLLM World Model Prototype |
