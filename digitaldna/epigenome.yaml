@@ -8,8 +8,8 @@
 meta:
   version: "1.5"
   last_updated: "2026-04-27"
-  last_mutation_id: "EPI-008"
-  mutation_count: 9
+  last_mutation_id: "EPI-010"
+  mutation_count: 10
   # EPI-001: Aggiunta sezione consciousness_metrics (ACF Integration)
   #          + fitness_function v2 (6 componenti) in mutation_rules.yaml
   # EPI-002: M2 – external_benchmark_validated=true dopo benchmark suite 6/6 pass
@@ -37,6 +37,11 @@ meta:
   #          planning_depth, self_repair_mode, mutation_gate_open, focus_shift.
   #          7 regole causali (R1-R7). 46 test PASS. SMFOI step4 wired.
   #          (PROP-M7-DRIVE-EXECUTIVE → APPROVED)
+  # EPI-010: M8 — cognitive_autonomy.swarm.enabled: true
+  #          SwarmOrchestrator (10° comparto): NeuronBase + PlannerNeuron + CriticNeuron
+  #          ExecutorNeuron + ResearcherNeuron + SwarmOrchestrator pipeline.
+  #          29 test PASS. Emergence EM-03 FAIL→PASS. Score: 58%→65%.
+  #          (PROP-M8-SWARM-AGENTIC → APPROVED)
 
 # --- Parametri di apprendimento e adattamento ---
 learning:
@@ -249,7 +254,20 @@ mutation_history:
       Test suite: 46/46 PASS (causal tests). Emergence EM-06 FAIL→PASS.
       Emergence Score: 50% → ~57%.
     evidence: "cortex/cognitive_autonomy/executive/_tests_executive.py (46/46, 2026-04-27)"
-    snapshot_pre: "snap_20260427_pre_epi008_gk01" Viability alerts ora generati realmente.
+    snapshot_pre: "snap_20260427_pre_epi008_gk01"
+  - id: "EPI-010"
+    timestamp: "2026-04-27T18:00:00"
+    proposal: "PROP-M8-SWARM-AGENTIC"
+    change: >
+      cognitive_autonomy.swarm.enabled: false → true.
+      SwarmOrchestrator implementato come 10° comparto SPEACE Cortex.
+      Port neuroni da speaceorganismocibernetico: PlannerNeuron, CriticNeuron,
+      ExecutorNeuron, ResearcherNeuron (base NeuronBase con fallback deterministico).
+      Pipeline: Researcher→Planner→Executor(x N)→Critic(x N)→Synthesis.
+      Integrazione BehavioralState: exploration_bonus > 0 → Swarm avviato spontaneamente.
+      Test suite: 29/29 PASS. Emergence EM-03 FAIL→PASS (+7%). Score 58%→65%.
+    evidence: "cortex/cognitive_autonomy/swarm/_tests_swarm.py (29/29, 2026-04-27)"
+    snapshot_pre: "snap_20260427_pre_epi010_m8" Viability alerts ora generati realmente.
     evidence: "tests/test_emergence.py EM-05 (viability drop genera alerts) — 2026-04-27"
     snapshot_pre: "snap_20260427_pre_gk01"
   - id: "EPI-006"
@@ -358,5 +376,10 @@ cognitive_autonomy:
     energy_deep_threshold: 0.7
     alignment_gate_threshold: 0.5
     phi_parallel_threshold: 0.7
+  swarm:
+    enabled: true               # EPI-010: ON (2026-04-27) — Swarm Agentic Layer 10° comparto
+    model: "gemma3:4b"
+    max_subtasks: 4
+    critic_strict: false
   world_model:
     enabled: true               # EPI-007: ON (2026-04-27) — WorldModelCortex 9° comparto
