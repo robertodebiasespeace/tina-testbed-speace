@@ -1,0 +1,165 @@
+{
+  "timestamp": "2026-04-20T09:38:48",
+  "total_seconds": 3.91,
+  "results": {
+    "tests": {
+      "name": "bench_tests",
+      "exit_code": 0,
+      "passed": 16,
+      "failed": 0,
+      "output_tail": "................                                                         [100%]\n16 passed in 0.42s"
+    },
+    "smoke": {
+      "name": "bench_smoke",
+      "exit_code": 0,
+      "cycles_requested": 3,
+      "cycles_observed": 3,
+      "session_completed": true,
+      "stderr_tail": ""
+    },
+    "cindex": {
+      "name": "bench_cindex",
+      "c_index": 0.4267,
+      "phi": 0.4486,
+      "w_activation": 0.5,
+      "a_complexity": 0.289,
+      "consciousness_level": "Funzionale",
+      "fitness_after": 0.5867
+    },
+    "fitness": {
+      "name": "bench_fitness",
+      "fitness_before": 0.0,
+      "fitness_after": 0.5867,
+      "delta": 0.5867
+    },
+    "latency": {
+      "name": "bench_latency",
+      "sample_size": 20,
+      "total_calls": 180,
+      "mean_ms": 4.977,
+      "p50_ms": 0.018,
+      "p95_ms": 21.481,
+      "max_ms": 29.018,
+      "per_compartment_mean_ms": {
+        "prefrontal_cortex": 0.022,
+        "hippocampus": 1.323,
+        "safety_module": 19.776,
+        "temporal_lobe": 0.011,
+        "parietal_lobe": 17.18,
+        "cerebellum": 0.01,
+        "default_mode_network": 0.011,
+        "curiosity_module": 0.007,
+        "world_model": 6.453
+      }
+    },
+    "rollback_cli": {
+      "name": "bench_rollback_cli",
+      "list_ok": true,
+      "snapshots_found": 11,
+      "dry_run_ok_noop": true
+    },
+    "llm_smoke": {
+      "name": "bench_llm_smoke",
+      "primary": "openai_compat",
+      "fallback_chain": [
+        "anthropic",
+        "mock"
+      ],
+      "health": {
+        "openai_compat": false,
+        "ollama_native": false,
+        "anthropic": false,
+        "mock": true
+      },
+      "health_latency_ms": 4.9,
+      "health_dict_ok": true,
+      "any_real_backend_up": false,
+      "complete_latency_ms": 1.55,
+      "backend_used": "mock",
+      "is_stub": true,
+      "fallback_used": true,
+      "text_len": 122,
+      "any_responded": true
+    },
+    "neural_flow": {
+      "name": "bench_neural_flow",
+      "nominal": {
+        "scenario": "nominal",
+        "compartments_total": 9,
+        "compartments_in_log": 9,
+        "compartments_missing": [],
+        "levels_seen": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "log_entries": 9,
+        "errors": 0,
+        "error_samples": [],
+        "safety_blocked": false,
+        "hierarchy_issues": [],
+        "latency_ms": 58.32,
+        "uncertainty": 0.7,
+        "risk": 0.0,
+        "novelty": 0.0
+      },
+      "hazard": {
+        "scenario": "hazard",
+        "safety_blocked": true,
+        "cerebellum_status": "skipped",
+        "hippocampus_logged": true,
+        "downstream_respected": true,
+        "log_entries": 9,
+        "latency_ms": 59.02
+      },
+      "nominal_ok": true,
+      "hazard_ok": true,
+      "all_ok": true
+    }
+  },
+  "findings": [
+    {
+      "bench": "tests",
+      "ok": true,
+      "detail": "passed=16, failed=0"
+    },
+    {
+      "bench": "smoke",
+      "ok": true,
+      "detail": "exit=0, cycles=3, completed=True"
+    },
+    {
+      "bench": "cindex",
+      "ok": true,
+      "detail": "c_index=0.4267 (min 0.42)"
+    },
+    {
+      "bench": "fitness",
+      "ok": true,
+      "detail": "fitness_after=0.5867 (min 0.55)"
+    },
+    {
+      "bench": "latency",
+      "ok": true,
+      "detail": "p95=21.481ms, mean=4.977ms (max p95 100.0ms)"
+    },
+    {
+      "bench": "rollback_cli",
+      "ok": true,
+      "detail": "list=True, snaps=11, dry_run_noop=True"
+    },
+    {
+      "bench": "llm_smoke",
+      "ok": true,
+      "detail": "backend=mock, responded=True, real_up=False, latency=1.55ms"
+    },
+    {
+      "bench": "neural_flow",
+      "ok": true,
+      "detail": "nominal(comp=9/9, errors=0), hazard(blocked=True, respected=True)"
+    }
+  ],
+  "all_passed": true
+}

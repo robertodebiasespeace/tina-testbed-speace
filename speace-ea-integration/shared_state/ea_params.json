@@ -1,0 +1,9 @@
+{
+  "LotSize": 0.1,
+  "StopLossPips": 500,
+  "TakeProfitPips": 1000,
+  "RSI_Period": 14,
+  "MA_Fast_Period": 10,
+  "MA_Slow_Period": 30,
+  "MaxTrades": 3
+}

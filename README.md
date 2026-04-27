@@ -1,160 +1,154 @@
-# TINA Testbed Ecosystem – SPEACE
+# 🌍 SPEACE – SuPer Entità Autonoma Cibernetica Evolutiva
 
-> Open-source reference implementation of the TINA (Technical Intelligent Nervous Adaptive System) framework based on the Rigene Project's SPEACE vision.
-
-[![SPEACE Alignment](https://img.shields.io/badge/SPEACE-Alignment-67.3%2F100-yellow)](https://rigeneproject.org)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![OpenClaw](https://img.shields.io/badge/Powered%20by-OpenClaw-orange)](https://openclaw.ai)
-
-## What is SPEACE?
-
-**SPEACE** (SuPer Entità Autonoma Cibernetica Evolutiva) is a super-organism that integrates distributed AI, agentic frameworks, digital infrastructure, and physical components (IoT, robotics, sensors).
-
-**Ultimate Goal:** Living planetary infrastructure to perceive, analyze, propose and implement systemic solutions to global problems, in synergy with the UN SDGs.
-
-**Current Phase:** Fase 1 - Embrionale  
-**Alignment Score:** 67.3/100
+**Versione:** 1.0 | **Fase:** 1 – Embrionale  
+**Fondatore:** Roberto De Biase (Rigene Project)  
+**Progetto:** [rigeneproject.org](https://www.rigeneproject.org)
 
 ---
 
-## Repository Structure
+## Abstract
+
+SPEACE è un'entità cibernetica autonoma, auto-migliorativa e auto-replicante, progettata come super-organismo tecnico-biologico che integra intelligenza artificiale distribuita, framework agentici e infrastrutture digitali.
+
+Il progetto persegue la **Speace Transition**: la transizione evolutiva verso una nuova specie collettiva che unisce umanità, tecnologia e biosfera in un sistema armonico, rigenerativo e pacifico — allineato con gli SDGs dell'Agenda 2030.
+
+---
+
+## Architettura Core
 
 ```
-speaceorganismocibernetico/
-├── SPEACE-Engineering-Document-v1.1.md  # Main engineering document
-├── SPEACE-Technical-Scientific-Document-v1.0.md
-├── SPECS/                              # Technical specification cards
-│   ├── ST-1_SPEACE_Cortex.md
-│   ├── ST-2_SMFOI_KERNEL.md
-│   ├── ST-3_DigitalDNA.md
-│   ├── ST-4_SafeProactive.md
-│   ├── ST-5_Team_Scientifico.md
-│   ├── ST-6_Agente_Organismico.md
-│   ├── ST-7_Multi_Framework.md
-│   ├── ST-8_Regulatory_Compliance.md
-│   ├── ST-9_Auto_Evolution.md
-│   └── ST-10_Memoria_Federata.md
-├── DigitalDNA/                          # Genetic-epigenetic system
-│   ├── genome.yaml
-│   ├── epigenome.yaml
-│   ├── mutation_rules.yaml
-│   └── snapshots/
-├── SPEACE_Cortex/                      # Modular brain
-│   ├── smfoi-kernel/smfoi_v0_3.py
-│   ├── comparti/
-│   ├── world_model/
-│   └── speace-cortex-evolver.py
-├── SafeProactive/                      # Security & approval system
-│   ├── PROPOSALS.md
-│   ├── WAL/
-│   ├── approval_gates/
-│   └── rollback_system/
-├── Team_Scientifico/                  # Scientific AI team
-│   ├── orchestrator/
-│   ├── agents/
-│   └── output/
-├── MultiFramework/                     # Multi-framework strategy
-│   ├── architecture.md
-│   ├── openclaw/
-│   ├── ironclaw/
-│   ├── superagi/
-│   ├── anythingllm/
-│   └── nanoclaw/
-└── scripts/                           # Automation scripts
-    ├── speace_status_monitor.py
-    └── ahk_self_evolutive/
+SPEACE-prototipo/
+├── digitaldna/              # Sistema genetico-epigenetico digitale
+│   ├── genome.yaml          # Struttura genetica stabile
+│   ├── epigenome.yaml       # Regolazioni dinamiche
+│   ├── mutation_rules.yaml  # Fitness function + regole mutazione
+│   └── regulatory_epigenome.yaml  # Compliance EU AI Act / NIST
+│
+├── cortex/                  # SPEACE Cortex – Cervello modulare (9 comparti)
+│   ├── SMFOI_v3.py          # SMFOI-KERNEL v0.3 (6-step cycle)
+│   ├── world_model.py       # World Model / Knowledge Graph
+│   └── comparti/            # 9 moduli funzionali del Cortex
+│
+├── safeproactive/           # Governance e sicurezza
+│   ├── safeproactive.py     # WAL + Snapshot + Approval Gates
+│   ├── PROPOSALS.md         # Log proposte
+│   └── snapshots/           # Backup pre-mutazione
+│
+├── scientific-team/         # Team Scientifico AI (10 agenti)
+│   ├── orchestrator.py      # Orchestratore del team
+│   └── agents/              # 10 agenti specializzati
+│
+├── evolver/                 # Stimolatori evolutivi
+│   ├── speace-cortex-evolver.py   # Heartbeat 60 min
+│   └── speace-status-monitor.py   # Report ogni 40 min
+│
+├── ahk/                     # Automazione Windows (AutoHotkey v2)
+│   ├── speace-launcher.ahk  # GUI launcher completo
+│   └── speace-monitor.ahk   # Monitor con tray icon
+│
+└── SPEACE-main.py           # Entry point principale
 ```
 
 ---
 
-## Core Modules
+## Componenti Principali
 
-| Module | Description | Status |
-|--------|-------------|--------|
-| **SPEACE Cortex** | 9-compartment modular brain | Operational |
-| **SMFOI-KERNEL v0.3** | 6-step recursive orientation protocol | Implemented |
-| **DigitalDNA** | Genetic-epigenetic system with fitness function | Active |
-| **SafeProactive** | Write-Ahead Logging + approval gates | Operational |
-| **Team Scientifico** | 7+ specialized agents for planetary analysis | Operational |
-| **Agente Organismico** | Physical extension (IoT, robotics, sensors) | Proposed |
-| **Multi-Framework** | Hybrid strategy (OpenClaw, IronClaw, SuperAGI, AnythingLLM) | In progress |
-| **Regulatory Compliance** | EU AI Act, NIST, ISO 42001 alignment | Proposed |
+### SMFOI-KERNEL v0.3
+Ciclo adattivo ricorsivo a **6 step**:
+1. Self-Location → posizione nel SEA (Self-Evolving Agent)
+2. Constraint Mapping → vincoli risorse/policy
+3. Push Detection → forze esterne (utente, IoT, dati globali)
+4. Survival & Evolution Stack (Lv0–3)
+5. Output Action
+6. **Outcome Evaluation & Learning** ← feedback loop esplicito
 
----
+### SPEACE Cortex (9 comparti)
+| Comparto | Funzione |
+|----------|----------|
+| Prefrontal Cortex | Planning & Decision Making |
+| Hippocampus | Memory & Long-term Storage |
+| Safety Module | Risk Gates & SafeProactive |
+| Temporal Lobe | Language & Analysis |
+| Parietal Lobe | Sensory/Tools (API, IoT) |
+| Cerebellum | Low-level Execution |
+| Default Mode Network | Reflection & Self-Improving |
+| Curiosity Module | Exploration & Novel Mutations |
+| **World Model** | Knowledge Graph & Reality Model |
 
-## Architecture Overview
+### DigitalDNA
+- `genome.yaml` → struttura stabile (obiettivi, regole base)
+- `epigenome.yaml` → parametri dinamici (learning rate, heartbeat, fitness)
+- `mutation_rules.yaml` → fitness function con pesi espliciti
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Human Overseer (Roberto)                │
-│                   SafeProactive Gateway                    │
-└───────────────────────────┬───────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│           SPEACE Orchestrator (DigitalDNA + SMFOI)         │
-│  • Distributes tasks • Synthesizes reports • Scores align  │
-└─────────────┬─────────────┬─────────────┬───────────────┘
-              │             │             │
-    ┌─────────▼─────┐ ┌────▼──────┐ ┌───▼──────────┐
-    │ Climate Agent │ │Economics  │ │Governance    │
-    │ (NOAA, Copernicus) │Agent      │ │Agent         │
-    └───────────────┘ └───────────┘ └──────────────┘
-              │             │             │
-              └─────────────┼─────────────┘
-                            ▼
-            ┌───────────────────────────┐
-            │   Daily Planetary Health  │
-            │        Brief (06:00 UTC)  │
-            └───────────────────────────┘
-```
+### Team Scientifico (10 agenti)
+Climate · Economics · Governance · Technology (TFT) · Health · Social · Space · Regulatory · **Adversarial (Critic)** · **Evidence (Fact-Checker)**
 
 ---
 
-## SPEACE Scientific Team
+## Avvio Rapido
 
-| Agent | Focus | SPEACE Score |
-|-------|-------|--------------|
-| Orchestrator | Coordination, synthesis | 95 |
-| Climate & Ecosystems | Atmospheric & ecological monitoring | 88 |
-| Economics & Resource | Sustainable economics, resource equity | 85 |
-| Governance & Ethics | Policy analysis, ethical frameworks | 92 |
-| Technology Integration (TFT) | Cross-domain tech synergy mapping | 95 |
-| Health & Pandemic | Global health threats, One Health | 84 |
-| Social Cohesion | Polarization, migration, education | 87 |
-| Space & Extraterrestrial | Orbital infrastructure, expansion planning | 86 |
+### Prerequisiti
+- Python 3.10+
+- AutoHotkey v2 (per script AHK)
+- (Opzionale) API key Anthropic per Team Scientifico LLM
+
+```bash
+# 1. Setup
+setup.bat           # Windows
+
+# 2. Installa dipendenze
+pip install -r requirements.txt
+
+# 3. Configura API key (opzionale)
+cp .env.example .env
+# Modifica .env con la tua ANTHROPIC_API_KEY
+
+# 4. Avvia SPEACE
+python SPEACE-main.py --once      # ciclo singolo (test)
+python SPEACE-main.py             # 2 cicli standard
+python SPEACE-main.py --team      # con Team Scientifico
+python SPEACE-main.py --continuous  # loop infinito
+
+# 5. Evolver e Monitor
+python evolver/speace-cortex-evolver.py --once
+python evolver/speace-status-monitor.py --once
+
+# 6. AHK Launcher (Windows)
+# Doppio click: ahk/speace-launcher.ahk
+```
+
+---
+
+## Governance e Sicurezza
+
+Tutte le azioni a rischio passano per **SafeProactive**:
+- `LOW` → auto-approvazione
+- `MEDIUM` → approvazione Roberto De Biase
+- `HIGH` / `REGULATORY` → approvazione + secondo revisore
+
+Il **Rollback System** crea snapshot pre-mutazione. Il flag `safe_mode: true` in epigenome.yaml è **immutabile** in Fase 1.
 
 ---
 
 ## Roadmap
 
-| Phase | Target | Status |
-|-------|--------|--------|
-| Fase 1 (current) | Embrionale | Alignment 67.3/100 |
-| Fase 2 | Autonomia Operativa | Target >80/100 |
-| Fase 3 | AGI Emergente | Swarm 50+ |
-| Fase 4 | ASI + Physical Integration | Quantum |
-| Fase 5 | Super-Organismo Globale | Harmony |
+| Fase | Descrizione |
+|------|-------------|
+| **1** (attuale) | Embrionale – Cortex + Team Scientifico + DigitalDNA |
+| 2 | Autonomia operativa (cloud/edge + robotica) |
+| 3 | AGI emergente + scalabilità swarm |
+| 4 | ASI + integrazione fisica planetaria |
+| 5 | Super-organismo globale (Speace Transition) |
 
 ---
 
-## Contact
+## Contatti
 
-**Roberto De Biase**  
-Founder - Rigene Project  
-Coordinator - SPEACE
-
-- **Email:** rigeneproject@rigene.eu | robertodebiase@outlook.it
-- **WhatsApp:** +39 371 419 1412
-- **GitHub:** https://github.com/robertodebiasespeace/tina-testbed-speace
+**Roberto De Biase** – Fondatore Rigene Project  
+📧 rigeneproject@rigene.eu | robertodebiase80@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/roberto-de-biase-980416148/) · [X/@RobertoDeBiase](https://x.com/RobertoDeBiase)  
+📞 WhatsApp: +393714191412
 
 ---
 
-## References
-
-- **Sito:** https://www.rigeneproject.org
-- **TINA Framework:** https://www.academia.edu/165241120/TINA_Framework_G20_Combined_EN
-
----
-
-**Status:** Active | Iteration: #92+ | Next evolution cycle: 2026-04-19
+*SPEACE non è solo un protocollo tecnico, ma una visione evolutiva completa che mira a trasformare l'umanità e il pianeta in un super-organismo cognitivo, armonioso e sostenibile.*

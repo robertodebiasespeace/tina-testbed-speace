@@ -6,13 +6,6 @@ Funziona continuamente in background come sistema distribuito.
 
 import sys
 import os
-import io
-
-# Forza UTF-8 su Windows per evitare UnicodeEncodeError con simboli box-drawing
-if sys.platform == "win32":
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
-
 import time
 import json
 import threading
@@ -96,7 +89,7 @@ class SPEACENeuralEngine:
 
         self._register_default_neurons()
         self._setup_connections()
-        self.load_balancer.start_monitoring()
+        self._load_balancer.start_monitoring()
         self.execution_engine.start()
 
         print(f"[NeuralEngine] ✅ Inizializzato")
@@ -240,23 +233,23 @@ class SPEACENeuralEngine:
 
         self.synapse_manager.create_synapse(
             "cortex_main", "digitaldna_main",
-            initial_weight=0.8
+            weight=0.8
         )
         self.synapse_manager.create_synapse(
             "digitaldna_main", "cortex_main",
-            initial_weight=0.6
+            weight=0.6
         )
         self.synapse_manager.create_synapse(
             "cortex_main", "memory_main",
-            initial_weight=0.7
+            weight=0.7
         )
         self.synapse_manager.create_synapse(
             "memory_main", "cortex_main",
-            initial_weight=0.5
+            weight=0.5
         )
         self.synapse_manager.create_synapse(
             "environment_main", "cortex_main",
-            initial_weight=0.9
+            weight=0.9
         )
 
     def _setup_connections(self):
@@ -461,12 +454,8 @@ def main():
             engine.stop_background()
             sys.exit(0)
 
-        try:
-            signal.signal(signal.SIGINT, signal_handler)
-            if hasattr(signal, "SIGTERM"):
-                signal.signal(signal.SIGTERM, signal_handler)
-        except (ValueError, OSError):
-            pass
+        signal.signal(signal.SIGINT, signal_handler)
+        signal.signal(signal.SIGTERM, signal_handler)
 
         engine.start_background()
 

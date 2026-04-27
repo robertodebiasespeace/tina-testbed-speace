@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-04-19T21:35:49.601649",
+  "gate": {
+    "passed": true,
+    "status": "PASS",
+    "score": 0.573,
+    "reliability": 0.45,
+    "adversarial_confidence": 0.4,
+    "agents_ok_ratio": 1.0,
+    "agents_ok": 8,
+    "agents_total": 8,
+    "issues": [],
+    "thresholds": {
+      "min_reliability_score": 0.4,
+      "min_adversarial_conf": 0.3,
+      "min_agents_ok_ratio": 0.6
+    }
+  }
+}

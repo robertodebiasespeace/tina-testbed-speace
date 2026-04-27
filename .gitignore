@@ -1,55 +1,90 @@
+# ============================================================
+# SPEACE – .gitignore
+# ============================================================
+
+# Secrets e configurazione locale
+.env
+*.key
+*.pem
+*.p12
+
+# Script git con token (eliminare dopo l'uso)
+git-push-github.ps1
+GIT-PUSH-NOW.bat
+git_push_github.py
+PUSH-NOW.bat
+
+# Log push
+git_push_log.txt
+
+# Documento bozza originale
+*.txt
+
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
 .Python
-env/
-venv/
-ENV/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+dist/
+build/
+.eggs/
+venv/
+env/
+.venv/
+pip-log.txt
 
-# OpenClaw / SPEACE
-memory/
-workspace/
-logs/
-*.log
-state.json
-team_state.json
+# Log (mantieni struttura, non i contenuti)
+logs/*.log
+logs/status_reports/
+!logs/.gitkeep
 
-# IDE
+# Snapshot (generati a runtime, non versionare)
+safeproactive/snapshots/*/
+!safeproactive/snapshots/.gitkeep
+
+# Memory episodica (generata a runtime)
+memory/episodic/
+memory/world_model.json
+!memory/.gitkeep
+!memory/MEMORY.md
+
+# WAL log (generato a runtime)
+safeproactive/WAL.log
+
+# Output agenti (generati a runtime)
+scientific-team/outputs/daily_brief_*.md
+
+# Notebook e IDE
+.jupyter/
+*.ipynb
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
-
-# OS
 .DS_Store
 Thumbs.db
 
-# Sensitive
-.secrets/
-.env
-credentials.json
-wallets.json
-private_keys/
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+pytest-cache-files-*/
 
-# Data caches (optional)
-scientific-team/data/raw/
-scientific-team/data/cache/
+# Temp
+*.tmp
+*.bak
+*.orig
+
+# Output di comandi finiti accidentalmente in redirezione (non versionare)
+/1
+/2
+/loop
+
+# Materiale di riferimento (PDF/libri) — troppo pesante per il repo
+Organismic AI Initiative/
+*.pdf

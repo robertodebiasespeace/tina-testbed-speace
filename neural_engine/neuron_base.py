@@ -55,7 +55,6 @@ class Port:
     data_type: str
     direction: str
     schema: Optional[Dict[str, Any]] = None
-    required: bool = False
 
 
 @dataclass

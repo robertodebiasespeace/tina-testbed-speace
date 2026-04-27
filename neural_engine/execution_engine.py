@@ -115,7 +115,7 @@ class ResourceMonitor:
                 "concurrent": self._current_load["concurrent_jobs"] / self._limits["max_concurrent_jobs"],
                 "queue": self._current_load["queued_jobs"] / self._limits["max_queue_size"]
             }
-        }
+        )
 
 
 class ExecutionEngine:

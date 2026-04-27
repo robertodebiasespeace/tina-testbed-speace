@@ -1,6 +1,6 @@
 """
 SPEACE Scientific Team – Regulatory & Compliance Monitor
-Versione: 1.0 | 2026-04-22
+Versione: 1.0 | 2026-04-17
 Agente #8 — 9° comparto SPEACE Cortex: Compliance Module
 """
 

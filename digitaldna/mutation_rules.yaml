@@ -1,0 +1,143 @@
+# ============================================================
+# SPEACE DIGITAL DNA – MUTATION RULES
+# Versione: 1.0 | Data: 2026-04-17
+# Regole di mutazione, selezione e fitness function
+# ============================================================
+
+# --- FITNESS FUNCTION v2 ---
+# Formula: fitness v2 = somma pesata dei 6 indicatori
+# Aggiornamento: aggiunto C-index (coscienza funzionale) come 6° componente.
+# Fonte: Implementation and Testing of an Adaptive Artificial Consciousness
+#        Framework (2025) + SPEACE ACF integration (2026-04-17)
+# ATTENZIONE: i punteggi DEVONO essere ancorati a benchmark esterni
+# Non usare auto-valutazioni come unica metrica.
+
+fitness_function:
+  version: "2.0"
+  weights:
+    speace_alignment_score: 0.25    # Allineamento con obiettivi Rigene/TINA
+    task_success_rate: 0.20         # % task completati con successo reale
+    system_stability: 0.15          # Stabilità sistema (uptime, no crash)
+    resource_efficiency: 0.10       # Efficienza uso risorse (RAM/CPU)
+    ethical_compliance: 0.05        # Conformità etica e normativa
+    c_index: 0.25                   # C-index coscienza funzionale (ACF Framework)
+  formula: >
+    fitness = (speace_alignment_score * 0.25) +
+              (task_success_rate * 0.20) +
+              (system_stability * 0.15) +
+              (resource_efficiency * 0.10) +
+              (ethical_compliance * 0.05) +
+              (c_index * 0.25)
+  range: [0.0, 1.0]
+  acceptance_threshold: 0.65        # Fitness minima per accettare mutazione
+  benchmark_source: "external"      # OBBLIGATORIO: benchmark non auto-generati
+  # Nota: C-index = α·Φ + β·W-activation + γ·A-complexity
+  #        (α=0.40, β=0.35, γ=0.25) – calcolato da cortex/consciousness/
+
+# --- TIPI DI MUTAZIONE ---
+mutation_types:
+  epigenetic:
+    description: "Modifica parametri epigenome.yaml"
+    risk_level: "medium"
+    approval_required: true
+    rollback_snapshot: true
+    max_parameter_change_pct: 20    # max 20% variazione per ciclo
+
+  structural:
+    description: "Aggiunta/modifica comparti Cortex o agenti Team"
+    risk_level: "high"
+    approval_required: true
+    rollback_snapshot: true
+    requires_fitness_improvement: true
+
+  kernel:
+    description: "Modifica SMFOI-KERNEL o SafeProactive"
+    risk_level: "high"
+    approval_required: true
+    rollback_snapshot: true
+    second_approver_required: true
+
+  replication:
+    description: "Auto-replicazione su nuovi host/cloud"
+    risk_level: "high"
+    approval_required: true
+    requires_flags:
+      - "rollback_system_active"
+      - "external_benchmark_validated"
+    locked: true                    # LOCKED fino a Fase 2
+
+# --- REGOLE DI SELEZIONE ---
+selection_rules:
+  - name: "fitness_gate"
+    description: "Accetta mutazione solo se fitness post-mutazione >= threshold"
+    condition: "new_fitness >= fitness_function.acceptance_threshold"
+    action: "accept"
+
+  - name: "stability_veto"
+    description: "Blocca qualsiasi mutazione che riduca stabilità sotto 0.7"
+    condition: "new_system_stability < 0.7"
+    action: "reject"
+
+  - name: "ethical_veto"
+    description: "Blocca mutazioni che riducono compliance etica"
+    condition: "new_ethical_compliance < current_ethical_compliance"
+    action: "reject"
+
+  - name: "resource_cap"
+    description: "Blocca mutazioni che portano RAM usage oltre 80%"
+    condition: "new_resource_efficiency < 0.2"
+    action: "reject"
+
+  - name: "max_mutations_per_cycle"
+    description: "Non più di 3 mutazioni approvate per ciclo evolver"
+    condition: "mutations_this_cycle <= 3"
+    action: "continue"
+
+# --- ROLLBACK RULES ---
+rollback_rules:
+  auto_rollback_on_crash: true
+  auto_rollback_on_fitness_drop:
+    enabled: true
+    threshold_drop: 0.10           # rollback automatico se fitness cala >10%
+  snapshot_retention_days: 30
+  max_snapshots: 50
+
+# --- PARAMETRI MUTABILI (whitelist) ---
+# Solo questi parametri epigenome possono essere mutati automaticamente
+mutable_parameters:
+  - "learning.learning_rate"
+  - "learning.exploration_rate"
+  - "learning.yield_priority"
+  - "learning.reflection_depth"
+  - "evolution.heartbeat_interval_min"
+  - "evolution.status_report_interval_min"
+  - "evolution.mutation_threshold"
+  - "tina_alignment.active"
+  - "world_model.update_interval_min"
+  - "flags.verbose_logging"
+  - "flags.debug_mode"
+  # Consciousness metrics (ACF) – aggiornati automaticamente da SMFOI Step 6
+  - "consciousness_metrics.c_index"
+  - "consciousness_metrics.c_index_level"
+  - "consciousness_metrics.c_index_trend"
+  - "consciousness_metrics.phi"
+  - "consciousness_metrics.phi_mode"          # può passare a "medium" o "full" per audit
+  - "consciousness_metrics.phi_trend"
+  - "consciousness_metrics.w_activation"
+  - "consciousness_metrics.workspace_active_compartments"
+  - "consciousness_metrics.a_complexity"
+  - "consciousness_metrics.plasticity_index"
+  - "consciousness_metrics.c_index_history"
+  - "consciousness_metrics.last_updated_cycle"
+  - "consciousness_metrics.evolution_suggestion"
+
+# --- PARAMETRI IMMUTABILI (blacklist) ---
+immutable_parameters:
+  - "flags.safe_mode"              # mai disabilitare in Fase 1
+  - "flags.rollback_system_active"
+  - "regulatory.eu_ai_act_monitoring"
+  - "agents.scientific_team_active"
+  # Pesi C-index immutabili in Fase 1 (calibrati su base scientifica ACF)
+  - "consciousness_metrics.alpha"  # α=0.40 (peso Φ)
+  - "consciousness_metrics.beta"   # β=0.35 (peso W-activation)
+  - "consciousness_metrics.gamma"  # γ=0.25 (peso A-complexity)

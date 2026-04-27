@@ -1,0 +1,160 @@
+# ============================================================================
+# SPEACE Cortex Mesh — Execution Rules
+# ============================================================================
+#
+# Ceiling STRUTTURALI del runtime mesh M4-CNM.
+#
+# Distinzione chiave rispetto a epigenome.yaml:
+#   - epigenome.yaml  → valori operativi dinamici (mesh.enabled,
+#                       mesh.max_concurrent_neurons, mesh.needs.weights,
+#                       mesh.harmony_threshold). Mutabili via EPI-xxx.
+#   - questo file     → ceiling hard di sicurezza (max_ms_ceiling,
+#                       max_mb_ceiling, whitelist fs/net/llm/shell,
+#                       fail-safe thresholds). Modificabili SOLO via
+#                       PROP-MESH-RULES-<id> risk MEDIUM in SafeProactive.
+#
+# L'epigenome può regolare parametri operativi, ma non può MAI superare i
+# ceiling definiti qui (validator boot-time clampa silenziosamente — SPEC §7).
+#
+# Milestone: M4.4 (PROP-CORTEX-NEURAL-MESH-M4)
+# Ultima revisione: 2026-04-20
+# ============================================================================
+
+meta:
+  version: "1.0"
+  last_updated: "2026-04-20"
+  milestone: "M4.4"
+  description: >
+    Ceiling strutturali mesh CNM. NON mutabili via epigenome.
+    Mutazione richiede PROP SafeProactive risk MEDIUM.
+
+# --- Hard ceilings per resource_budget dei neuroni -------------------------
+# Un neurone che dichiara max_ms > ceiling viene clampato silenziosamente
+# al boot-time (SPEC §7 — "clamp, not crash"). I valori dichiarati oltre
+# i ceiling generano warning in log ma NON violazione di contratto.
+budget_ceilings:
+  max_ms: 30000               # 30s hard wall per execute() di un singolo neurone
+  max_mb: 512                 # 512MB — monitored, strike+quarantena se superato 3 volte
+  max_retries: 3              # 0..3; oltre → INVALID_BUDGET
+  priority_boost_min: -2
+  priority_boost_max: 2
+
+# --- Timeout default per operazioni lifecycle ------------------------------
+default_timeouts:
+  activation_ms: 5000         # on_init() + health() cumulative
+  cleanup_ms: 3000            # on_cleanup()
+  execute_fallback_ms: 10000  # se neurone omette max_ms (shouldn't happen dopo validate)
+
+# --- Backpressure & concorrenza --------------------------------------------
+# Valori operativi (l'epigenome può ridurli ma non aumentarli oltre ceiling).
+concurrency:
+  max_concurrent_neurons: 8         # ceiling assoluto; epigenome può ridurre
+  queue_size: 64                    # dimensione runtime queue (M4.6)
+  submit_timeout_ms: 1000           # quanto aspettare se coda piena
+  backpressure_strategy: "reject_new"  # reject_new | drop_oldest | block
+  per_level_caps:                   # max esecuzioni simultanee per livello
+    L1: 2                           # Controllo (prefrontal, safety) — mai saturare
+    L2: 4                           # Cognizione (temporal, world_model, dmn)
+    L3: 2                           # Memoria (hippocampus)
+    L4: 4                           # Azione (parietal, cerebellum, organismic)
+    L5: 1                           # Evoluzione (curiosity, plasticity) — bassa priorità
+  per_need_caps:                    # max esecuzioni simultanee per need
+    harmony: 4                      # priorità massima → budget concorrenza più alto
+    survival: 3
+    integration: 4
+    self_improvement: 2
+    expansion: 2
+
+# --- Quarantine policy (SPEC §8.2) -----------------------------------------
+quarantine:
+  strike_threshold: 3               # 3 strike → DISABLED + PROP-NEURON-QUARANTINE
+  strike_reset_after_s: 3600        # dopo 1h senza errori, counter resettato
+  auto_disable: true
+  requires_prop_to_reactivate: true
+  prop_risk_level: "medium"         # PROP-NEURON-QUARANTINE-<name> risk MEDIUM
+
+# --- Fail-safe globale (SPEC §8.3) -----------------------------------------
+fail_safe:
+  error_rate_threshold: 0.50                # >50% errori → trip
+  error_rate_window_heartbeats: 2           # per ≥ 2 heartbeat consecutivi
+  action_on_trip: "freeze_mesh"             # freeze_mesh | degrade | noop
+  auto_flip_epigenome_enabled: true         # flippa epigenome.flags.mesh_enabled → false
+  emit_prop_risk: "high"                    # PROP-MESH-FREEZE-<ts> risk HIGH
+
+# --- Retry policy ----------------------------------------------------------
+retry:
+  default_retries: 0                # NO retry di default
+  backoff_base_ms: 100
+  backoff_multiplier: 2.0           # 100 → 200 → 400 …
+  backoff_max_ms: 2000
+
+# --- Side effect sandbox whitelist (M4.6 completo) -------------------------
+# Il runtime M4.6 intercetta fs/net/shell tramite sandbox wrapper.
+# Un side_effect dichiarato ma out-of-whitelist → UNDECLARED_SIDE_EFFECT runtime.
+sandbox:
+  fs_read_allowed_roots:
+    - "digitaldna/"
+    - "safeproactive/"
+    - "benchmarks/"
+    - "scientific-team/outputs/"
+    - "scientific-team/briefs/"
+    - "cortex/mesh/"
+    - "cortex/state_bus.py"          # read-only per introspection
+    - "snapshots/"
+  fs_write_allowed_roots:
+    - "safeproactive/"               # PROPOSALS.md, WAL.log, proposals/*.md
+    - "scientific-team/outputs/"
+    - "scientific-team/briefs/"
+    - "cortex/mesh/mesh_state.jsonl"
+    - "cortex/mesh/logs/"
+    - "snapshots/"
+  net_whitelist:
+    - "localhost"
+    - "127.0.0.1"
+    - "api.anthropic.com"
+    - "www.rigeneproject.org"        # allineamento TINA
+    - "www.noaa.gov"                 # climate data
+    - "artificialintelligenceact.eu" # regulatory scan
+  shell_whitelist:                   # comandi eseguibili dal Cerebellum
+    - "git_status"
+    - "snapshot_list"
+    - "benchmark_run"
+    - "python_version"
+  llm_allowed_backends:
+    - "openai_compat"                # LM Studio locale
+    - "anthropic"                    # fallback remoto
+    - "mock"                         # safety net sempre attivo
+  state_bus_allowed_keys:
+    - "sensory_input"
+    - "interpretation"
+    - "decision"
+    - "action_result"
+    - "memory_delta"
+    - "reflection"
+    - "world_snapshot"
+    - "mutation_proposal"
+    - "safety_flags"
+    - "needs_snapshot"
+
+# --- Telemetry (usato da M4.13) --------------------------------------------
+telemetry:
+  jsonl_path: "cortex/mesh/mesh_state.jsonl"
+  buffer_max_events: 1000           # flush su disco ogni N eventi
+  rotation_mb: 50                   # rotazione JSONL dopo 50MB
+  keep_rotations: 5
+  log_backend_used: true            # per ogni llm: side_effect, log del backend reale
+
+# --- Runtime lifecycle -----------------------------------------------------
+runtime:
+  boot_validation_required: true
+  boot_validation_timeout_ms: 5000  # AC-9 target: 50 neuroni < 100ms (50x margine)
+  refuse_boot_on_violations: true   # se ANY neuron ha violazioni → mesh non avvia
+  graceful_shutdown_timeout_s: 30
+  health_check_interval_s: 300      # 5 min — allineato a epigenome.mesh.heartbeat_s
+
+# --- Policy di interop con SafeProactive -----------------------------------
+safeproactive:
+  proposal_low_auto_approve: false  # anche LOW richiede revisione umana in M4
+  proposal_medium_requires_human: true
+  proposal_high_requires_human_and_legal: true
+  wal_append_only: true
