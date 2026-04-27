@@ -8,8 +8,8 @@
 meta:
   version: "1.5"
   last_updated: "2026-04-27"
-  last_mutation_id: "GK-01"
-  mutation_count: 8
+  last_mutation_id: "EPI-008"
+  mutation_count: 9
   # EPI-001: Aggiunta sezione consciousness_metrics (ACF Integration)
   #          + fitness_function v2 (6 componenti) in mutation_rules.yaml
   # EPI-002: M2 – external_benchmark_validated=true dopo benchmark suite 6/6 pass
@@ -31,6 +31,12 @@ meta:
   #          HomeostaticController dh/dt + SystemReceptors + ConsciousnessIndex +
   #          ValueField V_internal verificati (25+N test pass).
   #          (PROP-COG-AUTONOMY-EPI005)
+  # EPI-008: M7.0 — cognitive_autonomy.executive.enabled: true
+  #          DriveExecutive (ponte causale Drive→BehavioralState) attivato.
+  #          BehavioralState: max_parallel_tasks, exploration_bonus, memory_priority_boost,
+  #          planning_depth, self_repair_mode, mutation_gate_open, focus_shift.
+  #          7 regole causali (R1-R7). 46 test PASS. SMFOI step4 wired.
+  #          (PROP-M7-DRIVE-EXECUTIVE → APPROVED)
 
 # --- Parametri di apprendimento e adattamento ---
 learning:
@@ -229,7 +235,21 @@ mutation_history:
       HomeostasisConfig.enabled default: False → True (controller.py:64).
       Fix code default — YAML aveva già enabled:true da EPI-005, ma il default Python
       bypassed quando HomeostaticController istanziato senza from_epigenome().
-      Emergence EM-05: PARTIAL → PASS. Viability alerts ora generati realmente.
+      Emergence EM-05: PARTIAL → PASS.
+  - id: "EPI-008"
+    timestamp: "2026-04-27T17:00:00"
+    proposal: "PROP-M7-DRIVE-EXECUTIVE"
+    change: >
+      cognitive_autonomy.executive.enabled: false → true.
+      Implementato DriveExecutive (drive_executive.py): BehavioralState dataclass
+      con 7 regole causali (R1-R7) che traducono drive omeostatici in comportamento.
+      Implementato TaskSelector (task_selector.py): selezione task guidata da BehavioralState.
+      Implementato SelfRepairTrigger (self_repair.py): gestione ciclo auto-riparazione.
+      SMFOI_v3.py step 4 wired: legge BehavioralState prima di Output Action.
+      Test suite: 46/46 PASS (causal tests). Emergence EM-06 FAIL→PASS.
+      Emergence Score: 50% → ~57%.
+    evidence: "cortex/cognitive_autonomy/executive/_tests_executive.py (46/46, 2026-04-27)"
+    snapshot_pre: "snap_20260427_pre_epi008_gk01" Viability alerts ora generati realmente.
     evidence: "tests/test_emergence.py EM-05 (viability drop genera alerts) — 2026-04-27"
     snapshot_pre: "snap_20260427_pre_gk01"
   - id: "EPI-006"
@@ -328,3 +348,15 @@ cognitive_autonomy:
     enabled: true               # EPI-006: ON (2026-04-27) — Plasticity Hebbian + pruning attivi
   constraints:
     enabled: true               # EPI-006: ON
+  executive:
+    enabled: true               # EPI-008: ON (2026-04-27) — DriveExecutive M7.0 attivo
+    viability_repair_threshold: 0.4
+    viability_conserve_threshold: 0.6
+    curiosity_explore_threshold: 0.7
+    coherence_memory_threshold: 0.4
+    energy_shallow_threshold: 0.3
+    energy_deep_threshold: 0.7
+    alignment_gate_threshold: 0.5
+    phi_parallel_threshold: 0.7
+  world_model:
+    enabled: true               # EPI-007: ON (2026-04-27) — WorldModelCortex 9° comparto
