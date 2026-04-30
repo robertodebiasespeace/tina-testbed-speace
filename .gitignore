@@ -17,9 +17,6 @@ PUSH-NOW.bat
 # Log push
 git_push_log.txt
 
-# Documento bozza originale
-*.txt
-
 # Python
 __pycache__/
 *.py[cod]
@@ -33,6 +30,7 @@ dist/
 build/
 .eggs/
 venv/
+venv_ml/
 env/
 .venv/
 pip-log.txt
@@ -57,6 +55,9 @@ safeproactive/WAL.log
 
 # Output agenti (generati a runtime)
 scientific-team/outputs/daily_brief_*.md
+
+# Claude Code
+.claude/
 
 # Notebook e IDE
 .jupyter/
@@ -88,3 +89,19 @@ pytest-cache-files-*/
 # Materiale di riferimento (PDF/libri) — troppo pesante per il repo
 Organismic AI Initiative/
 *.pdf
+
+# Docker / container
+
+# Vendored frameworks
+vendor/
+MultiFramework/agpt/
+
+# Runtime data
+data/learning_state.json
+data/speace_live_state.json
+data/metalearner_state.json
+data/ml_integration_state.json
+data/rl_models/
+vector_data/
+speace_status.json
+speace_world_model_test_report.json

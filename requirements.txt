@@ -1,19 +1,47 @@
 # SPEACE – Python Dependencies
 # Installa con: pip install -r requirements.txt
+# Per ML/AI avanzato: pip install -r requirements-ml.txt
 
 # Core
 pyyaml>=6.0
 requests>=2.31.0
 psutil>=5.9.0
-
-# AI / LLM (per Team Scientifico con Claude API)
-anthropic>=0.25.0
-
-# Scheduling (per evolver/monitor in background)
+python-dotenv>=1.0.0
 schedule>=1.2.0
 
-# Utility
-python-dotenv>=1.0.0
+# AI / LLM
+anthropic>=0.25.0
 
-# Testing (M1 – PROP-CORTEX-COMPLETE-M1)
+# Data & knowledge graph
+numpy>=1.24.0
+pandas>=1.5.0
+networkx>=3.0
+py2neo>=2021.2.3
+
+# Web & API
+flask>=2.3.0
+httpx>=0.24.0
+beautifulsoup4>=4.11.0
+
+# Vector DB
+chromadb>=0.4.0
+
+# Embeddings
+sentence-transformers>=2.2.0
+
+# Messaging & DB
+redis>=4.5.0
+paho-mqtt>=1.6.0
+
+# Validation
+pydantic>=2.0.0
+jsonschema>=4.17.0
+
+# Online learning
+river>=0.21.0
+
+# Monitoring
+prometheus-client>=0.16.0
+
+# Testing
 pytest>=8.0.0

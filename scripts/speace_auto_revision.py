@@ -109,6 +109,7 @@ IMPORT_TO_PACKAGE = {
     "stable_baselines3": "stable-baselines3",
     "torch": "torch",
     "transformers": "transformers",
+    "sklearn": "scikit-learn",
     "yaml": "pyyaml",
 }
 

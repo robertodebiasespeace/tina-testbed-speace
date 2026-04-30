@@ -1,0 +1,21 @@
+# SPEACE Docker ignore
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+venv_ml/
+.venv/
+.vscode/
+.idea/
+.env
+.env.local
+.claude/
+.git/
+Thumbs.db
+.DS_Store
+data/rl_models/
+*.log
+vendor/
+docs/
